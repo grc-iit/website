@@ -1,5 +1,5 @@
-
-# Installation
+# OpenFOAM
+## Installation
 ## On Ares
 When you are on Ares, you should ideally find the openfoam application already installed as a module. To see if there is an openfoam module in ares run the below command:
 
