@@ -1,5 +1,5 @@
-
-# Installation
+# LAMMPS
+## Installation
 ## On Ares
 When you are on Ares, you should ideally find the lammps application already installed as a module. To see if there is a lammps module in ares run the below command:
 
