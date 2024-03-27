@@ -32,11 +32,11 @@ Current wall time limit of a job is 48h. By default, a job will be terminated 48
 
 ### Can I reserve the nodes for my tests for a longer time?
 
-Yes. Please contact the system admin to request node reservation. Once your reservation is approved, you will receive an email with a reservation ID. Then you can add --reservation=reservation\_id to your allocation command to use your reservation.
+Yes. Please contact the system admin to request node reservation. Once your reservation is approved, you will receive an email with a reservation ID. Then you can add `--reservation=reservation_id` to your allocation command to use your reservation.
 
 ### Can I jump in front of the job queue?
 
-We follow FCFS policy in the resource scheduling. Users cannot change the priority of their jobs and jump in front of the job queue. You can, however, contact the users whose jobs are in front of you to negotiate a way to prioritize your job. You may also negotiate with other users about how to time sharing the nodes instead of exclusive allocation. You can do it by contacting each user specifically. You can find the names and contacts of all the users here. If you have urgent jobs to run, please contact the admin at grc+aresadmin@iit.edu.
+We follow FCFS policy in the resource scheduling. Users cannot change the priority of their jobs and jump in front of the job queue. You can, however, contact the users whose jobs are in front of you to negotiate a way to prioritize your job. You may also negotiate with other users about how to time sharing the nodes instead of exclusive allocation. You can do it by contacting each user specifically. You can find the names and contacts of all the users here. If you have urgent jobs to run, please contact the admin at `grc<plus>aresadmin<at>iit<dot>edu`.
 
 ### What are the roles of different nodes (master, compute)?
 
@@ -63,7 +63,7 @@ You can send email to the System Admin to request for new packages. The system a
 
 Since Ares is heterogenous, different nodes have different node-local storage.
 Ares has a global shared NFS across the whole cluster which is mounted at /home. A symbolic link to the global NFS is also created at /mnt/common.
-Each compute node has one local NVMe SSD, one SATA SSD, and one SATA HDD. They are mounted at /mnt/nvme, /mnt/ssd and /mnt/hdd, respectively. Every user has local directories in /mnt/nvme/USERNAME, /mnt/ssd/USERNAME and /mnt/hdd/USERNAME on each compute node.
+Each compute node has one local NVMe SSD, one SATA SSD, and one SATA HDD. They are mounted at /mnt/nvme, /mnt/ssd and /mnt/hdd, respectively. Every user has local directories in `/mnt/nvme/$USER`, `/mnt/ssd/$USER`, and `/mnt/hdd/$USER` on each compute node.
 
 ### Is this cluster homogeneous?
 
@@ -77,7 +77,7 @@ As shown in figure, each compute node has one high-speed (40Gbps) Ethernet and o
 
 ### How is the inter-job/user interference?
 
-By default, nodes are shared by all users. Nodes which you are assigned to could be allocated to other users as long as remaining resources (e.g., CPU, memory) match the job requirement. You can avoid it by adding --exclusive to your job allocation command. Please use this feature only when necessary.
+By default, nodes are shared by all users. Nodes which you are assigned to could be allocated to other users as long as remaining resources (e.g., CPU, memory) match the job requirement. You can avoid it by adding `--exclusive` to your job allocation command. Please use this feature only when necessary.
 
 
 ## OrangeFS
@@ -115,4 +115,4 @@ ares-orangefs-terminate <conf file> <server list> <client list> <mount_loc>
 
 # Report Issue
 
-Please contact the system admin at `grc <plus> aresadmin <at> iit <dot> edu` if you find an issue when using this cluster.
+Please contact the system admin at `grc<plus>aresadmin<at>iit<dot>edu` if you find an issue when using this cluster.

@@ -140,7 +140,7 @@ const config = {
               },
               {
                 to: "/research/resources",
-                label: "Resources",
+                label: "Hardware Resources",
               },
               {
                 to: "/resources/ares/user-guide",
