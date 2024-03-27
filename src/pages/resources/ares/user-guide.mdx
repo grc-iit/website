@@ -11,13 +11,13 @@ title: Ares User Guide
 *   Submit batch jobs with `sbatch`.
 *   Manage software modules with Lmod using `module load` and `module avail`.
     *   Use Spack for setting up custom toolchains.
-*   Sudo access is limited and granted for specific purposes.
+*   sudo access is limited and granted for specific purposes.
 *   Do **NOT** reach out to the admin without reading the rest of the guide.
 
 ## Introduction
 
 Welcome to the Ares cluster user manual. Ares is a high-performance computing (HPC) cluster running on Ubuntu 22.04. This guide will provide you with the necessary information to effectively utilize the resources available on the cluster.
-Your cluster administrator can be reached via <grc+aresadmin@iit.edu> and someone will get back to you.
+Your system administrator can be reached via <grc+aresadmin@iit.edu>, and someone will get back to you.
 
 ## Resource Information
 
@@ -72,7 +72,7 @@ The comp/compute nodes are for heavy computation and I/O tasks, including compil
 
 ## Accessing the Cluster
 
-To access the Ares cluster, you will need to SSH using your IIT assigned username and SSH key. If you encounter any issues with access, please contact the cluster administrator.
+To access the machines you need to be on the IIT network, either on-site or via the [IIT-VPN](https://www.iit.edu/ots/access/vpn-remote-access). Then, you can SSH to the master/login node using your IIT assigned username and the SSH key you provided to the system admin. If you encounter any issues with access, please contact the system administrator.
 
 ```bash
 ssh username@ares.cs.iit.edu
@@ -185,7 +185,7 @@ Refer to the Spack documentation for detailed instructions on setting up custom 
 ## Escalated privileges
 
 Sudo access on Ares is limited to specific purposes such as clearing caches, mounting OrangeFS, or other restricted administrative tasks. Users are not granted broad sudo privileges.
-Contact the cluster administrator if you require sudo access for a specific task. Additionally, please note all topics in this subsection require `sudo` permissions.
+Contact the system administrator if you require sudo access for a specific task. Additionally, please note all topics in this subsection require `sudo` permissions.
 
 Services requiring `sudo` permissions:
 
