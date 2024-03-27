@@ -1,6 +1,7 @@
 ---
 title: Ares User Guide
 ---
+
 # Ares User Guide
 
 **TL;DR**:
@@ -11,7 +12,7 @@ title: Ares User Guide
 *   Manage software modules with Lmod using `module load` and `module avail`.
     *   Use Spack for setting up custom toolchains.
 *   Sudo access is limited and granted for specific purposes.
-* Do **NOT** reach out to the admin without reading the rest of the guide.
+*   Do **NOT** reach out to the admin without reading the rest of the guide.
 
 ## Introduction
 
@@ -25,7 +26,7 @@ The Ares cluster is composed of one rack of compute nodes. All the nodes share a
 Xeon Scalable Silver 4114 processors with boosted frequency up to 3.0GHz, which leads to 660 cores and 1320 threads.
 The master node and the compute nodes are equipped with 96GB and 48GB DDR4-2400 memory, 128GB and 32GB M.2 SSD for
 OS, respectively. 24 compute nodes are equipped with one 250GB M.2 Samsung 960 Evo SSD. The other eight are equipped
-with one 256 GB M.2 Toshiba RD400 SSD. 
+with one 256 GB M.2 Toshiba RD400 SSD.
 
 ### Node Roles
 
@@ -42,19 +43,19 @@ The comp/compute nodes are for heavy computation and I/O tasks, including compil
 
 ### Master/login node (from Lenovo)
 
-- Host: ares.cs.iit.edu
-- IP: 216.47.152.168
-- Protocol: SSH
-- Port: 22
-- Shared global home directory: `/mnt/common/$USER` or `/home/$USER`
+*   Host: ares.cs.iit.edu
+*   IP: 216.47.152.168
+*   Protocol: SSH
+*   Port: 22
+*   Shared global home directory: `/mnt/common/$USER` or `/home/$USER`
 
 ### Compute nodes (from Lenovo)
 
-- Host (low-speed Ethernet): ares-comp-\[01-32]
-- Host (high-speed Ethernet): ares-comp-\[01-32]-40g
-- Local NVMe SSD: /mnt/nvme/`$USER`
-- Local SATA SSD: /mnt/ssd/`$USER`
-- Local SATA HDD: /mnt/hdd/`$USER`
+*   Host (low-speed Ethernet): ares-comp-\[01-32]
+*   Host (high-speed Ethernet): ares-comp-\[01-32]-40g
+*   Local NVMe SSD: /mnt/nvme/`$USER`
+*   Local SATA SSD: /mnt/ssd/`$USER`
+*   Local SATA HDD: /mnt/hdd/`$USER`
 
 ### Details
 
@@ -181,11 +182,20 @@ Users have the option to set up custom toolchains using Spack. Spack is a flexib
 
 Refer to the Spack documentation for detailed instructions on setting up custom toolchains.
 
-## Limited Sudo Access
+## Escalated privileges
 
 Sudo access on Ares is limited to specific purposes such as clearing caches, mounting OrangeFS, or other restricted administrative tasks. Users are not granted broad sudo privileges.
+Contact the cluster administrator if you require sudo access for a specific task. Additionally, please note all topics in this subsection require `sudo` permissions.
 
-Contact the cluster administrator if you require sudo access for a specific task.
+Services requiring `sudo` permissions:
+
+*   clearing storage cache
+*   deploying node local orangefs deployments
+
+
+### Clearing the storage cache
+
+Load the appropriate module using `module load user-scripts` to bring use the `sudo drop_caches` script, or you can just directly run `sudo /mnt/repo/software/user-scripts/drop_caches`
 
 ## First-Timers Section:
 
