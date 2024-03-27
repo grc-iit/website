@@ -142,6 +142,10 @@ const config = {
                 to: "/research/resources",
                 label: "Resources",
               },
+              {
+                to: "/resources/ares/user-guide",
+                label: "Ares User Guide",
+              },
             ],
           },
           {
