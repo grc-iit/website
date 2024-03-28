@@ -159,9 +159,6 @@ const config = {
                 label: "Ares User Guide",
               },
             ],
-            to: "/jobs",
-            label: "Job Opportunities",
-            position: "left",
           },
           // {
           //   to: "/blog",
