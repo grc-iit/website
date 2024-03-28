@@ -138,20 +138,26 @@ const config = {
                 to: "/research/patents",
                 label: "Patents",
               },
-              {
-                to: "/research/resources",
-                label: "Hardware Resources",
-              },
-              {
-                to: "/resources/ares/user-guide",
-                label: "Ares User Guide",
-              },
             ],
           },
           {
             to: "/publications",
             label: "Publications",
             position: "left",
+          },
+          {
+            label: "Resources",
+            position: "right",
+            items: [
+              {
+                to: "/resources/hardware-overview",
+                label: "Hardware Overview",
+              },
+              {
+                to: "/resources/ares/user-guide",
+                label: "Ares User Guide",
+              },
+            ],
           },
           // {
           //   to: "/blog",
