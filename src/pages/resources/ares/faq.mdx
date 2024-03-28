@@ -10,6 +10,12 @@ title: FAQ
 
 No. we only allow login via ssh keys. Send your public ssh key to the Ares system admin
 
+### I can login to the headnode, I can make a slurm reservation, but when I try to ssh to said node I get "permission denied"                                                                                        
+
+You need to make the SSH keys for your `$USER`. You can do this the same way you did using `ssh-keygen`. Use the default key name and leave it without the password.                                                 
+This is the key that you/your apps/mpi will use to ssh to the node.                                                                                                                                                  
+Finally, run `cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys`   
+
 ### Why can’t I login with correct credentials?
 
 Ares uses fail2ban to block offensive hosts to secure the server. Any IP that fails to login 5 times in the last 50 days will be blocked from accessing Ares for 24h. If you are blocked, please contact the system admin to unblock yourself.
