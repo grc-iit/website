@@ -150,15 +150,41 @@ Each compute node has one local NVMe SSD, one SATA SSD, and one SATA HDD. They a
 
 ## OrangeFS
 
-### How can I mount OrangeFS on compute/storage nodes?
+### What is OrangeFS?
+
+OrangeFS is an open-source, scale-out network file system designed for High Performance Computing (HPC) systems¹³. It provides very high-performance access to multi-server-based disk storage, in parallel¹. Here are some key features and details about OrangeFS:
+
+- **User-Level Code**: The OrangeFS server and client are user-level code, making them very easy to install and manage¹.
+- **Part of Linux Kernel**: OrangeFS is part of the Linux kernel as of version 4.6¹.
+- **Parallel Access Methods**: OrangeFS supports diverse methods of parallel access including Linux kernel integration, native Windows client, HCFS-compliant JNI interface to the Hadoop ecosystem of applications, WebDAV for native client access, and direct POSIX-compatible libraries for pre-loading or linking¹.
+- **Optimized MPI-IO Support**: OrangeFS has optimized MPI-IO support for parallel and distributed applications¹.
+- **Research and Development**: The OrangeFS project continues to push the envelope of file system research while bringing high-performance parallel storage to production-ready releases¹.
+
+It's ideal for large storage problems faced by HPC, BigData, Streaming Video, Genomics, and Bioinformatics⁴. It's also the next generation of Parallel Virtual File System (PVFS)³. A parallel file system is a type of distributed file system that distributes file data across multiple servers and provides for concurrent access by multiple tasks of a parallel application³.
+
+Source: Conversation with Bing, 4/4/2024, and edited for clarity
+(1) orangefs.org. https://www.orangefs.org/.
+(2) OrangeFS - Wikipedia. https://en.wikipedia.org/wiki/OrangeFS.
+(3) ORANGEFS — The Linux Kernel documentation. https://www.kernel.org/doc/html/latest/filesystems/orangefs.html.
+(4) OrangeFS. https://orangefs.com/.
+(5) undefined. https://github.com/waltligon/orangefs/discussions.
+
+
+### How can I use OrangeFS?
+
+Simple! 
+1. You load the precompiled module on ares `module load orangefs`
+2. Generate the configuration for OrangeFS using `pvfs2-genconfig`
+  - The servers you specify must be nodes you have an allocation. You can change the server names and relaunch between allocations, BUT a config for 4 nodes cannot be used for a config for lesser or greater than 4 nodes
+3. Load up the servers and mount them on the clients!
+
+### How can I "load up the servers and mount them on the clients" on compute nodes?
 
 Make sure you have the necessary sudo permission. Load the `orangefs` module.
 Provide the orangefs configuration file, the server, and client list file, and the mount location
-
 ```bash
 ares-orangefs-deploy <conf file> <server list> <client list> <mount_loc>
 ```
-
 Example server file
 
     ares-comp-01-40g
@@ -169,15 +195,14 @@ Example client file
     ares-comp-01-40g
     ares-comp-23-40g
 
+It is just a file with each line having a node hostname.
+
 ### How can I clean OrangeFS deployment from previous users or myself?
 
 Run
-
 ```bash
 ares-orangefs-terminate <conf file> <server list> <client list> <mount_loc>
 ```
-
-
 # Report Issue
 
-Please contact the system admin at `grc<plus>aresadmin<at>iit<dot>edu` if you find an issue when using this cluster.
+If you have any issues, with the cluster, or the user guide please contact the system admin at `grc<plus>aresadmin<at>iit<dot>edu` if you find an issue when using this cluster.
