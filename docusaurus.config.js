@@ -140,19 +140,14 @@ const config = {
                 label: "Patents",
               },
               {
-                to: "/research/resources",
-                label: "Resources",
+                to: "/resources/hardware-overview",
+                label: "Hardware Overview",
               },
             ],
           },
           {
             to: "/publications",
             label: "Publications",
-            position: "left",
-          },
-          {
-            to: "/jobs",
-            label: "Job Opportunities",
             position: "left",
           },
           // {
@@ -238,6 +233,10 @@ const config = {
               {
                 label: "C++ Introduction",
                 to: "/docs/category/c-introduction",
+              },
+              {
+                to: "/docs/category/ares-research-cluster",
+                label: "Ares User Guide",
               },
             ],
           },
