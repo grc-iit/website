@@ -45,6 +45,24 @@ const publications: Publication[] = [
     links: {},
   },
   {
+    authors: ["X. Lu", "B. Long", "X. Chen", "Y. Han", "X.-H. Sun"],
+    title:
+      "ACES: Accelerating Sparse Matrix Multiplication with Adaptive Execution Flow and Concurrency-Aware Cache Optimizations",
+    venue:
+      "The 2024 Conference on Architectural Support for Programming Languages and Operating Systems (ASPLOS 2024)",
+    type: "Conference",
+    date: "April, 2024",
+    tags: [
+      "SpMM",
+      "Accelerator",
+      "Parallelism",
+      "Concurrency",
+      "Synchronization",
+      "Scalability",
+    ],
+    links: {},
+  },
+  {
     authors: ["X. Lu", "H. Najafi", "J. Liu", "X.-H. Sun"],
     title:
       "CHROME: Concurrency-Aware Holistic Cache Management Framework with Online Reinforcement Learning",
