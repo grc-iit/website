@@ -354,6 +354,7 @@ export type PublicationTag =
   | "Bandwidth"
   | "Benchmark"
   | "Benchmarking"
+  | "Best Paper Award"
   | "Big Data"
   | "Burst Buffers"
   | "C-AMAT"
