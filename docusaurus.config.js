@@ -156,6 +156,11 @@ const config = {
           //   position: "left",
           // },
           {
+            to: "/jobs",
+            label: "Job Opportunities",
+            position: "left",
+          },
+          {
             type: "docSidebar",
             label: "Tutorials",
             sidebarId: "tutorialSidebar",
