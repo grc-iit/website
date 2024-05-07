@@ -9,7 +9,7 @@ export default [
     links: {
       email: "sun@iit.edu",
       scholar: "https://scholar.google.com/citations?user=9h3JX7MAAAAJ&hl=en",
-      website: "https://www.cs.iit.edu/~scs/sun",
+      website: "http://www.cs.iit.edu/~scs/sun",
     },
   },
   {
