@@ -49,7 +49,7 @@ const publications: Publication[] = [
     title:
       "ACES: Accelerating Sparse Matrix Multiplication with Adaptive Execution Flow and Concurrency-Aware Cache Optimizations",
     venue:
-      "The 2024 Conference on Architectural Support for Programming Languages and Operating Systems (ASPLOS 2024)",
+      "The 29th ACM International Conference on Architectural Support for Programming Languages and Operating Systems (ASPLOS-29)",
     type: "Conference",
     date: "April, 2024",
     tags: [
@@ -60,18 +60,29 @@ const publications: Publication[] = [
       "Synchronization",
       "Scalability",
     ],
-    links: {},
+    links: {
+      pdf: "http://cs.iit.edu/~scs/assets/files/lu2024aces.pdf",
+      slides: "http://cs.iit.edu/~scs/assets/files/lu2024aces_slides.pdf",
+      poster: "http://cs.iit.edu/~scs/assets/files/lu2024aces_poster.pdf",
+      bibtex: "http://cs.iit.edu/~scs/assets/files/lu2024aces.bib",
+      citation: "http://cs.iit.edu/~scs/assets/files/lu2024aces.txt",
+    },
   },
   {
     authors: ["X. Lu", "H. Najafi", "J. Liu", "X.-H. Sun"],
     title:
       "CHROME: Concurrency-Aware Holistic Cache Management Framework with Online Reinforcement Learning",
     venue:
-      "The 30th IEEE International Symposium on High-Performance Computer Architecture (HPCA 2024)",
+      "The 30th IEEE International Symposium on High-Performance Computer Architecture (HPCA 2024), Edinburgh, Scotland",
     type: "Conference",
     date: "March, 2024",
     tags: ["Memory Architecture", "Cache Management"],
-    links: {},
+    links: {
+      pdf: "http://cs.iit.edu/~scs/assets/files/lu2024chrome.pdf",
+      slides: "http://cs.iit.edu/~scs/assets/files/lu2024chrome_slides.pdf",
+      bibtex: "http://cs.iit.edu/~scs/assets/files/lu2024chrome.bib",
+      citation: "http://cs.iit.edu/~scs/assets/files/lu2024chrome.txt",
+    },
   },
   {
     authors: [
@@ -138,24 +149,7 @@ const publications: Publication[] = [
       citation: "http://cs.iit.edu/~scs/assets/files/yildirim2023mmetrics.txt",
     },
   },
-  {
-    authors: [
-      "M. Zou",
-      "M. Zhang",
-      "R. Wang",
-      "X.-H. Sun",
-      "X. Ye",
-      "D. Fan",
-      "Z. Tang",
-    ],
-    title:
-      "Skyway: Accelerate Graph Applications with a Dual-Path Architecture and Fine-Grained Data Management",
-    venue: "Journal of Computer Science and Technology (JCST'23)",
-    type: "Journal",
-    date: "TBA",
-    tags: ["Graph Applications", "Computer Architecture", "Memory Hierarchy"],
-    links: {},
-  },
+
   {
     authors: [
       "H. Lee",
@@ -172,7 +166,33 @@ const publications: Publication[] = [
     type: "Conference",
     date: "November, 2023",
     tags: ["Data Analytics", "Performance Measurement", "Modeling", "Tools"],
-    links: {},
+    links: {
+      pdf: "http://cs.iit.edu/~scs/assets/files/lee2023data.pdf",
+      bibtex: "http://cs.iit.edu/~scs/assets/files/lee2023data.bib",
+      citation: "http://cs.iit.edu/~scs/assets/files/lee2023data.txt",
+    },
+  },
+  {
+    authors: [
+      "M. Zou",
+      "M. Zhang",
+      "R. Wang",
+      "X.-H. Sun",
+      "X. Ye",
+      "D. Fan",
+      "Z. Tang",
+    ],
+    title:
+      "Skyway: Accelerate Graph Applications with a Dual-Path Architecture and Fine-Grained Data Management",
+    venue: "Journal of Computer Science and Technology (JCST'23)",
+    type: "Journal",
+    date: "October, 2023",
+    tags: ["Graph Applications", "Computer Architecture", "Memory Hierarchy"],
+    links: {
+      slides: "http://cs.iit.edu/~scs/assets/files/zou2023skyway_slides.pdf",
+      bibtex: "http://cs.iit.edu/~scs/assets/files/zou2023skyway.bib",
+      citation: "http://cs.iit.edu/~scs/assets/files/zou2023skyway.txt",
+    },
   },
   {
     authors: ["L. Logan", "J. Lofstead", "A. Kougkas", "X.-H. Sun"],
