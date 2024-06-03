@@ -1057,10 +1057,8 @@ const publications: Publication[] = [
     links: {
       pdf: "http://cs.iit.edu/~scs/assets/files/hcompress.pdf",
       slides: "http://cs.iit.edu/~scs/assets/files/hcompress_ipdps.pdf",
-      bibtex:
-        "http://www.cs.iit.edu/~scs/http://cs.iit.edu/~scs/assets/files/hcompress2020.bib",
-      citation:
-        "http://www.cs.iit.edu/~scs/http://cs.iit.edu/~scs/assets/files/hcompress2020.txt",
+      bibtex: "http://cs.iit.edu/~scs/assets/files/hcompress2020.bib",
+      citation: "http://cs.iit.edu/~scs/assets/files/hcompress2020.txt",
     },
   },
   {
