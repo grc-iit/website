@@ -42,7 +42,11 @@ const publications: Publication[] = [
     type: "Conference",
     date: "May, 2024",
     tags: ["AI for I/O", "I/O Stack Tuning"],
-    links: {},
+    links: {
+      pdf: "http://cs.iit.edu/~scs/assets/files/rajesh2024tunio.pdf",
+      bibtex: "http://cs.iit.edu/~scs/assets/files/rajesh2024tunio.bib",
+      citation: "http://cs.iit.edu/~scs/assets/files/rajesh2024tunio.txt",
+    },
   },
   {
     authors: ["X. Lu", "B. Long", "X. Chen", "Y. Han", "X.-H. Sun"],
