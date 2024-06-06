@@ -17,13 +17,7 @@ export type Job = {
   // type: "full-time" | "part-time" | "internship";
 };
 
-export type MemberLinkType =
-  | "website"
-  | "email"
-  | "github"
-  | "linkedin"
-  | "twitter"
-  | "scholar";
+export type MemberLinkType = "website" | "email" | "github" | "linkedin" | "twitter" | "scholar";
 
 export type Member = {
   affiliation?: string;
@@ -45,6 +39,7 @@ export type ProjectId =
   | "iris"
   | "dtio"
   | "labios"
+  | "storehub"
   | "viper"
   | "wisio";
 
