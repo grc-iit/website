@@ -25,7 +25,11 @@ const publications: Publication[] = [
       "In-Transit Computing",
       "Coeus",
     ],
-    links: {},
+    links: {
+      pdf: "http://cs.iit.edu/~scs/assets/files/cernuda2024hades.pdf",
+      bibtex: "http://cs.iit.edu/~scs/assets/files/cernuda2024hades.bib",
+      citation: "http://cs.iit.edu/~scs/assets/files/cernuda2024hades.txt",
+    },
   },
   {
     authors: [
