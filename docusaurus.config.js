@@ -146,6 +146,11 @@ const config = {
             ],
           },
           {
+            to: "/news",
+            label: "News",
+            position: "left",
+          },
+          {
             to: "/publications",
             label: "Publications",
             position: "left",
