@@ -155,16 +155,16 @@ const config = {
             label: "Publications",
             position: "left",
           },
+          {
+            to: "/jobs",
+            label: "Jobs",
+            position: "left",
+          },
           // {
           //   to: "/blog",
           //   label: "Blog",
-          //   position: "left",
+          //   position: "right",
           // },
-          {
-            to: "/jobs",
-            label: "Job Opportunities",
-            position: "left",
-          },
           {
             type: "docSidebar",
             label: "Tutorials",
