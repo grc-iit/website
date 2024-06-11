@@ -5,21 +5,43 @@ export type Affiliation = {
   url: string;
 };
 
+export type Job = {
+  applicationLink: string;
+  detailLink?: string;
+  detailText?: string;
+  location?: string;
+  postedAt?: string;
+  shortDescription: string;
+  status: "open" | "closed";
+  title: string;
+  // type: "full-time" | "part-time" | "internship";
+};
+
 export type MemberLinkType = "website" | "email" | "github" | "linkedin" | "twitter" | "scholar";
 
 export type Member = {
   affiliation?: string;
-  advisor: string;
+  advisor?: string;
   bio?: string;
   image: string;
   links?: Record<MemberLinkType, string>;
   name: string;
   researchInterests?: string[];
   title: string;
-  type: "researcher" | "engineer" | "visiting";
+  type: "researcher" | "engineer" | "visiting" | "external";
 };
 
-export type ProjectId = "chronolog" | "coeus" | "hermes" | "iris" | "dtio"| "labios";
+export type ProjectId =
+  | "chronolog"
+  | "coeus"
+  | "dayu"
+  | "hermes"
+  | "iris"
+  | "dtio"
+  | "labios"
+  | "storehub"
+  | "viper"
+  | "wisio";
 
 export type Project = {
   id: ProjectId;
@@ -42,6 +64,8 @@ export type PublicationAuthor =
   | "A. Eswaradass"
   | "A. Fleck"
   | "A. G. Singh"
+  | "A. Gainaru"
+  | "A. Geist"
   | "A. Gentile"
   | "A. Haider"
   | "A. Kougkas"
@@ -53,6 +77,7 @@ export type PublicationAuthor =
   | "B. Allcock"
   | "B. Alunkal"
   | "B. Feng"
+  | "B. Long"
   | "B. Scholz"
   | "B. Toonen"
   | "B. Wang"
@@ -117,7 +142,7 @@ export type PublicationAuthor =
   | "J. B. Kowalkowski"
   | "J. Bent"
   | "J. Brandt"
-  | "J. C. Garcia"
+  | "J. Cernuda"
   | "J. Dennis"
   | "J. Firoz"
   | "J. Gawor"
@@ -225,6 +250,7 @@ export type PublicationAuthor =
   | "S. He"
   | "S. Herbein"
   | "S. Hu"
+  | "S. Klasky"
   | "S. Lang"
   | "S. Levy"
   | "S. Liu"
@@ -289,6 +315,7 @@ export type PublicationAuthor =
   | "Y. Fan"
   | "Y. Han"
   | "Y. Li"
+  | "Y. Liu"
   | "Y. Lu"
   | "Y. Luo"
   | "Y. Wang"
@@ -314,11 +341,15 @@ export type PublicationAuthor =
   | "Z.-W. Xu";
 
 export type PublicationTag =
+  | "Accelerator"
   | "Access Pattern"
+  | "Active Storage"
+  | "AI for I/O"
   | "Apache Arrow"
   | "Bandwidth"
   | "Benchmark"
   | "Benchmarking"
+  | "Best Paper Award"
   | "Big Data"
   | "Burst Buffers"
   | "C-AMAT"
@@ -329,10 +360,13 @@ export type PublicationTag =
   | "Clouds and Distributed Computing"
   | "Column store"
   | "Compression"
+  | "Computer Architecture"
   | "Computing Education"
+  | "Concurrency"
   | "Concurrent Average Memory Access Time"
   | "Concurrent Memory Access"
   | "Containers"
+  | "Context Awareness"
   | "Coeus"
   | "DNN"
   | "DRAM"
@@ -342,8 +376,10 @@ export type PublicationTag =
   | "Data Analytics"
   | "Data Centers"
   | "Data Compression"
+  | "Data Drilling"
   | "Data Integration"
   | "Data Layout"
+  | "Data Operator"
   | "Data Pipeline"
   | "Data Placement"
   | "Data Prefetching"
@@ -382,6 +418,7 @@ export type PublicationTag =
   | "Filesystems"
   | "Flash Memory"
   | "GPU"
+  | "Graph Applications"
   | "HDF5"
   | "HPC"
   | "HPC Data Containers"
@@ -392,17 +429,22 @@ export type PublicationTag =
   | "Hierarchical"
   | "Hierarchical Data Prefetching"
   | "Hierarchical Memory System"
+  | "Hierarchical Storage"
   | "History of Computing"
   | "Hybrid Data Access Model"
   | "Hybrid Parallel File System"
   | "I/O"
   | "I/O Acceleration"
+  | "I/O Analysis"
   | "I/O Behavior"
   | "I/O Bottleneck"
   | "I/O Bottleneck Detection"
   | "I/O Buffering"
   | "I/O Characterization"
+  | "I/O Metrics"
   | "I/O Optimization"
+  | "I/O Stack Tuning"
+  | "In-Transit Computing"
   | "Integrated Workflow"
   | "Intelligent Selection"
   | "KVS"
@@ -417,6 +459,7 @@ export type PublicationTag =
   | "MLP"
   | "Machine Learning"
   | "Matrix Multiplication"
+  | "Metadata Management"
   | "Memory Architecture"
   | "Memory Concurrency"
   | "Memory Hierarchy"
@@ -429,9 +472,11 @@ export type PublicationTag =
   | "Middleware"
   | "Modeling"
   | "Multi-Tiered"
+  | "Out-of-Core Analysis"
   | "Parallel File System (PFS)"
   | "Parallel I/O"
   | "Parallel Computing"
+  | "Parallelism"
   | "Performance Evaluation"
   | "Performance Measurement"
   | "Performance Modeling"
@@ -450,6 +495,7 @@ export type PublicationTag =
   | "Resource Management"
   | "Resource Monitoring"
   | "Resource Provisioning"
+  | "Scalability"
   | "Scalable Computing"
   | "Scientific Applications"
   | "Selection Algorithm"
@@ -460,10 +506,12 @@ export type PublicationTag =
   | "Shared Log"
   | "Singularity"
   | "Solid State Drive"
+  | "SpMM"
   | "Storage"
   | "Storage Auto-Tuning"
   | "Storage Bridging"
   | "Swapping"
+  | "Synchronization"
   | "System Software"
   | "Task-Based I/O"
   | "Tensor"
@@ -473,6 +521,7 @@ export type PublicationTag =
   | "Tools"
   | "Utilization"
   | "Virtualization"
+  | "WisIO"
   | "Workflow Priorities"
   | "Workflow-Aware";
 
@@ -484,6 +533,7 @@ export type PublicationType =
   | "Poster"
   | "Technical Report"
   | "Thesis"
+  | "WIP"
   | "Workshop";
 
 export type Publication = {

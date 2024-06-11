@@ -1,8 +1,9 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
-const lightCodeTheme = require("prism-react-renderer/themes/github");
-const darkCodeTheme = require("prism-react-renderer/themes/dracula");
+const { themes } = require("prism-react-renderer");
+const lightTheme = themes.github;
+const darkTheme = themes.dracula;
 
 const GNOSIS_SHORT = "GRC";
 const GNOSIS_TITLE = "Gnosis Research Center";
@@ -139,20 +140,30 @@ const config = {
                 label: "Patents",
               },
               {
-                to: "/research/resources",
-                label: "Resources",
+                to: "/resources/hardware-overview",
+                label: "Hardware Overview",
               },
             ],
+          },
+          {
+            to: "/news",
+            label: "News",
+            position: "left",
           },
           {
             to: "/publications",
             label: "Publications",
             position: "left",
           },
+          {
+            to: "/jobs",
+            label: "Jobs",
+            position: "left",
+          },
           // {
           //   to: "/blog",
           //   label: "Blog",
-          //   position: "left",
+          //   position: "right",
           // },
           {
             type: "docSidebar",
@@ -200,10 +211,10 @@ const config = {
                 label: "ChronoLog",
                 to: "/research/projects/chronolog",
               },
-	      {
-		label: "Labios",
-		to: "/research/projects/labios",
-	      },
+              {
+                label: "Labios",
+                to: "/research/projects/labios",
+              },
               {
                 label: "Coeus",
                 to: "/research/projects/coeus",
@@ -232,6 +243,10 @@ const config = {
               {
                 label: "C++ Introduction",
                 to: "/docs/category/c-introduction",
+              },
+              {
+                to: "/docs/category/ares-research-cluster",
+                label: "Ares User Guide",
               },
             ],
           },
@@ -268,8 +283,8 @@ const config = {
         copyright: `Copyright © ${new Date().getFullYear()} ${GNOSIS_TITLE} (${GNOSIS_SHORT}).`,
       },
       prism: {
-        theme: lightCodeTheme,
-        darkTheme: darkCodeTheme,
+        theme: lightTheme,
+        darkTheme: darkTheme,
       },
     }),
 };

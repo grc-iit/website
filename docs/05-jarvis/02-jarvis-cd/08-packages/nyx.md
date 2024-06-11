@@ -1,5 +1,9 @@
 # Nyx
 
+https://amrex-astro.github.io/Nyx/
+
+Nyx code solves equations of compressible hydrodynamics on an adaptive grid hierarchy coupled with an N-body treatment of dark matter. The gas dynamics in Nyx uses a finite volume methodology on a set of 3-D Eulerian grids; dark matter is represented as discrete particles moving under the influence of gravity. Particles are evolved via a particle-mesh method, using Cloud-in-Cell deposition/interpolation scheme. Both baryonic and dark matter contribute to the gravitational field. In addition, Nyx includes physics needed to accurately model the intergalactic medium: in optically thin limit and assuming ionization equilibrium, the code calculates heating and cooling processes of the primordial-composition gas in an ionizing ultraviolet background radiation field. Additional physics capabilities are under development
+
 ## Installation
 
 1. Dependencies: MPI and "parallel hdf5"

@@ -1,8 +1,16 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { MemberLinkType } from "@site/src/types";
-import { faEnvelope, faGlobe, faGraduationCap } from "@fortawesome/free-solid-svg-icons";
-import { faGithub, faLinkedin, faTwitter } from "@fortawesome/free-brands-svg-icons";
+import {
+  faEnvelope,
+  faGlobe,
+  faGraduationCap,
+} from "@fortawesome/free-solid-svg-icons";
+import {
+  faGithub,
+  faLinkedin,
+  faTwitter,
+} from "@fortawesome/free-brands-svg-icons";
 import { useCallback } from "react";
 
 export default function useMemberLinksRenderer() {
@@ -34,7 +42,12 @@ export default function useMemberLinksRenderer() {
           icon = null;
       }
       return (
-        <a key={href} className="padding-horiz--sm" href={href}>
+        <a
+          key={href}
+          className="padding-horiz--sm"
+          href={href}
+          target={linkType === "email" ? "_self" : "_blank"}
+        >
           {icon ? <FontAwesomeIcon icon={icon} /> : link[0]}
         </a>
       );

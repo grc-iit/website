@@ -1,0 +1,104 @@
+---
+title: "StoreHub"
+---
+
+import ProjectBadges from "@site/src/components/projects/ProjectBadges";
+
+:::info
+
+**Hold the Dates: August 5-7, 2024, Illinois Tech Main Campus, MTCC** <br/>
+We are pleased to announce that the StoreHub community workshop will be co-located with the HDF Group's [2024 HDF5 User Group Meeting (HUG)](https://hdfgroup.org/hug/hug24) at Illinois Tech's main campus.
+This is an excellent opportunity to engage with both events and expand your network within the data storage and I/O research community.
+
+:::
+
+# StoreHub
+
+<ProjectBadges projectId="storehub" />
+
+StoreHub is a collaborative platform designed to advance data storage research by providing a specialized infrastructure that meets the unique needs of researchers.
+It brings together experts handling large amounts of data, focusing on I/O performance, and developing innovative storage solutions, making it a vital resource for the community.
+
+## Project Motivation
+
+Large-scale applications in scientific, Big Data, and AI communities present unique data storage requirements that existing solutions struggle to address.
+Modern storage systems are rapidly evolving, leading to heterogeneous storage resources where data movement becomes complex and performance-dominant.
+
+- Infrastructure isolation is essential for capturing subsystem impacts.
+- Customized and flexible hardware compositions are needed to emulate various machine models.
+- Hardware heterogeneity is vital for assessing research impacts across diverse hardware designs.
+- Programmable hardware is transforming modern software solutions.
+
+## Project Summary
+
+Our goal is to establish, nurture, and sustain a vibrant research community centered on data storage research.
+We intend to support this community with StoreHub, an adaptable infrastructure equipped with experimental hardware and cutting-edge software.
+Our objectives include:
+
+- Flexible storage hardware composition
+- Ease of use and deployment
+- Responsive support system
+- Training opportunities
+
+## Project Significance
+
+The significance of StoreHub is three-fold:
+
+- CISE researchers gain access to premier infrastructure for data storage research.
+- Uniting CISE researchers into a research community to collectively address the I/O bottleneck.
+- Early access to prototype devices from vendors, enhancing creativity and output.
+
+## Envisioned Research Infrastructure
+
+### Hardware Composition
+
+- Node Composition: A significant number of nodes prioritizing storage capabilities over CPU density.
+- Storage Mediums: PMEM, NVMe SSD, SATA SSD, HDDs in RAID configurations.
+- Hardware Diversity: Mix of CPUs and GPUs with various technologies.
+- Networking: Fast Ethernet and Infiniband network interconnections.
+- Modern Protocols: Support for DDR5, PCIe 5.0, NVMe-oF, and innovative research with concept devices.
+
+### User Services
+
+- Software Management: Flexible package management.
+- Resource Management: Cluster resource manager for isolation and programmable devices support.
+- Debugging and Telemetry: Comprehensive tools for capturing code efficiency and hardware utilization.
+- Storage Flexibility: Ability to mount/unmount storage devices based on user requirements.
+
+### Research Areas Enabled
+
+- Advanced Data Buffering
+- Real-time Data Streaming
+- I/O Convergence
+- Storage Stack Development
+- Tuning I/O for Deep Learning
+- Storage Configuration and Resource Provisioning
+- I/O Characterization and Instrumentation
+
+## Institutions
+
+<p style={{ display: "flex", marginBottom: 0 }}>
+  <a
+    href="https://www.iit.edu/"
+    style={{ display: "flex", flexDirection: "column", justifyContent: "center" }}
+  >
+    <img
+      src={require("@site/static/img/affiliations/iit.png").default}
+      style={{ marginRight: "1em", objectFit: "contain", width: 150 }}
+    />
+  </a>
+  <a href="https://www.osu.edu/">
+    <img
+      src={require("@site/static/img/affiliations/osu.png").default}
+      style={{ objectFit: "contain", width: 150 }}
+    />
+  </a>
+</p>{" "}
+
+## Sponsor
+
+Thanks to the National Science Foundation (NSF) for supporting StoreHub under award CIRC-2346504.
+
+<p>
+  <img src={require("@site/static/img/affiliations/nsf.png").default} width="100" />
+</p>

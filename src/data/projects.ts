@@ -64,9 +64,11 @@ const projects: Project[] = [
     shortDescription:
       "HPC and Big Data environments have diverged over the years, resulting in diverging and even conflicting I/O requirements. Labios aims to address the challenges vital to HPC + Big Data Convergence",
     link: "/research/projects/labios",
-    isFeatured: true,
+    isFeatured: false,
     isOurs: true,
     researchStatus: "r&d",
+    status: "active",
+    type: "funded",
   },
   {
     id: "dtio",
@@ -75,7 +77,7 @@ const projects: Project[] = [
     shortDescription:
       "In partnership with Argonne National Laboratory, DTIO investigates the use of a task framework for unifying complex I/O stacks and providing features such as resilience, fault-tolerance, and task replay.",
     link: "/research/projects/dtio",
-    isFeatured: true,
+    isFeatured: false,
     isOurs: true,
     researchStatus: "testing",
     status: "active",
@@ -84,8 +86,7 @@ const projects: Project[] = [
   {
     id: "viper",
     name: "Viper",
-    title:
-      "Viper: A High-Performance I/O Framework for Transferring Deep Neural Network Models",
+    title: "Viper: A High-Performance I/O Framework for Transferring Deep Neural Network Models",
     shortDescription:
       "Within a DL workflow, exchanging DNN models through PFS may result in  high model update latency and discovery latency. Moreover, model update frequency affects both training and inference performance. Viper is an I/O framework aiming to accelerate model discovery and delivery, and to find an optimal model checkpoint schedule to balance the trade-off.",
     link: "/research/projects/viper",
@@ -95,12 +96,11 @@ const projects: Project[] = [
     researchStatus: "r&d",
     status: "active",
     type: "funded",
-  }, 
+  },
   {
     id: "dayu",
     name: "DaYu",
-    title:
-      "DaYu: Optimizing Workflow Performance by Elucidating Semantic Data Flow",
+    title: "DaYu: Optimizing Workflow Performance by Elucidating Semantic Data Flow",
     shortDescription:
       "Nowadays, distributed scientific workflows encounter challenges in data movement through storage systems. DaYu, by capturing the mapping of data objects to I/O operations, can uncover new insights for optimizing workflow data movement.",
     link: "/research/projects/dayu",
@@ -108,6 +108,35 @@ const projects: Project[] = [
     isOpenSource: true,
     isOurs: true,
     researchStatus: "testing",
+    status: "active",
+    type: "funded",
+  },
+  {
+    id: "wisio",
+    name: "WisIO",
+    title:
+      "WisIO: Automated I/O Bottleneck Detection via Multi-Perspective Views for HPC Workloads",
+    shortDescription:
+      "Explore WisIO, an automated I/O bottleneck detection tool with multi-perspective views for I/O trace data analysis. Overcoming large-scale I/O challenges, WisIO utilizes distributed computing and an extensible rule engine for tailored solutions. Elevate your I/O analysis in HPC environments with WisIO.",
+    link: "/research/projects/wisio",
+    isFeatured: false,
+    isOpenSource: false,
+    isOurs: true,
+    researchStatus: "r&d",
+    status: "active",
+    type: "student",
+  },
+  {
+    id: "storehub",
+    name: "StoreHub",
+    title: "StoreHub",
+    shortDescription:
+      "StoreHub is a collaborative platform designed to advance data storage research by providing a specialized infrastructure that meets the unique needs of researchers. It brings together experts handling large amounts of data, focusing on I/O performance, and developing innovative storage solutions, making it a vital resource for the community.",
+    link: "/research/projects/storehub",
+    isFeatured: false,
+    isOpenSource: false,
+    isOurs: true,
+    researchStatus: "r&d",
     status: "active",
     type: "funded",
   },
