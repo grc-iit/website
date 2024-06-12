@@ -44,13 +44,8 @@ const publications: Publication[] = [
     type: "Conference",
     date: "Aug, 2024",
     tags: [
-      "Active Storage",
-      "Hierarchical Storage",
-      "Context Awareness",
-      "Metadata Management",
-      "Data Operator",
-      "In-Transit Computing",
-      "Coeus",
+      "DNN model transferring",
+      "Inference serving",
     ],
     links: {
     },
