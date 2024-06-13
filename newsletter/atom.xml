@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://grc.iit.edu/newsletter</id>
+    <title>Gnosis Research Center Blog</title>
+    <updated>2023-10-25T00:00:00.000Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://grc.iit.edu/newsletter"/>
+    <subtitle>Gnosis Research Center Blog</subtitle>
+    <icon>https://grc.iit.edu/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[Introducing the Gnosis Research Center]]></title>
+        <id>https://grc.iit.edu/newsletter/2023/10/25/introducing-grc</id>
+        <link href="https://grc.iit.edu/newsletter/2023/10/25/introducing-grc"/>
+        <updated>2023-10-25T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Introducing the Gnosis Research Center]]></summary>
+        <content type="html"><![CDATA[<p>Introducing the Gnosis Research Center</p>]]></content>
+        <author>
+            <name>Gnosis Research Center</name>
+            <uri>https://grc.iit.edu</uri>
+        </author>
+    </entry>
+</feed>

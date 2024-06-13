@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkgrc=self.webpackChunkgrc||[]).push([[2335],{8086:e=>{e.exports=JSON.parse('{"permalink":"/newsletter","page":1,"postsPerPage":10,"totalPages":1,"totalCount":1,"blogDescription":"Blog","blogTitle":"Blog"}')}}]);
