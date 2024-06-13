@@ -2,6 +2,44 @@ import { ProjectId, Publication, PublicationTag } from "../types";
 
 const publications: Publication[] = [
   {
+    authors: ["J. Cernuda", "J. Ye", "A. Kougkas", "X.-H. Sun"],
+    title:
+      "HStream: A hierarchical data streaming engine for high-throughput scientific applications",
+    venue:
+      "The 53th International Conference on Parallel Processing (ICPP 2024)",
+    type: "Conference",
+    date: "Aug, 2024",
+    tags: [
+      "Data Streaming",
+      "HPC",
+      "Hierarchical Storage",
+      "Elastic System",
+      "In-Transit Computing",
+    ],
+    links: {},
+  },
+  {
+    authors: [
+      "J. Ye",
+      "J. Cernuda",
+      "O. Yildiz",
+      "T. Peterka",
+      "A. Nigmetov",
+      "D. Morozov",
+      "A. Kougkas",
+      "X.-H. Sun",
+      "B. Nicolae",
+    ],
+    title:
+      "Viper: A High-Performance I/O Framework for Transparently Updating, Storing, and Transferring Deep Neural Network Models",
+    venue:
+      "The 53th International Conference on Parallel Processing (ICPP 2024)",
+    type: "Conference",
+    date: "Aug, 2024",
+    tags: ["DNN Model Transferring", "Inference Serving"],
+    links: {},
+  },
+  {
     authors: [
       "J. Cernuda",
       "L. Logan",

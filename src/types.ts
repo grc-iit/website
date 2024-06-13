@@ -17,7 +17,13 @@ export type Job = {
   // type: "full-time" | "part-time" | "internship";
 };
 
-export type MemberLinkType = "website" | "email" | "github" | "linkedin" | "twitter" | "scholar";
+export type MemberLinkType =
+  | "website"
+  | "email"
+  | "github"
+  | "linkedin"
+  | "twitter"
+  | "scholar";
 
 export type Member = {
   affiliation?: string;
@@ -70,6 +76,7 @@ export type PublicationAuthor =
   | "A. Haider"
   | "A. Kougkas"
   | "A. Kravtsov"
+  | "A. Nigmetov"
   | "A. R. Blatecky"
   | "A. Torres"
   | "A. Y. Zomaya"
@@ -78,6 +85,7 @@ export type PublicationAuthor =
   | "B. Alunkal"
   | "B. Feng"
   | "B. Long"
+  | "B. Nicolae"
   | "B. Scholz"
   | "B. Toonen"
   | "B. Wang"
@@ -104,6 +112,7 @@ export type PublicationAuthor =
   | "D. Khettry"
   | "D. Kimpe"
   | "D. Li"
+  | "D. Morozov"
   | "D. Ren"
   | "D. Rover"
   | "D. Rudd"
@@ -214,6 +223,7 @@ export type PublicationAuthor =
   | "N. Sun"
   | "N. Tallent"
   | "N. Zhang"
+  | "O. Yildiz"
   | "P. C. Roth"
   | "P. Challa"
   | "P. Chen"
@@ -273,6 +283,7 @@ export type PublicationAuthor =
   | "T. Kasampalis"
   | "T. Ke"
   | "T. Matsui"
+  | "T. Peterka"
   | "T. Y. Li"
   | "V. K. Gurbani"
   | "V. K. Naik"
@@ -369,6 +380,7 @@ export type PublicationTag =
   | "Context Awareness"
   | "Coeus"
   | "DNN"
+  | "DNN Model Transferring"
   | "DRAM"
   | "Darshan"
   | "Data Access Pattern"
@@ -386,6 +398,7 @@ export type PublicationTag =
   | "Data Reorganization"
   | "Data Replication"
   | "Data Scoring"
+  | "Data Streaming"
   | "Data-Aware"
   | "Data-Centric"
   | "Data-Centric Architecture"
@@ -407,6 +420,7 @@ export type PublicationTag =
   | "Dynamic Programming"
   | "Efficiency"
   | "Elastic Storage"
+  | "Elastic System"
   | "Emerging Architectures"
   | "Emerging Technologies"
   | "Energy-Aware I/O"
@@ -445,6 +459,7 @@ export type PublicationTag =
   | "I/O Optimization"
   | "I/O Stack Tuning"
   | "In-Transit Computing"
+  | "Inference Serving"
   | "Integrated Workflow"
   | "Intelligent Selection"
   | "KVS"
