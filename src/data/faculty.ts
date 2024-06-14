@@ -17,7 +17,7 @@ export default [
     title: "Research Assistant Professor",
     email: "akougkas@iit.edu",
     website: "",
-    bio: "Dr. Anthony Kougkas is a Research Assistant Professor and the Deputy Director of the Gnosis Research Center, Illinois Institute of Technology. Holding a Ph.D. in Computer Science from the same institution, Anthony has dedicated his academic journey to addressing the challenges of I/O in modern supercomputers. With over nine years of leadership experience as a military officer, Anthony seamlessly transitioned to academia, where he now mentors and supervises graduate students, envisioning research directions and managing research grants. His current research focuses on optimizing I/O operations, enhancing storage infrastructures, and creating intelligent systems that adapt to the unique demands of HPC environments.",
+    bio: "Dr. Anthony Kougkas is the Associate Director of the Gnosis Research Center at the Illinois Institute of Technology. With a Ph.D. in Computer Science, he is committed to solving data management and I/O challenges in extreme-scale distributed applications. His research has led to advancements in multi-tiered storage systems, data prefetching, replication, compression, and in-transit/in-situ techniques, resulting in performance improvements for HPC, Cloud, and AI workloads.",
     image: require("@site/static/img/faculty/kougkas.jpg").default,
     links: {
       email: "akougkas@iit.edu",
