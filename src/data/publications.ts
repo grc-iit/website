@@ -2,6 +2,23 @@ import { ProjectId, Publication, PublicationTag } from "../types";
 
 const publications: Publication[] = [
   {
+    authors: ["L. Logan", "X.-H. Sun", "A. Kougkas"],
+    title:
+      "MegaMmap: Blurring the Boundary Between Memory and Storage for Data-Intensive Workloads",
+    venue:
+      "The International Conference for High Performance Computing, Networking, Storage, and Analysis (SC'24)	",
+    type: "Conference",
+    date: "November, 2024",
+    tags: [
+      "Memory",
+      "Storage",
+      "Hierarchical Storage",
+      "HPC",
+      "Operating Systems",
+    ],
+    links: {},
+  },
+  {
     authors: ["J. Cernuda", "J. Ye", "A. Kougkas", "X.-H. Sun"],
     title:
       "HStream: A hierarchical data streaming engine for high-throughput scientific applications",
