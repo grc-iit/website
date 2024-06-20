@@ -19,6 +19,28 @@ const publications: Publication[] = [
     links: {},
   },
   {
+    authors: [
+      "Z. Pan",
+      "S. He",
+      "X. Li",
+      "X. Zhang",
+      "Y. Yin",
+      "R. Wang",
+      "L. Shou",
+      "M. Song",
+      "X.-H. Sun",
+      "G. Chen",
+    ],
+    title:
+      "Enumeration of Billions of Maximal Bicliques in Bipartite Graphs without Using GPUs",
+    venue:
+      "The International Conference for High Performance Computing, Networking, Storage, and Analysis (SC'24)	",
+    type: "Conference",
+    date: "November, 2024",
+    tags: [],
+    links: {},
+  },
+  {
     authors: ["J. Cernuda", "J. Ye", "A. Kougkas", "X.-H. Sun"],
     title:
       "HStream: A hierarchical data streaming engine for high-throughput scientific applications",
