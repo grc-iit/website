@@ -286,6 +286,7 @@ export type PublicationAuthor =
   | "T. Ke"
   | "T. Matsui"
   | "T. Peterka"
+  | "T. Wu"
   | "T. Y. Li"
   | "V. K. Gurbani"
   | "V. K. Naik"

@@ -41,13 +41,33 @@ const publications: Publication[] = [
     links: {},
   },
   {
+    authors: [
+      "T. Wu",
+      "S. He",
+      "J. Zhu",
+      "W. Chen",
+      "S. Yang",
+      "P. Chen",
+      "Y. Yin",
+      "X. Zhang",
+      "X.-H. Sun",
+      "G. Chen",
+    ],
+    title:
+      "AUTOHET: An Automated Heterogeneous ReRAM-Based Accelerator for DNN Inference",
+    venue: "The 53th International Conference on Parallel Processing (ICPP'24)",
+    type: "Conference",
+    date: "August, 2024",
+    tags: [],
+    links: {},
+  },
+  {
     authors: ["J. Cernuda", "J. Ye", "A. Kougkas", "X.-H. Sun"],
     title:
       "HStream: A hierarchical data streaming engine for high-throughput scientific applications",
-    venue:
-      "The 53th International Conference on Parallel Processing (ICPP 2024)",
+    venue: "The 53th International Conference on Parallel Processing (ICPP'24)",
     type: "Conference",
-    date: "Aug, 2024",
+    date: "August, 2024",
     tags: [
       "Data Streaming",
       "HPC",
@@ -71,10 +91,9 @@ const publications: Publication[] = [
     ],
     title:
       "Viper: A High-Performance I/O Framework for Transparently Updating, Storing, and Transferring Deep Neural Network Models",
-    venue:
-      "The 53th International Conference on Parallel Processing (ICPP 2024)",
+    venue: "The 53th International Conference on Parallel Processing (ICPP'24)",
     type: "Conference",
-    date: "Aug, 2024",
+    date: "August, 2024",
     tags: ["DNN Model Transferring", "Inference Serving"],
     links: {},
   },
