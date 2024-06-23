@@ -51,7 +51,7 @@ export default [
     type: "engineer",
   },
   {
-    name: "Eneko Gonzalez",
+    name: "Mr. Eneko Gonzalez",
     title: "Research Software Engineer",
     advisor: "Dr. Xian-He Sun",
     image: require("@site/static/img/members/gonzalez.jpg").default,
@@ -82,18 +82,18 @@ export default [
     type: "researcher",
   },
   {
-    name: "Xiaoyang Lu",
-    title: "PhD Candidate",
+    name: "Dr. Xiaoyang Lu",
+    title: "Research Assistant Professor",
     advisor: "Dr. Xian-He Sun",
-    image: require("@site/static/img/members/lu.jpg").default,
+    image: require("@site/static/img/members/lu.png").default,
     links: {
-      email: "bli70@hawk.iit.edu",
+      email: "xlu40@iit.edu",
+      linkedin: "https://www.linkedin.com/in/xiaoyang-lu-698943137/",
+      scholar: "https://scholar.google.com/citations?user=54-lMHUAAAAJ&hl=en",
+      website: "https://xiaoyang-lu.github.io/",
     },
-    researchInterests: [
-      "Memory Performance Modeling",
-      "Memory Performance Optimization",
-    ],
-    type: "researcher",
+    researchInterests: [],
+    type: "engineer",
   },
   {
     name: "Neeraj Rajesh",
