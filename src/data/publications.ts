@@ -2,6 +2,29 @@ import { ProjectId, Publication, PublicationTag } from "../types";
 
 const publications: Publication[] = [
   {
+    authors: [
+      "H. Devarajan",
+      "L. Pottier",
+      "K. Velusamy",
+      "H. Zheng",
+      "I. Yildirim",
+      "O. Kogiou",
+      "W. Yu",
+      "A. Kougkas",
+      "X.-H. Sun",
+      "J.-S. Yeom",
+      "K. Mohror",
+    ],
+    title:
+      "DFTracer: An Analysis-Friendly Data Flow Tracer for AI-Driven Workflows",
+    venue:
+      "The International Conference for High Performance Computing, Networking, Storage, and Analysis (SC'24)	",
+    type: "Conference",
+    date: "November, 2024",
+    tags: ["Deep Learning", "Workflows", "I/O Tracing"],
+    links: {},
+  },
+  {
     authors: ["L. Logan", "X.-H. Sun", "A. Kougkas"],
     title:
       "MegaMmap: Blurring the Boundary Between Memory and Storage for Data-Intensive Workloads",

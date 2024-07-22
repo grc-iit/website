@@ -174,6 +174,7 @@ export type PublicationAuthor =
   | "J. Ye"
   | "J. Zhou"
   | "J. Zhu"
+  | "J.-S. Yeom"
   | "K. Bateman"
   | "K. Cameron"
   | "K. Chanchio"
@@ -182,6 +183,7 @@ export type PublicationAuthor =
   | "K. Li"
   | "K. Mohror"
   | "K. Qiao"
+  | "K. Velusamy"
   | "K. Wang"
   | "K. Xiao"
   | "K. Zhang"
@@ -191,6 +193,7 @@ export type PublicationAuthor =
   | "L. Logan"
   | "L. Ni"
   | "L. Piccoli"
+  | "L. Pottier"
   | "L. Schneidenbach"
   | "L. Shen"
   | "L. Shou"
@@ -225,6 +228,7 @@ export type PublicationAuthor =
   | "N. Sun"
   | "N. Tallent"
   | "N. Zhang"
+  | "O. Kogiou"
   | "O. Yildiz"
   | "P. C. Roth"
   | "P. Challa"
@@ -460,6 +464,7 @@ export type PublicationTag =
   | "I/O Metrics"
   | "I/O Optimization"
   | "I/O Stack Tuning"
+  | "I/O Tracing"
   | "In-Transit Computing"
   | "Inference Serving"
   | "Integrated Workflow"
@@ -542,7 +547,8 @@ export type PublicationTag =
   | "Virtualization"
   | "WisIO"
   | "Workflow Priorities"
-  | "Workflow-Aware";
+  | "Workflow-Aware"
+  | "Workflows";
 
 export type PublicationType =
   | "Conference"
