@@ -29,7 +29,7 @@ const publications: Publication[] = [
     title:
       "MegaMmap: Blurring the Boundary Between Memory and Storage for Data-Intensive Workloads",
     venue:
-      "The International Conference for High Performance Computing, Networking, Storage, and Analysis (SC'24)	",
+      "The International Conference for High Performance Computing, Networking, Storage, and Analysis (SC'24)",
     type: "Conference",
     date: "November, 2024",
     tags: [
@@ -57,10 +57,29 @@ const publications: Publication[] = [
     title:
       "Enumeration of Billions of Maximal Bicliques in Bipartite Graphs without Using GPUs",
     venue:
-      "The International Conference for High Performance Computing, Networking, Storage, and Analysis (SC'24)	",
+      "The International Conference for High Performance Computing, Networking, Storage, and Analysis (SC'24)",
     type: "Conference",
     date: "November, 2024",
     tags: [],
+    links: {},
+  },
+  {
+    authors: [
+      "L. Yan",
+      "X. Lu",
+      "X. Chen",
+      "S. Xu",
+      "X. Zou",
+      "Y. Han",
+      "X.-H. Sun",
+    ],
+    title:
+      "AceMiner: Accelerating Graph Pattern Matching using PIM with Optimized Cache System",
+    venue:
+      "The 2024 IEEE 42nd International Conference on Computer Design (ICCD'24)",
+    type: "Conference",
+    date: "November, 2024",
+    tags: ["Graph Pattern Matching", "Processing-in-Memory", "Cache System"],
     links: {},
   },
   {
