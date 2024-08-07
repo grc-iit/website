@@ -21,11 +21,6 @@ jarvis hostfile set [path-to-hostfile.txt]
 
 This hostfile is used by all jarvis deployments.
 
-NOTE: If changes to the hostfile are made, re-run the above command.
-This is because jarvis needs to reconfigure all pipelines to adjust
-to the changes in the hostfile. Systems, such as OrangeFS, require
-the exact set of hosts in order to be deployed properly.
-
 ## Build Resource Graph
 
 NOTE: This step is not needed for machines which have pre-configured
@@ -39,7 +34,7 @@ provided by your machine, they are loaded.
 To begin polling the system, run:
 
 ```bash
-jarvis resource-graph build +walkthrough
+jarvis rg build +walkthrough
 ```
 
 This information will be stored under `${JARVIS_ROOT}/config/resource_graph.yaml`. The command uses SSH to connect to all pkgs. It will use the hostfile from the previous command and scan those pkgs.
@@ -54,13 +49,41 @@ jarvis pipeline create ior_test
 
 After creating a pipeline, jarvis will focus on that pipeline.
 
+## Updating a pipline
+
+The very vast majority of problems encountered in Jarvis are because
+a pipeline did not get updated. One common mistake is that a hostfile
+changes, but the pipeline doesn't get updated. Pipelines initially
+build configuration files to each specific program in the pipeline.
+For example, a storage system would need to know the changed hosts
+and then rebuild its configuration based on those new systems.
+
+To update a pipeline, run:
+```bash
+jarvis ppl update
+```
+
 ## Build Environment
 
 Next, we must make jarvis aware of all environment variables needed
-to execute applications in the pipeline.
+to execute applications in the pipeline. Jarvis automatically
+captures most relevant variables, including PATH, LD_LIBRARY_PATH,
+etc. This allows Jarvis to forward environment variables through SSH.
 
 ```bash
-jarvis pipeline env build
+jarvis ppl env build
+```
+
+Alternatively, if you have an environment you would like to use
+across pipelines, you can create a named environment as follows:
+
+```bash
+jarvis env build my_env_name
+```
+
+This named environment can then be copied to a pipeline as follows:
+```bash
+jarvis ppl env copy my_env_name
 ```
 
 NOTE: this is machine-dependent. You would have to have these modules
@@ -74,7 +97,7 @@ Jarvis has specific "Interceptor" pkgs for handling LD_PRELOAD.
 To add pkgs to the pipeline:
 
 ```bash
-jarvis pipeline append ior api=posix xfer=4k block=1m out=/tmp/ior.bin
+jarvis ppl append ior api=posix xfer=4k block=1m out=/tmp/ior.bin
 ```
 
 ## Start a pipeline
@@ -82,7 +105,7 @@ jarvis pipeline append ior api=posix xfer=4k block=1m out=/tmp/ior.bin
 To start the service for the configured pipeline, do:
 
 ```bash
-jarvis pipeline run
+jarvis ppl run
 ```
 
 ## Get the status of the pipeline
@@ -90,7 +113,7 @@ jarvis pipeline run
 To check whether the pipeline is functioning, do:
 
 ```bash
-jarvis pipeline status
+jarvis ppl status
 ```
 
 NOTE: This command is not always implemented
@@ -101,7 +124,7 @@ Pipelines can create a bunch of data. For example, OrangeFS may contain
 data leftover from a benchmark. To destroy this data, run:
 
 ```bash
-jarvis pipeline clean
+jarvis ppl clean
 ```
 
 ## Re-configuring a `pkg`
@@ -110,7 +133,7 @@ There may be cases where you need to reconfigure a pkg in the pipeline.
 To do this, run configure:
 
 ```bash
-jarvis pkg configure ior api=mpiio
+jarvis pkg conf ior api=mpiio
 ```
 
 ## Unlinking and removing `pkg`s
@@ -135,12 +158,15 @@ use jarvis cd
 jarvis cd [pipeline_name]
 ```
 
+NOTE: Jarvis stores the current pipeline in a file. Only one
+pipeline can be active at a time for a user.
+
 ## Destroying a pipeline
 
 To destroy a pipeline, its pkgs, and all metadata associated with it:
 
 ```bash
-jarvis pipeline destroy [pipeline_name (opt)]
+jarvis ppl destroy [pipeline_name (opt)]
 ```
 
 If no pipeline_name is provided, the current pipeline will be destroyed.
@@ -150,29 +176,39 @@ If no pipeline_name is provided, the current pipeline will be destroyed.
 To list all existing pipelines, run:
 
 ```bash
-jarvis pipeline list
+jarvis ppl list
 ```
 
 ## Viewing the pkgs in a Pipeline
 
 ```bash
-jarvis pipeline print
+jarvis ppl print
 ```
 
 ## Viewing the contents of a Pipeline
 
 This will print the contents of the pipeline's root directory.
 
+To view the CONFIG_DIR of the pipeline:
 ```bash
-ls `jarvis path`
+ls $(jarvis path)
 ```
 
-## Viewing the contents of a Package
-
-This will view the contents of the hermes package in the current pipeline.
-
+To view the PRIVATE_DIR of the pipeline:
 ```bash
-ls `jarvis path`/hermes
+ls $(jarvis path +private)
+```
+
+To view the SHARED_DIR of the pipeline:
+```bash
+ls $(jarvis path +shared)
+```
+
+## Clear a pipeline
+
+The following will remove all pkgs from a pipeline:
+```bash
+jarvis ppl reset
 ```
 
 ## Resetting Jarvis
