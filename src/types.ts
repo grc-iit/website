@@ -332,6 +332,7 @@ export type PublicationAuthor =
   | "Y. Chen"
   | "Y. Cheng"
   | "Y. Fan"
+  | "Y. Gao"
   | "Y. Han"
   | "Y. Li"
   | "Y. Liu"

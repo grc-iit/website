@@ -3,6 +3,25 @@ import { ProjectId, Publication, PublicationTag } from "../types";
 const publications: Publication[] = [
   {
     authors: [
+      "Z. Pan",
+      "X. Li",
+      "S. He",
+      "X. Zhang",
+      "R. Wang",
+      "Y. Gao",
+      "G. Chen",
+      "X.-H. Sun",
+    ],
+    title:
+      "AMBEA: Aggressive Maximal Biclique Enumeration in Large Bipartite Graph Computing",
+    venue: "IEEE Transactions on Computers",
+    type: "Journal",
+    date: "TBA",
+    tags: [],
+    links: {},
+  },
+  {
+    authors: [
       "H. Devarajan",
       "L. Pottier",
       "K. Velusamy",
