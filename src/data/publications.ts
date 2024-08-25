@@ -159,6 +159,28 @@ const publications: Publication[] = [
     links: {},
   },
   {
+    authors: ["L. Logan", "J. Lofstead", "A. Kougkas", "X.-H. Sun"],
+    title:
+      "An Evaluation of DAOS for Simulation and Deep Learning HPC Workloads",
+    venue:
+      "SIGOPS Operating Systems Review (OSR'24)",
+    type: "Journal",
+    date: "June, 2024",
+    tags: [
+      "Distributed Computing",
+      "Distributed Storage",
+      "Flash Memory",
+      "Machine Learning",
+      "Parallel Computing",
+      "Phase Change Memory",
+    ],
+    links: {
+      pdf: "http://cs.iit.edu/~scs/assets/files/logan2023daos.pdf"
+      // bibtex: "http://cs.iit.edu/~scs/assets/files/logan2024daos.bib",
+      // citation: "http://cs.iit.edu/~scs/assets/files/logan2024daos.txt",
+    },
+  },
+  {
     authors: [
       "J. Cernuda",
       "L. Logan",
