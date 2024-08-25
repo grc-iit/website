@@ -1,4 +1,4 @@
-# Getting Standard
+# Getting Started
 
 In this section, we will discuss the jarvis command line interface.
 We will discuss the basic steps of how to create a deployment
