@@ -103,6 +103,30 @@ const publications: Publication[] = [
   },
   {
     authors: [
+      "Z. Dang",
+      "S. He",
+      "X. Zhang",
+      "P. Hong",
+      "Z. Li",
+      "X. Chen",
+      "H. Song",
+      "X.-H. Sun",
+      "G. Chen",
+    ],
+    title:
+      "PMAlloc: A Holistic Approach to Improving Persistent Memory Allocation",
+    venue: "ACM Transactions on Computer Systems (TOCS'24)",
+    type: "Journal",
+    date: "September, 2024",
+    tags: ["Persistent Memory", "Memory Management"],
+    links: {
+      pdf: "http://cs.iit.edu/~scs/assets/files/dang2024pmalloc.pdf",
+      bibtex: "http://cs.iit.edu/~scs/assets/files/dang2024pmalloc.bib",
+      citation: "http://cs.iit.edu/~scs/assets/files/dang2024pmalloc.txt",
+    },
+  },
+  {
+    authors: [
       "T. Wu",
       "S. He",
       "J. Zhu",
@@ -157,6 +181,29 @@ const publications: Publication[] = [
     date: "August, 2024",
     tags: ["DNN Model Transferring", "Inference Serving"],
     links: {},
+  },
+  {
+    authors: [
+      "M. Zou",
+      "M. Zhang",
+      "R. Wang",
+      "X.-H. Sun",
+      "X. Ye",
+      "D. Fan",
+      "Z. Tang",
+    ],
+    title:
+      "Skyway: Accelerate Graph Applications with a Dual-Path Architecture and Fine-Grained Data Management",
+    venue: "Journal of Computer Science and Technology (Volume 39)",
+    type: "Journal",
+    date: "July, 2024",
+    tags: ["Graph Applications", "Computer Architecture", "Memory Hierarchy"],
+    links: {
+      pdf: "http://cs.iit.edu/~scs/assets/files/zou2024skyway.pdf",
+      slides: "http://cs.iit.edu/~scs/assets/files/zou2023skyway_slides.pdf",
+      bibtex: "http://cs.iit.edu/~scs/assets/files/zou2023skyway.bib",
+      citation: "http://cs.iit.edu/~scs/assets/files/zou2023skyway.txt",
+    },
   },
   {
     authors: ["L. Logan", "J. Lofstead", "A. Kougkas", "X.-H. Sun"],
@@ -272,26 +319,6 @@ const publications: Publication[] = [
   },
   {
     authors: [
-      "Z. Dang",
-      "S. He",
-      "X. Zhang",
-      "P. Hong",
-      "Z. Li",
-      "X. Chen",
-      "H. Song",
-      "X.-H. Sun",
-      "G. Chen",
-    ],
-    title:
-      "PMAlloc: A Holistic Approach to Improving Persistent Memory Allocation",
-    venue: "ACM Transactions on Computer Systems (TOCS'24)",
-    type: "Journal",
-    date: "January, 2024",
-    tags: ["Persistent Memory", "Memory Management"],
-    links: {},
-  },
-  {
-    authors: [
       "I. Yildirim",
       "H. Devarajan",
       "A. Kougkas",
@@ -356,28 +383,6 @@ const publications: Publication[] = [
       pdf: "http://cs.iit.edu/~scs/assets/files/lee2023data.pdf",
       bibtex: "http://cs.iit.edu/~scs/assets/files/lee2023data.bib",
       citation: "http://cs.iit.edu/~scs/assets/files/lee2023data.txt",
-    },
-  },
-  {
-    authors: [
-      "M. Zou",
-      "M. Zhang",
-      "R. Wang",
-      "X.-H. Sun",
-      "X. Ye",
-      "D. Fan",
-      "Z. Tang",
-    ],
-    title:
-      "Skyway: Accelerate Graph Applications with a Dual-Path Architecture and Fine-Grained Data Management",
-    venue: "Journal of Computer Science and Technology (JCST'23)",
-    type: "Journal",
-    date: "October, 2023",
-    tags: ["Graph Applications", "Computer Architecture", "Memory Hierarchy"],
-    links: {
-      slides: "http://cs.iit.edu/~scs/assets/files/zou2023skyway_slides.pdf",
-      bibtex: "http://cs.iit.edu/~scs/assets/files/zou2023skyway.bib",
-      citation: "http://cs.iit.edu/~scs/assets/files/zou2023skyway.txt",
     },
   },
   {
