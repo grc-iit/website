@@ -160,7 +160,11 @@ const publications: Publication[] = [
       "Elastic System",
       "In-Transit Computing",
     ],
-    links: {},
+    links: {
+      pdf: "http://cs.iit.edu/~scs/assets/files/cernuda2024hstream.pdf",
+      bibtex: "http://cs.iit.edu/~scs/assets/files/cernuda2024hstream.bib",
+      citation: "http://cs.iit.edu/~scs/assets/files/cernuda2024hstream.txt",
+    },
   },
   {
     authors: [
