@@ -225,6 +225,8 @@ const publications: Publication[] = [
     authors: [
       "J. Ye",
       "J. Cernuda",
+      "N. Rajesh",
+      "K. Bateman",
       "O. Yildiz",
       "T. Peterka",
       "A. Nigmetov",
@@ -238,8 +240,18 @@ const publications: Publication[] = [
     venue: "The 53th International Conference on Parallel Processing (ICPP'24)",
     type: "Conference",
     date: "August, 2024",
-    tags: ["DNN Model Transferring", "Inference Serving"],
-    links: {},
+    tags: [
+      "AI Workflows",
+      "Adaptive AI Model Checkpointing",
+      "Coupled Training and Inferences",
+      "Inferences During Partial Training",
+    ],
+    links: {
+      pdf: "http://cs.iit.edu/~scs/assets/files/ye2024viper.pdf",
+      slides: "http://cs.iit.edu/~scs/assets/files/ye2024viper.pptx",
+      bibtex: "http://cs.iit.edu/~scs/assets/files/ye2024viper.bib",
+      citation: "http://cs.iit.edu/~scs/assets/files/ye2024viper.txt",
+    },
   },
   {
     authors: [
