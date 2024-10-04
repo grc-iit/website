@@ -21,7 +21,11 @@ const publications: Publication[] = [
       "Performance Measurement",
       "Modeling", "Tools"
     ],
-    links: {},
+    links: {
+      pdf: "http://cs.iit.edu/~scs/assets/files/tang2024dayu.pdf",
+      bibtex: "http://cs.iit.edu/~scs/assets/files/tang2024dayu.bib",
+      citation: "http://cs.iit.edu/~scs/assets/files/tang2024dayu.txt",
+    },
   },
   {
     authors: [
