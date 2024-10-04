@@ -3,6 +3,25 @@ import { ProjectId, Publication, PublicationTag } from "../types";
 const publications: Publication[] = [
   {
     authors: [
+      "J. Cernuda",
+      "L. Logan",
+      "N. Lewis",
+      "S. Byna",
+      "X.-H. Sun",
+      "A. Kougkas",
+    ],
+    title:
+        "Jarvis: Towards a Shared, User-Friendly, and Reproducible, I/O Infrastructure.",
+    venue: "PDSW'24",
+    type: "Workshop",
+    date: "November, 2024",
+    tags: ["deployment", "HPC", "hardware abstraction", "resource management", "I/O", "Python"],
+    links: {
+      pdf: "http://cs.iit.edu/~scs/assets/files/cernuda2024jarvis.pdf",
+    },
+  },
+  {
+    authors: [
       "Z. Pan",
       "X. Li",
       "S. He",
