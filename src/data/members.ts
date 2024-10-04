@@ -134,7 +134,7 @@ export default [
       github: "https://github.com/candiceT233",
       linkedin: "https://www.linkedin.com/in/meng-tang-86417a128/",
     },
-    researchInterests: ["Distributed Storage", "Containerization"],
+    researchInterests: ["Distributed Storage", "Workflow I/O", "Containerization"],
     type: "researcher",
   },
   {

@@ -100,14 +100,14 @@ const projects: Project[] = [
   {
     id: "dayu",
     name: "DaYu",
-    title: "DaYu: Optimizing Workflow Performance by Elucidating Semantic Data Flow",
+    title: "DaYu: Optimizing Distributed Scientific Workflows by Decoding Dataflow Semantics and Dynamics",
     shortDescription:
       "Nowadays, distributed scientific workflows encounter challenges in data movement through storage systems. DaYu, by capturing the mapping of data objects to I/O operations, can uncover new insights for optimizing workflow data movement.",
     link: "/research/projects/dayu",
     isFeatured: false,
     isOpenSource: true,
     isOurs: true,
-    researchStatus: "testing",
+    researchStatus: "ready",
     status: "active",
     type: "funded",
   },
