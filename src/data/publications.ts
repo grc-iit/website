@@ -2,11 +2,72 @@ import { ProjectId, Publication, PublicationTag } from "../types";
 
 const publications: Publication[] = [
   {
+    authors: [
+      "J. Cernuda",
+      "L. Logan",
+      "N. Lewis",
+      "S. Byna",
+      "X.-H. Sun",
+      "A. Kougkas",
+    ],
+    title:
+        "Jarvis: Towards a Shared, User-Friendly, and Reproducible, I/O Infrastructure.",
+    venue: "PDSW'24",
+    type: "Workshop",
+    date: "November, 2024",
+    tags: ["deployment", "HPC", "hardware abstraction", "resource management", "I/O", "Python"],
+    links: {
+      pdf: "http://cs.iit.edu/~scs/assets/files/cernuda2024jarvis.pdf",
+    },
+  },
+  {
+    authors: [
+      "Z. Pan",
+      "X. Li",
+      "S. He",
+      "X. Zhang",
+      "R. Wang",
+      "Y. Gao",
+      "G. Chen",
+      "X.-H. Sun",
+    ],
+    title:
+      "AMBEA: Aggressive Maximal Biclique Enumeration in Large Bipartite Graph Computing",
+    venue: "IEEE Transactions on Computers",
+    type: "Journal",
+    date: "TBA",
+    tags: [],
+    links: {},
+  },
+  {
+    authors: [
+      "H. Devarajan",
+      "L. Pottier",
+      "K. Velusamy",
+      "H. Zheng",
+      "I. Yildirim",
+      "O. Kogiou",
+      "W. Yu",
+      "A. Kougkas",
+      "X.-H. Sun",
+      "J.-S. Yeom",
+      "K. Mohror",
+    ],
+    title:
+      "DFTracer: An Analysis-Friendly Data Flow Tracer for AI-Driven Workflows",
+    venue:
+      "The International Conference for High Performance Computing, Networking, Storage, and Analysis (SC'24)	",
+    type: "Conference",
+    date: "November, 2024",
+    tags: ["Deep Learning", "Workflows", "I/O Tracing"],
+    links: {},
+  },
+  {
     authors: ["L. Logan", "X.-H. Sun", "A. Kougkas"],
     title:
       "MegaMmap: Blurring the Boundary Between Memory and Storage for Data-Intensive Workloads",
     venue:
-      "The International Conference for High Performance Computing, Networking, Storage, and Analysis (SC'24)	",
+      "The International Conference for High Performance Computing, Networking, Storage, and Analysis (SC'24)",
     type: "Conference",
     date: "November, 2024",
     tags: [
@@ -19,13 +80,98 @@ const publications: Publication[] = [
     links: {},
   },
   {
+    authors: [
+      "Z. Pan",
+      "S. He",
+      "X. Li",
+      "X. Zhang",
+      "Y. Yin",
+      "R. Wang",
+      "L. Shou",
+      "M. Song",
+      "X.-H. Sun",
+      "G. Chen",
+    ],
+    title:
+      "Enumeration of Billions of Maximal Bicliques in Bipartite Graphs without Using GPUs",
+    venue:
+      "The International Conference for High Performance Computing, Networking, Storage, and Analysis (SC'24)",
+    type: "Conference",
+    date: "November, 2024",
+    tags: [],
+    links: {},
+  },
+  {
+    authors: [
+      "L. Yan",
+      "X. Lu",
+      "X. Chen",
+      "S. Xu",
+      "X. Zou",
+      "Y. Han",
+      "X.-H. Sun",
+    ],
+    title:
+      "AceMiner: Accelerating Graph Pattern Matching using PIM with Optimized Cache System",
+    venue:
+      "The 2024 IEEE 42nd International Conference on Computer Design (ICCD'24)",
+    type: "Conference",
+    date: "November, 2024",
+    tags: ["Graph Pattern Matching", "Processing-in-Memory", "Cache System"],
+    links: {},
+  },
+  {
+    authors: [
+      "Z. Dang",
+      "S. He",
+      "X. Zhang",
+      "P. Hong",
+      "Z. Li",
+      "X. Chen",
+      "H. Song",
+      "X.-H. Sun",
+      "G. Chen",
+    ],
+    title:
+      "PMAlloc: A Holistic Approach to Improving Persistent Memory Allocation",
+    venue: "ACM Transactions on Computer Systems (TOCS'24)",
+    type: "Journal",
+    date: "September, 2024",
+    tags: ["Persistent Memory", "Memory Management"],
+    links: {
+      pdf: "http://cs.iit.edu/~scs/assets/files/dang2024pmalloc.pdf",
+      bibtex: "http://cs.iit.edu/~scs/assets/files/dang2024pmalloc.bib",
+      citation: "http://cs.iit.edu/~scs/assets/files/dang2024pmalloc.txt",
+    },
+  },
+  {
+    authors: [
+      "T. Wu",
+      "S. He",
+      "J. Zhu",
+      "W. Chen",
+      "S. Yang",
+      "P. Chen",
+      "Y. Yin",
+      "X. Zhang",
+      "X.-H. Sun",
+      "G. Chen",
+    ],
+    title:
+      "AUTOHET: An Automated Heterogeneous ReRAM-Based Accelerator for DNN Inference",
+    venue: "The 53th International Conference on Parallel Processing (ICPP'24)",
+    type: "Conference",
+    date: "August, 2024",
+    tags: [],
+    links: {},
+  },
+  {
     authors: ["J. Cernuda", "J. Ye", "A. Kougkas", "X.-H. Sun"],
     title:
       "HStream: A hierarchical data streaming engine for high-throughput scientific applications",
-    venue:
-      "The 53th International Conference on Parallel Processing (ICPP 2024)",
+    venue: "The 53th International Conference on Parallel Processing (ICPP'24)",
     type: "Conference",
-    date: "Aug, 2024",
+    date: "August, 2024",
     tags: [
       "Data Streaming",
       "HPC",
@@ -33,7 +179,11 @@ const publications: Publication[] = [
       "Elastic System",
       "In-Transit Computing",
     ],
-    links: {},
+    links: {
+      pdf: "http://cs.iit.edu/~scs/assets/files/cernuda2024hstream.pdf",
+      bibtex: "http://cs.iit.edu/~scs/assets/files/cernuda2024hstream.bib",
+      citation: "http://cs.iit.edu/~scs/assets/files/cernuda2024hstream.txt",
+    },
   },
   {
     authors: [
@@ -49,12 +199,55 @@ const publications: Publication[] = [
     ],
     title:
       "Viper: A High-Performance I/O Framework for Transparently Updating, Storing, and Transferring Deep Neural Network Models",
-    venue:
-      "The 53th International Conference on Parallel Processing (ICPP 2024)",
+    venue: "The 53th International Conference on Parallel Processing (ICPP'24)",
     type: "Conference",
-    date: "Aug, 2024",
+    date: "August, 2024",
     tags: ["DNN Model Transferring", "Inference Serving"],
     links: {},
+  },
+  {
+    authors: [
+      "M. Zou",
+      "M. Zhang",
+      "R. Wang",
+      "X.-H. Sun",
+      "X. Ye",
+      "D. Fan",
+      "Z. Tang",
+    ],
+    title:
+      "Skyway: Accelerate Graph Applications with a Dual-Path Architecture and Fine-Grained Data Management",
+    venue: "Journal of Computer Science and Technology (Volume 39)",
+    type: "Journal",
+    date: "July, 2024",
+    tags: ["Graph Applications", "Computer Architecture", "Memory Hierarchy"],
+    links: {
+      pdf: "http://cs.iit.edu/~scs/assets/files/zou2024skyway.pdf",
+      slides: "http://cs.iit.edu/~scs/assets/files/zou2023skyway_slides.pdf",
+      bibtex: "http://cs.iit.edu/~scs/assets/files/zou2023skyway.bib",
+      citation: "http://cs.iit.edu/~scs/assets/files/zou2023skyway.txt",
+    },
+  },
+  {
+    authors: ["L. Logan", "J. Lofstead", "A. Kougkas", "X.-H. Sun"],
+    title:
+      "An Evaluation of DAOS for Simulation and Deep Learning HPC Workloads",
+    venue: "SIGOPS Operating Systems Review (OSR'24)",
+    type: "Journal",
+    date: "June, 2024",
+    tags: [
+      "Distributed Computing",
+      "Distributed Storage",
+      "Flash Memory",
+      "Machine Learning",
+      "Parallel Computing",
+      "Phase Change Memory",
+    ],
+    links: {
+      pdf: "http://cs.iit.edu/~scs/assets/files/logan2023daos.pdf",
+      bibtex: "http://cs.iit.edu/~scs/assets/files/logan2024daos.bib",
+      citation: "http://cs.iit.edu/~scs/assets/files/logan2024daos.txt",
+    },
   },
   {
     authors: [
@@ -149,26 +342,6 @@ const publications: Publication[] = [
   },
   {
     authors: [
-      "Z. Dang",
-      "S. He",
-      "X. Zhang",
-      "P. Hong",
-      "Z. Li",
-      "X. Chen",
-      "H. Song",
-      "X.-H. Sun",
-      "G. Chen",
-    ],
-    title:
-      "PMAlloc: A Holistic Approach to Improving Persistent Memory Allocation",
-    venue: "ACM Transactions on Computer Systems (TOCS'24)",
-    type: "Journal",
-    date: "January, 2024",
-    tags: ["Persistent Memory", "Memory Management"],
-    links: {},
-  },
-  {
-    authors: [
       "I. Yildirim",
       "H. Devarajan",
       "A. Kougkas",
@@ -233,28 +406,6 @@ const publications: Publication[] = [
       pdf: "http://cs.iit.edu/~scs/assets/files/lee2023data.pdf",
       bibtex: "http://cs.iit.edu/~scs/assets/files/lee2023data.bib",
       citation: "http://cs.iit.edu/~scs/assets/files/lee2023data.txt",
-    },
-  },
-  {
-    authors: [
-      "M. Zou",
-      "M. Zhang",
-      "R. Wang",
-      "X.-H. Sun",
-      "X. Ye",
-      "D. Fan",
-      "Z. Tang",
-    ],
-    title:
-      "Skyway: Accelerate Graph Applications with a Dual-Path Architecture and Fine-Grained Data Management",
-    venue: "Journal of Computer Science and Technology (JCST'23)",
-    type: "Journal",
-    date: "October, 2023",
-    tags: ["Graph Applications", "Computer Architecture", "Memory Hierarchy"],
-    links: {
-      slides: "http://cs.iit.edu/~scs/assets/files/zou2023skyway_slides.pdf",
-      bibtex: "http://cs.iit.edu/~scs/assets/files/zou2023skyway.bib",
-      citation: "http://cs.iit.edu/~scs/assets/files/zou2023skyway.txt",
     },
   },
   {

@@ -1,12 +1,10 @@
 # Main Scenario
 
 :::info
-
 Hermes **1.1.0** is now available! [Download
 now](https://github.com/HDFGroup/hermes/releases) for the latest features and
 improvements. For more information, visit the [Hermes project
 page](/research/projects/hermes).
-
 :::
 
 ![Deep Memory and Storage Hierarchy (DMSH)](images/Hermes_hierachy.jpg)
