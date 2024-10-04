@@ -3,6 +3,28 @@ import { ProjectId, Publication, PublicationTag } from "../types";
 const publications: Publication[] = [
   {
     authors: [
+      "M. Tang", 
+      "J. Cernuda", 
+      "J. Ye", 
+      "L. Guo", 
+      "N. Tallent", 
+      "A. Kougkas", 
+      "X.-H. Sun"],
+    title:
+      "DaYu: Optimizing Distributed Scientific Workflows by Decoding Dataflow Semantics and Dynamics",
+    venue: "2024 IEEE International Conference on Cluster Computing (CLUSTER'24)",
+    type: "Conference",
+    date: "September, 2024",
+    tags: [
+      "Data Analytics",
+      "Workflow Optimization",
+      "Performance Measurement",
+      "Modeling", "Tools"
+    ],
+    links: {},
+  },
+  {
+    authors: [
       "J. Cernuda",
       "L. Logan",
       "N. Lewis",
