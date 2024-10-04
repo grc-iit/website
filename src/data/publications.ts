@@ -3,32 +3,6 @@ import { ProjectId, Publication, PublicationTag } from "../types";
 const publications: Publication[] = [
   {
     authors: [
-      "M. Tang", 
-      "J. Cernuda", 
-      "J. Ye", 
-      "L. Guo", 
-      "N. Tallent", 
-      "A. Kougkas", 
-      "X.-H. Sun"],
-    title:
-      "DaYu: Optimizing Distributed Scientific Workflows by Decoding Dataflow Semantics and Dynamics",
-    venue: "2024 IEEE International Conference on Cluster Computing (CLUSTER'24)",
-    type: "Conference",
-    date: "September, 2024",
-    tags: [
-      "Data Analytics",
-      "Workflow Optimization",
-      "Performance Measurement",
-      "Modeling", "Tools"
-    ],
-    links: {
-      pdf: "http://cs.iit.edu/~scs/assets/files/tang2024dayu.pdf",
-      bibtex: "http://cs.iit.edu/~scs/assets/files/tang2024dayu.bib",
-      citation: "http://cs.iit.edu/~scs/assets/files/tang2024dayu.txt",
-    },
-  },
-  {
-    authors: [
       "J. Cernuda",
       "L. Logan",
       "N. Lewis",
@@ -37,11 +11,18 @@ const publications: Publication[] = [
       "A. Kougkas",
     ],
     title:
-        "Jarvis: Towards a Shared, User-Friendly, and Reproducible, I/O Infrastructure.",
+      "Jarvis: Towards a Shared, User-Friendly, and Reproducible, I/O Infrastructure.",
     venue: "PDSW'24",
     type: "Workshop",
     date: "November, 2024",
-    tags: ["deployment", "HPC", "hardware abstraction", "resource management", "I/O", "Python"],
+    tags: [
+      "Deployment",
+      "HPC",
+      "Hardware Abstraction",
+      "I/O",
+      "Python",
+      "Resource Management",
+    ],
     links: {
       pdf: "http://cs.iit.edu/~scs/assets/files/cernuda2024jarvis.pdf",
     },
@@ -145,6 +126,35 @@ const publications: Publication[] = [
     date: "November, 2024",
     tags: ["Graph Pattern Matching", "Processing-in-Memory", "Cache System"],
     links: {},
+  },
+  {
+    authors: [
+      "M. Tang",
+      "J. Cernuda",
+      "J. Ye",
+      "L. Guo",
+      "N. Tallent",
+      "A. Kougkas",
+      "X.-H. Sun",
+    ],
+    title:
+      "DaYu: Optimizing Distributed Scientific Workflows by Decoding Dataflow Semantics and Dynamics",
+    venue:
+      "2024 IEEE International Conference on Cluster Computing (CLUSTER'24)",
+    type: "Conference",
+    date: "September, 2024",
+    tags: [
+      "Data Analytics",
+      "Modeling",
+      "Performance Measurement",
+      "Tools",
+      "Workflow Optimization",
+    ],
+    links: {
+      pdf: "http://cs.iit.edu/~scs/assets/files/tang2024dayu.pdf",
+      bibtex: "http://cs.iit.edu/~scs/assets/files/tang2024dayu.bib",
+      citation: "http://cs.iit.edu/~scs/assets/files/tang2024dayu.txt",
+    },
   },
   {
     authors: [
