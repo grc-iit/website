@@ -3,6 +3,29 @@ import { ProjectId, Publication, PublicationTag } from "../types";
 const publications: Publication[] = [
   {
     authors: [
+      "J. Ye",
+      "B. Nicolae",
+      "A. Kougkas",
+      "X.-H. Sun",
+    ],
+    title:
+      "Uncover the Overhead and Resource Usage for Handling KV Cache Overflow in LLM Inference",
+    venue: "SC'24",
+    type: "Poster",
+    date: "November, 2024",
+    tags: [
+      "KV Cache",
+      "LLM Inference",
+    ],
+    links: {
+      poster:
+        "http://cs.iit.edu/~scs/assets/files/jie2024kvcache_poster.pdf",
+      "extended abstract":
+        "http://cs.iit.edu/~scs/assets/files/jie2024kvcache_absract.pdf",
+    },
+  },
+  {
+    authors: [
       "J. Cernuda",
       "L. Logan",
       "N. Lewis",
