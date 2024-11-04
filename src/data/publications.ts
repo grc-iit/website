@@ -2,6 +2,27 @@ import { ProjectId, Publication, PublicationTag } from "../types";
 
 const publications: Publication[] = [
   {
+    authors: [
+      "A. Gainaru",
+      "G. Eisenhauer",
+      "N. Podhorszki",
+      "L. Dulac",
+      "Q. Gong",
+      "A. Kougkas",
+      "J. Lofstead",
+      "X.-H. Sun",
+      "S. Klasky",
+    ],
+    title:
+      "To Derive or Not to Derive: I/O Libraries Take Charge of Derived Quantities Computation",
+    venue:
+      "IEEE/SBC 36th International Symposium on Computer Architecture and High Performance Computing (SBAC-PAD 2024), Hawaii, USA",
+    type: "Conference",
+    date: "November, 2024",
+    tags: [],
+    links: {},
+  },
+  {
     authors: ["J. Ye", "B. Nicolae", "A. Kougkas", "X.-H. Sun"],
     title:
       "Uncover the Overhead and Resource Usage for Handling KV Cache Overflow in LLM Inference",
