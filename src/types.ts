@@ -38,6 +38,8 @@ export type Member = {
 };
 
 export type ProjectId =
+  | "aces"
+  | "chrome"
   | "chronolog"
   | "coeus"
   | "dayu"
