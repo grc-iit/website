@@ -3,6 +3,33 @@ import { ProjectId, Publication, PublicationTag } from "../types";
 const publications: Publication[] = [
   {
     authors: [
+      "Z. Pan",
+      "X. Li",
+      "S. He",
+      "X. Zhang",
+      "R. Wang",
+      "Y. Gao",
+      "G. Chen",
+      "X.-H. Sun",
+    ],
+    title:
+      "AMBEA: Aggressive Maximal Biclique Enumeration in Large Bipartite Graph Computing",
+    venue: "IEEE Transactions on Computers, Vol. 73, No. 12",
+    type: "Journal",
+    date: "December, 2024",
+    tags: [
+      "Graph Computing",
+      "Bipartite Graph",
+      "Maximal Biclique Enumeration",
+    ],
+    links: {
+      pdf: "http://cs.iit.edu/~scs/assets/files/pan2024ambea.pdf",
+      bibtex: "http://cs.iit.edu/~scs/assets/files/pan2024ambea.bib",
+      citation: "http://cs.iit.edu/~scs/assets/files/pan2024ambea.txt",
+    },
+  },
+  {
+    authors: [
       "A. Gainaru",
       "G. Eisenhauer",
       "N. Podhorszki",
@@ -62,25 +89,7 @@ const publications: Publication[] = [
       pdf: "http://cs.iit.edu/~scs/assets/files/cernuda2024jarvis.pdf",
     },
   },
-  {
-    authors: [
-      "Z. Pan",
-      "X. Li",
-      "S. He",
-      "X. Zhang",
-      "R. Wang",
-      "Y. Gao",
-      "G. Chen",
-      "X.-H. Sun",
-    ],
-    title:
-      "AMBEA: Aggressive Maximal Biclique Enumeration in Large Bipartite Graph Computing",
-    venue: "IEEE Transactions on Computers",
-    type: "Journal",
-    date: "TBA",
-    tags: [],
-    links: {},
-  },
+
   {
     authors: [
       "H. Devarajan",
