@@ -46,8 +46,15 @@ const publications: Publication[] = [
       "IEEE/SBC 36th International Symposium on Computer Architecture and High Performance Computing (SBAC-PAD 2024), Hawaii, USA",
     type: "Conference",
     date: "November, 2024",
-    tags: [],
-    links: {},
+    tags: [
+      "HPC Analysis",
+      "Large-Scale I/O",
+      "Derived Variables",
+      "Quantities of Interest",
+    ],
+    links: {
+      pdf: "http://cs.iit.edu/~scs/assets/files/gainaru2024derive.pdf",
+    },
   },
   {
     authors: ["J. Ye", "B. Nicolae", "A. Kougkas", "X.-H. Sun"],
