@@ -83,7 +83,7 @@ export default [
   },
   {
     name: "Dr. Xiaoyang Lu",
-    title: "Research Assistant Professor",
+    title: "Assistant Research Professor",
     advisor: "Dr. Xian-He Sun",
     image: require("@site/static/img/members/lu.png").default,
     links: {
@@ -134,7 +134,11 @@ export default [
       github: "https://github.com/candiceT233",
       linkedin: "https://www.linkedin.com/in/meng-tang-86417a128/",
     },
-    researchInterests: ["Distributed Storage", "Workflow I/O", "Containerization"],
+    researchInterests: [
+      "Distributed Storage",
+      "Workflow I/O",
+      "Containerization",
+    ],
     type: "researcher",
   },
   {
