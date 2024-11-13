@@ -38,16 +38,16 @@ export type Member = {
 };
 
 export type ProjectId =
-  | "aces"
-  | "chrome"
   | "chronolog"
   | "coeus"
   | "dayu"
+  | "dtio"
   | "hermes"
   | "iris"
-  | "dtio"
   | "labios"
+  | "optmem"
   | "storehub"
+  | "unimcc"
   | "viper"
   | "wisio";
 
@@ -522,6 +522,7 @@ export type PublicationTag =
   | "Multi-Tiered"
   | "Out-of-Core Analysis"
   | "Operating Systems"
+  | "Optimization of Memory Architectures"
   | "Parallel File System (PFS)"
   | "Parallel I/O"
   | "Parallel Computing"
@@ -571,6 +572,7 @@ export type PublicationTag =
   | "Tiered Storage"
   | "Time Factors"
   | "Tools"
+  | "UniMCC"
   | "Utilization"
   | "Virtualization"
   | "WisIO"

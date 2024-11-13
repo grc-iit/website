@@ -414,6 +414,7 @@ const publications: Publication[] = [
       "Concurrency",
       "Synchronization",
       "Scalability",
+      "UniMCC",
     ],
     links: {
       pdf: "http://cs.iit.edu/~scs/assets/files/lu2024aces.pdf",
@@ -431,7 +432,12 @@ const publications: Publication[] = [
       "The 30th IEEE International Symposium on High-Performance Computer Architecture (HPCA 2024), Edinburgh, Scotland",
     type: "Conference",
     date: "March, 2024",
-    tags: ["Memory Architecture", "Cache Management"],
+    tags: [
+      "Memory Architecture",
+      "Cache Management",
+      "Optimization of Memory Architectures",
+      "UniMCC",
+    ],
     links: {
       pdf: "http://cs.iit.edu/~scs/assets/files/lu2024chrome.pdf",
       slides: "http://cs.iit.edu/~scs/assets/files/lu2024chrome_slides.pdf",
@@ -541,6 +547,7 @@ const publications: Publication[] = [
       "Scalable Computing",
       "Memory-Wall",
       "Data-Centric Design",
+      "Optimization of Memory Architectures",
     ],
     links: {
       pdf: "http://cs.iit.edu/~scs/assets/files/sun2023memory.pdf",
@@ -581,7 +588,7 @@ const publications: Publication[] = [
       "The 29th IEEE International Symposium on High-Performance Computer Architecture (HPCA-29), Montreal, QC, Canada, February 25 - March 01, 2023",
     type: "Conference",
     date: "February, 2023",
-    tags: [],
+    tags: ["Optimization of Memory Architectures"],
     links: {
       pdf: "http://cs.iit.edu/~scs/assets/files/lu2023care.pdf",
       slides: "http://cs.iit.edu/~scs/assets/files/lu2023care-slides.pdf",
@@ -646,7 +653,11 @@ const publications: Publication[] = [
       "The 2022 Winter Simulation Conference (WSC), Singapore, December 11-14, 2022",
     type: "Conference",
     date: "December, 2022",
-    tags: ["Hierarchical Memory System", "C-AMAT"],
+    tags: [
+      "Hierarchical Memory System",
+      "C-AMAT",
+      "Optimization of Memory Architectures",
+    ],
     links: {
       pdf: "http://cs.iit.edu/~scs/assets/files/najafi2022generalized.pdf",
       bibtex: "http://cs.iit.edu/~scs/assets/files/najafi2022generalized.bib",
@@ -870,7 +881,7 @@ const publications: Publication[] = [
       "The 2021 IEEE 39th International Conference on Computer Design (ICCD'21), October 24 - 27, 2021",
     type: "Conference",
     date: "October, 2021",
-    tags: [],
+    tags: ["Optimization of Memory Architectures"],
     links: {
       pdf: "http://cs.iit.edu/~scs/assets/files/lu2021premier.pdf",
       bibtex: "http://cs.iit.edu/~scs/assets/files/lu2021premier.bib",
@@ -1080,6 +1091,7 @@ const publications: Publication[] = [
       "Memory Architecture",
       "Memory Hierarchy",
       "Concurrent Average Memory Access Time",
+      "Optimization of Memory Architectures",
     ],
     links: {
       pdf: "http://cs.iit.edu/~scs/assets/files/liu2021study.pdf",
@@ -1243,7 +1255,12 @@ const publications: Publication[] = [
       "The 38th IEEE International Conference on Computer Design (ICCD'20), October 18 - 21, 2020",
     type: "Conference",
     date: "October, 2020",
-    tags: ["Prefetch", "Memory Performance Model", "Concurrent Memory Access"],
+    tags: [
+      "Prefetch",
+      "Memory Performance Model",
+      "Concurrent Memory Access",
+      "Optimization of Memory Architectures",
+    ],
     links: {
       pdf: "http://cs.iit.edu/~scs/assets/files/lu2020apac.pdf",
       bibtex: "http://cs.iit.edu/~scs/assets/files/lu2020apac.bib",

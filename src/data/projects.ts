@@ -2,21 +2,6 @@ import { Project, ProjectId } from "../types";
 
 const projects: Project[] = [
   {
-    id: "aces",
-    name: "ACES",
-    title:
-      "ACES: Accelerating Sparse Matrix Multiplication with Adaptive Execution Flow and Concurrency-Aware Cache Optimizations",
-    shortDescription:
-      "ACES accelerates sparse matrix multiplications by dynamically adjusting execution flows and using concurrency-aware cache management to reduce data movement and optimize performance.",
-    link: "/research/projects/aces",
-    isFeatured: false,
-    isOpenSource: false,
-    isOurs: true,
-    researchStatus: "ready",
-    status: "active",
-    type: "funded",
-  },
-  {
     id: "coeus",
     name: "Coeus",
     title: "Coeus: Accelerating Scientific Insights Using Enriched Metadata",
@@ -26,21 +11,6 @@ const projects: Project[] = [
     isFeatured: true,
     isOurs: true,
     researchStatus: "r&d",
-    status: "active",
-    type: "funded",
-  },
-  {
-    id: "chrome",
-    name: "CHROME",
-    title:
-      "CHROME: Concurrency-Aware Holistic Cache Management Framework with Online Reinforcement Learning",
-    shortDescription:
-      "CHROME improves cache management through a concurrency-aware framework that integrates cache replacement, bypassing, and prefetching using online reinforcement learning. This holistic approach dynamically optimizes cache decisions, adapting to workload changes and enhancing cache efficiency across multi-core systems.",
-    link: "/research/projects/chrome",
-    isFeatured: false,
-    isOpenSource: true,
-    isOurs: true,
-    researchStatus: "ready",
     status: "active",
     type: "funded",
   },
@@ -102,6 +72,20 @@ const projects: Project[] = [
     type: "funded",
   },
   {
+    id: "optmem",
+    name: "OptMem",
+    title: "Optimization of Memory Architectures: A Foundation Approach",
+    shortDescription:
+      "This project establishes a foundational framework for memory performance modeling and optimization in modern architectures, utilizing simulation and real-system analysis to advance architecture designs for data-intensive applications.",
+    link: "/research/projects/optmem",
+    isFeatured: false,
+    isOpenSource: false,
+    isOurs: true,
+    researchStatus: "ready",
+    status: "active",
+    type: "funded",
+  },
+  {
     id: "dtio",
     name: "DTIO",
     title: "DTIO: A Data Task I/O Runtime",
@@ -111,6 +95,21 @@ const projects: Project[] = [
     isFeatured: false,
     isOurs: true,
     researchStatus: "testing",
+    status: "active",
+    type: "funded",
+  },
+  {
+    id: "unimcc",
+    name: "UniMCC",
+    title:
+      "UniMCC: Towards A Unified Memory-centric Computing System with Cross-layer Support",
+    shortDescription:
+      "UniMCC addresses memory bottlenecks in data-centric applications with a full-stack, cross-layer system that integrates architecture, SW/HW interfaces, code generation, runtime support, and performance optimization to maximize memory-centric computing's potential.",
+    link: "/research/projects/unimcc",
+    isFeatured: false,
+    isOpenSource: false,
+    isOurs: true,
+    researchStatus: "r&d",
     status: "active",
     type: "funded",
   },
