@@ -1,18 +1,31 @@
 import Link from "@docusaurus/Link";
 import React from "react";
+import clsx from "clsx";
 import { Project } from "@site/src/types";
 
 import ProjectBadges from "./ProjectBadges";
 
 type ProjectItemProps = {
   project: Project;
+  isThemeLight?: boolean;
 };
 
-export default function ProjectItem({ project }: ProjectItemProps) {
+import styles from "./ProjectItem.module.css";
+
+export default function ProjectItem({
+  project,
+  isThemeLight = false,
+}: ProjectItemProps) {
   const { id, link, name, title, shortDescription } = project;
   return (
     <div className="col col--4 margin-bottom--lg">
-      <div className="card text--center">
+      <div
+        className={clsx(
+          "card text--center",
+          styles.card,
+          !isThemeLight && styles.cardDarker
+        )}
+      >
         <div className="card__header">
           <h3>{title}</h3>
           <ProjectBadges addMargin={false} projectId={id} />
