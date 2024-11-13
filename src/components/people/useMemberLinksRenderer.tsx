@@ -9,6 +9,7 @@ import {
 import {
   faGithub,
   faLinkedin,
+  faOrcid,
   faTwitter,
 } from "@fortawesome/free-brands-svg-icons";
 import { useCallback } from "react";
@@ -31,6 +32,9 @@ export default function useMemberLinksRenderer() {
           break;
         case "linkedin":
           icon = faLinkedin;
+          break;
+        case "orcid":
+          icon = faOrcid;
           break;
         case "scholar":
           icon = faGraduationCap;

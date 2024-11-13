@@ -22,6 +22,7 @@ export type MemberLinkType =
   | "email"
   | "github"
   | "linkedin"
+  | "orcid"
   | "twitter"
   | "scholar";
 
