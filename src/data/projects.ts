@@ -2,19 +2,6 @@ import { Project, ProjectId } from "../types";
 
 const projects: Project[] = [
   {
-    id: "coeus",
-    name: "Coeus",
-    title: "Coeus: Accelerating Scientific Insights Using Enriched Metadata",
-    shortDescription:
-      "In collaboration with Sandia and Oak Ridge National Laboratories, coeus investigate the use of an active storage system to calculate derived quantities and support complex queries on scientific data (simulation and observational) as well as optimizing data placement across the storage hierarchy, with awareness of the resource limitations, to better support the scientific discovery process.",
-    link: "/research/projects/coeus",
-    isFeatured: true,
-    isOurs: true,
-    researchStatus: "r&d",
-    status: "active",
-    type: "funded",
-  },
-  {
     id: "chronolog",
     name: "ChronoLog",
     title:
@@ -30,14 +17,41 @@ const projects: Project[] = [
     type: "funded",
   },
   {
-    id: "iris",
-    name: "IRIS",
-    title: "IRIS: I/O Redirection Via Integrated Storage",
+    id: "coeus",
+    name: "Coeus",
+    title: "Coeus: Accelerating Scientific Insights Using Enriched Metadata",
     shortDescription:
-      "Various storage solutions exist and require specialized APIs and data models in order to use, which binds developers, applications, and entire computing facilities to using certain interfaces. Each storage system is designed and optimized for certain applications but does not perform well for others. IRIS is a unified storage access system that bridges the semantic gap between filesystems and object stores.",
-    link: "/research/projects/iris",
+      "In collaboration with Sandia and Oak Ridge National Laboratories, coeus investigate the use of an active storage system to calculate derived quantities and support complex queries on scientific data (simulation and observational) as well as optimizing data placement across the storage hierarchy, with awareness of the resource limitations, to better support the scientific discovery process.",
+    link: "/research/projects/coeus",
+    isFeatured: true,
+    isOurs: true,
+    researchStatus: "r&d",
+    status: "active",
+    type: "funded",
+  },
+  {
+    id: "dayu",
+    name: "DaYu",
+    title:
+      "DaYu: Optimizing Distributed Scientific Workflows by Decoding Dataflow Semantics and Dynamics",
+    shortDescription:
+      "Nowadays, distributed scientific workflows encounter challenges in data movement through storage systems. DaYu, by capturing the mapping of data objects to I/O operations, can uncover new insights for optimizing workflow data movement.",
+    link: "/research/projects/dayu",
     isFeatured: false,
     isOpenSource: true,
+    isOurs: true,
+    researchStatus: "ready",
+    status: "active",
+    type: "funded",
+  },
+  {
+    id: "dtio",
+    name: "DTIO",
+    title: "DTIO: A Data Task I/O Runtime",
+    shortDescription:
+      "In partnership with Argonne National Laboratory, DTIO investigates the use of a task framework for unifying complex I/O stacks and providing features such as resilience, fault-tolerance, and task replay.",
+    link: "/research/projects/dtio",
+    isFeatured: false,
     isOurs: true,
     researchStatus: "testing",
     status: "active",
@@ -55,6 +69,20 @@ const projects: Project[] = [
     isOpenSource: true,
     isOurs: true,
     researchStatus: "ready",
+    status: "active",
+    type: "funded",
+  },
+  {
+    id: "iris",
+    name: "IRIS",
+    title: "IRIS: I/O Redirection Via Integrated Storage",
+    shortDescription:
+      "Various storage solutions exist and require specialized APIs and data models in order to use, which binds developers, applications, and entire computing facilities to using certain interfaces. Each storage system is designed and optimized for certain applications but does not perform well for others. IRIS is a unified storage access system that bridges the semantic gap between filesystems and object stores.",
+    link: "/research/projects/iris",
+    isFeatured: false,
+    isOpenSource: true,
+    isOurs: true,
+    researchStatus: "testing",
     status: "active",
     type: "funded",
   },
@@ -86,15 +114,16 @@ const projects: Project[] = [
     type: "funded",
   },
   {
-    id: "dtio",
-    name: "DTIO",
-    title: "DTIO: A Data Task I/O Runtime",
+    id: "storehub",
+    name: "StoreHub",
+    title: "StoreHub",
     shortDescription:
-      "In partnership with Argonne National Laboratory, DTIO investigates the use of a task framework for unifying complex I/O stacks and providing features such as resilience, fault-tolerance, and task replay.",
-    link: "/research/projects/dtio",
+      "StoreHub is a collaborative platform designed to advance data storage research by providing a specialized infrastructure that meets the unique needs of researchers. It brings together experts handling large amounts of data, focusing on I/O performance, and developing innovative storage solutions, making it a vital resource for the community.",
+    link: "/research/projects/storehub",
     isFeatured: false,
+    isOpenSource: false,
     isOurs: true,
-    researchStatus: "testing",
+    researchStatus: "r&d",
     status: "active",
     type: "funded",
   },
@@ -129,21 +158,6 @@ const projects: Project[] = [
     type: "funded",
   },
   {
-    id: "dayu",
-    name: "DaYu",
-    title:
-      "DaYu: Optimizing Distributed Scientific Workflows by Decoding Dataflow Semantics and Dynamics",
-    shortDescription:
-      "Nowadays, distributed scientific workflows encounter challenges in data movement through storage systems. DaYu, by capturing the mapping of data objects to I/O operations, can uncover new insights for optimizing workflow data movement.",
-    link: "/research/projects/dayu",
-    isFeatured: false,
-    isOpenSource: true,
-    isOurs: true,
-    researchStatus: "ready",
-    status: "active",
-    type: "funded",
-  },
-  {
     id: "wisio",
     name: "WisIO",
     title:
@@ -157,20 +171,6 @@ const projects: Project[] = [
     researchStatus: "r&d",
     status: "active",
     type: "student",
-  },
-  {
-    id: "storehub",
-    name: "StoreHub",
-    title: "StoreHub",
-    shortDescription:
-      "StoreHub is a collaborative platform designed to advance data storage research by providing a specialized infrastructure that meets the unique needs of researchers. It brings together experts handling large amounts of data, focusing on I/O performance, and developing innovative storage solutions, making it a vital resource for the community.",
-    link: "/research/projects/storehub",
-    isFeatured: false,
-    isOpenSource: false,
-    isOurs: true,
-    researchStatus: "r&d",
-    status: "active",
-    type: "funded",
   },
 ];
 
