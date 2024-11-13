@@ -2,6 +2,21 @@ import { Project, ProjectId } from "../types";
 
 const projects: Project[] = [
   {
+    id: "iowarp",
+    name: "IOWarp",
+    title:
+      "IOWarp: Advanced Data Management for Scientific Workflows",
+    shortDescription:
+      "IOWarp is a comprehensive data management platform designed to address the unique challenges in scientific workflows that integrate simulation, analytics, and Artificial Intelligence (AI). IOWarp builds on existing storage infrastructures, optimizing data flow and providing a scalable, adaptable platform for managing diverse data needs in modern scientific workflows, particularly those augmented by AI.",
+    link: "/research/projects/iowarp",
+    isFeatured: true,
+    isOpenSource: true,
+    isOurs: true,
+    researchStatus: "r&d",
+    status: "active",
+    type: "funded",
+  },
+  {
     id: "chronolog",
     name: "ChronoLog",
     title:
