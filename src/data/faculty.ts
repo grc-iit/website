@@ -14,16 +14,15 @@ export default [
   },
   {
     name: "Dr. Anthony Kougkas",
-    title: "Research Assistant Professor",
+    title: "Assistant Research Professor",
     email: "akougkas@iit.edu",
     website: "",
-    bio: "Dr. Anthony Kougkas is the Associate Director of the Gnosis Research Center at the Illinois Institute of Technology. With a Ph.D. in Computer Science, he is committed to solving data management and I/O challenges in extreme-scale distributed applications. His research has led to advancements in multi-tiered storage systems, data prefetching, replication, compression, and in-transit/in-situ techniques, resulting in performance improvements for HPC, Cloud, and AI workloads.",
+    bio: "Dr. Anthony Kougkas is the Deputy Director of the Gnosis Research Center at the Illinois Institute of Technology. With a Ph.D. in Computer Science, he is committed to solving data management and I/O challenges in extreme-scale distributed applications. His research has led to advancements in multi-tiered storage systems, data prefetching, replication, compression, and in-transit/in-situ techniques, resulting in performance improvements for HPC, Cloud, and AI workloads.",
     image: require("@site/static/img/faculty/kougkas.jpg").default,
     links: {
       email: "akougkas@iit.edu",
       linkedin: "https://www.linkedin.com/in/anthonykougkas/",
       scholar: "https://scholar.google.com/citations?user=hiNO0EEAAAAJ&hl=en",
-      twitter: "https://twitter.com/kougkas",
       website: "https://akougkas.com/",
     },
   },
