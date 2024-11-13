@@ -17,7 +17,10 @@ export default function useMemberLinksRenderer() {
   const renderLinks = useCallback((links: Record<MemberLinkType, string>) => {
     return Object.entries(links).map((link) => {
       const linkType = link[0] as MemberLinkType;
-      const href = linkType === "email" ? `mailto:${link[1]}` : link[1];
+      const href =
+        linkType === "email"
+          ? `mailto:${link[1]}?subject=%5BGRC%20Website%5D%20`
+          : link[1];
       let icon = null;
       switch (linkType) {
         case "email":
