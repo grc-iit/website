@@ -176,7 +176,10 @@ const publications: Publication[] = [
     type: "Conference",
     date: "November, 2024",
     tags: ["Graph Pattern Matching", "Processing-in-Memory", "Cache System"],
-    links: {},
+    links: {
+      pdf: "http://cs.iit.edu/~scs/assets/files/yan2024aceminer.pdf",
+      slides: "http://cs.iit.edu/~scs/assets/files/yan2024aceminer_slides.pdf",
+    },
   },
   {
     authors: [
