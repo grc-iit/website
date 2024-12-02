@@ -3,6 +3,26 @@ import { ProjectId, Publication, PublicationTag } from "../types";
 const publications: Publication[] = [
   {
     authors: [
+      "S. Yang",
+      "S. He",
+      "W. Wang",
+      "Y. Yin",
+      "T. Wu",
+      "W. Chen",
+      "X. Zhang",
+      "X.-H. Sun",
+      "D. Feng",
+    ],
+    title: "GOPIM: GCN-Oriented Pipeline Optimization for PIM Accelerators",
+    venue:
+      "The IEEE International Symposium on High-Performance Computer Architecture (HPCA 2025)",
+    type: "Conference",
+    date: "March, 2025",
+    tags: [],
+    links: {},
+  },
+  {
+    authors: [
       "Z. Pan",
       "X. Li",
       "S. He",
