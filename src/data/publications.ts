@@ -60,7 +60,8 @@ const publications: Publication[] = [
     authors: ["J. Ye", "B. Nicolae", "A. Kougkas", "X.-H. Sun"],
     title:
       "Uncover the Overhead and Resource Usage for Handling KV Cache Overflow in LLM Inference",
-    venue: "SC'24",
+    venue:
+      "The International Conference for High Performance Computing, Networking, Storage, and Analysis (SC'24)",
     type: "Poster",
     date: "November, 2024",
     tags: ["KV Cache", "LLM Inference"],
@@ -81,7 +82,7 @@ const publications: Publication[] = [
     ],
     title:
       "Jarvis: Towards a Shared, User-Friendly, and Reproducible, I/O Infrastructure.",
-    venue: "PDSW'24",
+    venue: "The International Parallel Data Systems Workshop (PDSW'24)",
     type: "Workshop",
     date: "November, 2024",
     tags: [
@@ -114,11 +115,15 @@ const publications: Publication[] = [
     title:
       "DFTracer: An Analysis-Friendly Data Flow Tracer for AI-Driven Workflows",
     venue:
-      "The International Conference for High Performance Computing, Networking, Storage, and Analysis (SC'24)	",
+      "The International Conference for High Performance Computing, Networking, Storage, and Analysis (SC'24)",
     type: "Conference",
     date: "November, 2024",
     tags: ["Deep Learning", "Workflows", "I/O Tracing"],
-    links: {},
+    links: {
+      pdf: "http://cs.iit.edu/~scs/assets/files/devarajan2024dftracer.pdf",
+      bibtex: "http://cs.iit.edu/~scs/assets/files/devarajan2024dftracer.bib",
+      citation: "http://cs.iit.edu/~scs/assets/files/devarajan2024dftracer.txt",
+    },
   },
   {
     authors: ["L. Logan", "X.-H. Sun", "A. Kougkas"],
@@ -135,7 +140,11 @@ const publications: Publication[] = [
       "HPC",
       "Operating Systems",
     ],
-    links: {},
+    links: {
+      pdf: "http://cs.iit.edu/~scs/assets/files/logan2024megammap.pdf",
+      bibtex: "http://cs.iit.edu/~scs/assets/files/logan2024megammap.bib",
+      citation: "http://cs.iit.edu/~scs/assets/files/logan2024megammap.txt",
+    },
   },
   {
     authors: [
@@ -156,8 +165,12 @@ const publications: Publication[] = [
       "The International Conference for High Performance Computing, Networking, Storage, and Analysis (SC'24)",
     type: "Conference",
     date: "November, 2024",
-    tags: [],
-    links: {},
+    tags: ["Bipartite Graph", "Maximal Biclique Enumeration"],
+    links: {
+      pdf: "http://cs.iit.edu/~scs/assets/files/pan2024bipartite.pdf",
+      bibtex: "http://cs.iit.edu/~scs/assets/files/pan2024bipartite.bib",
+      citation: "http://cs.iit.edu/~scs/assets/files/pan2024bipartite.txt",
+    },
   },
   {
     authors: [
@@ -252,8 +265,12 @@ const publications: Publication[] = [
     venue: "The 53th International Conference on Parallel Processing (ICPP'24)",
     type: "Conference",
     date: "August, 2024",
-    tags: [],
-    links: {},
+    tags: ["Heterogeneous Systems", "Emerging Architectures"],
+    links: {
+      pdf: "http://cs.iit.edu/~scs/assets/files/wu2024autohet.pdf",
+      bibtex: "http://cs.iit.edu/~scs/assets/files/wu2024autohet.bib",
+      citation: "http://cs.iit.edu/~scs/assets/files/wu2024autohet.txt",
+    },
   },
   {
     authors: ["J. Cernuda", "J. Ye", "A. Kougkas", "X.-H. Sun"],
@@ -458,8 +475,7 @@ const publications: Publication[] = [
     ],
     title:
       "IOMax: Maximizing Out-of-Core I/O Analysis Performance on HPC Systems",
-    venue:
-      "The 8th International Parallel Data Systems Workshop (PDSW'23), November 12, 2023",
+    venue: "The International Parallel Data Systems Workshop (PDSW'23)",
     type: "Workshop",
     date: "November, 2023",
     tags: ["I/O Analysis", "Out-of-Core Analysis", "Data Drilling", "WisIO"],

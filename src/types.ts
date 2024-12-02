@@ -467,6 +467,7 @@ export type PublicationTag =
   | "Hermes"
   | "Heterogeneous Buffering"
   | "Heterogeneous I/O"
+  | "Heterogeneous Systems"
   | "Hierarchical"
   | "Hierarchical Data Prefetching"
   | "Hierarchical Memory System"
