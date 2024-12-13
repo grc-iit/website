@@ -262,11 +262,11 @@ in 3.06.
 |Name|Description|
 |-------|----------|
 |A < B|Less than operator. A is less than B.|
-|A <= B|Less than or equal operator. A is at most B.|
+|A <\= B|Less than or equal operator. A is at most B.|
 |A > B|Greater than operator. A is larger than B.|
-|A >= B|Greater than or equal operator. A is at least B.|
-|A == B|Equality operator. A and B are the same|
-|A != B|Inequality operator. A and B are not the same.|
+|A >\= B|Greater than or equal operator. A is at least B.|
+|A \=\= B|Equality operator. A and B are the same|
+|A !\= B|Inequality operator. A and B are not the same.|
 |A && B|AND operator. Both A and B are true.|
 |A \|\| B|OR operator. One of A or B is true.|
 |!A|NOT operator. Check if A is not true.|
@@ -561,7 +561,7 @@ int main() {
 
 To compile & run the code:
 ```bash
-cd ${GRC_TUTORIAL}/3.5.basics
+cd ${GRC_TUTORIAL}/cpp/04-cpp-basic-syntax
 mkdir build
 cd build
 make
@@ -641,7 +641,7 @@ int main() {
 
 To compile & run the code:
 ```bash
-cd ${GRC_TUTORIAL}/3.5.basics
+cd ${GRC_TUTORIAL}/cpp/04-cpp-basic-syntax
 mkdir build
 cd build
 make
@@ -720,7 +720,7 @@ int main() {
 
 To compile & run the code:
 ```bash
-cd ${GRC_TUTORIAL}/3.5.basics
+cd ${GRC_TUTORIAL}/cpp/04-cpp-basic-syntax
 mkdir build
 cd build
 make
@@ -811,7 +811,7 @@ int main() {
 
 To compile & run the code:
 ```bash
-cd ${GRC_TUTORIAL}/3.5.basics
+cd ${GRC_TUTORIAL}/cpp/04-cpp-basic-syntax
 mkdir build
 cd build
 make
@@ -924,7 +924,7 @@ ends when both of these statements are no longer true.
 
 To get the dataset, run the following:
 ```bash
-cd ${GRC_TUTORIAL}/3.5.basics
+cd ${GRC_TUTORIAL}/cpp/04-cpp-basic-syntax
 mkdir build
 cd build
 make
@@ -957,7 +957,7 @@ Average CO: 280
 ```
 
 Your Objectives:
-1. Create a file called my_analyze_kitchen_fire.cc in the ${GRC_TUTORIAL}/3.5.basics directory
+1. Create a file called my_analyze_kitchen_fire.cc in the ${GRC_TUTORIAL}/cpp/04-cpp-basic-syntax directory
 2. Edit the CMakeLists.txt in that directory to compile your code. Feel free to look at how the other sources in that directory were compiled.
 3. How do you read "kitchen_fire.bin" and interpret its contents?
 4. How do you analyze its contents to determine the start, end, and average
