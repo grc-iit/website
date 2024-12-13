@@ -25,10 +25,10 @@ is a subdirectory of the current working directory.
 ```bash
 ssh-keygen -t rsa -f ${PWD}/id_rsa -N "" -q
 ```
-**-t rsa** uses RSA for the algorithm.
-**-f ${PWD}/id_rsa** defines the output for the private key to be in this directory.
-**-N ""** indicates no password should be generated.
-**-q** disables interactive prompts.
+* ``-t rsa`` uses RSA for the algorithm.
+* ``-f ${PWD}/id_rsa`` defines the output for the private key to be in this directory.
+* ``-N ""`` indicates no password should be generated.
+* ``-q`` disables interactive prompts.
 
 ## OpenSSH-Server Dockerfile
 

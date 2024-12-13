@@ -959,7 +959,7 @@ Average CO: 280
 ```
 
 Your Objectives:
-1. Create a file called my_analyze_kitchen_fire.cc in the ${GRC_TUTORIAL}/cpp/04-cpp-basic-syntax directory
+1. Create a file called my_analyze_kitchen_fire.cc in the ``${GRC_TUTORIAL}/cpp/04-cpp-basic-syntax`` directory
 2. Edit the CMakeLists.txt in that directory to compile your code. Feel free to look at how the other sources in that directory were compiled.
 3. How do you read "kitchen_fire.bin" and interpret its contents?
 4. How do you analyze its contents to determine the start, end, and average
