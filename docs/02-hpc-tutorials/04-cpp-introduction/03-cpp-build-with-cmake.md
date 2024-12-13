@@ -456,11 +456,12 @@ This will run unit tests verbosely, meaning that terminal outputs
 will not be hidden. -VV indicates making the tests verbose
 
 You should see something like:
-<pre>UpdateCTestConfiguration  from :/home/lukemartinlogan/Documents/Projects/PhD/scs-tutorial/3.3.building_cpp_cmake/build/DartConfiguration.tcl
-Parse Config file:/home/lukemartinlogan/Documents/Projects/PhD/scs-tutorial/3.3.building_cpp_cmake/build/DartConfiguration.tcl
-UpdateCTestConfiguration  from :/home/lukemartinlogan/Documents/Projects/PhD/scs-tutorial/3.3.building_cpp_cmake/build/DartConfiguration.tcl
-Parse Config file:/home/lukemartinlogan/Documents/Projects/PhD/scs-tutorial/3.3.building_cpp_cmake/build/DartConfiguration.tcl
-Test project /home/lukemartinlogan/Documents/Projects/PhD/scs-tutorial/3.3.building_cpp_cmake/build
+```bash
+UpdateCTestConfiguration  from :/home/luke/Documents/Projects/grc-tutorial/cpp/03-cpp-build-with-cmake/build/DartConfiguration.tcl
+Parse Config file:/home/luke/Documents/Projects/grc-tutorial/cpp/03-cpp-build-with-cmake/build/DartConfiguration.tcl
+UpdateCTestConfiguration  from :/home/luke/Documents/Projects/grc-tutorial/cpp/03-cpp-build-with-cmake/build/DartConfiguration.tcl
+Parse Config file:/home/luke/Documents/Projects/grc-tutorial/cpp/03-cpp-build-with-cmake/build/DartConfiguration.tcl
+Test project /home/luke/Documents/Projects/grc-tutorial/cpp/03-cpp-build-with-cmake/build
 Constructing a list of tests
 Done constructing a list of tests
 Updating test list for fixtures
@@ -470,9 +471,10 @@ Checking test dependency graph end
 test 1
     Start 1: test_grocery_db
 
-1: Test command: /home/lukemartinlogan/Documents/Projects/PhD/scs-tutorial/3.3.building_cpp_cmake/build/bin/grocery_db
-1: Environment variables:
-1:  LD_LIBRARY_PATH=/home/lukemartinlogan/Documents/Projects/PhD/scs-tutorial/3.3.building_cpp_cmake/build/bin
+1: Test command: /home/luke/Documents/Projects/grc-tutorial/cpp/03-cpp-build-with-cmake/build/bin/grocery_db
+1: Working Directory: /home/luke/Documents/Projects/grc-tutorial/cpp/03-cpp-build-with-cmake/build/test
+1: Environment variables: 
+1:  LD_LIBRARY_PATH=/home/luke/Documents/Projects/grc-tutorial/cpp/03-cpp-build-with-cmake/build/bin
 1: Test timeout computed to be: 1500
 1: grocery: in create
 1: grocery: in read
@@ -482,9 +484,10 @@ test 1
 test 2
     Start 2: test_movies_db
 
-2: Test command: /home/lukemartinlogan/Documents/Projects/PhD/scs-tutorial/3.3.building_cpp_cmake/build/bin/movies_db
-2: Environment variables:
-2:  LD_LIBRARY_PATH=/home/lukemartinlogan/Documents/Projects/PhD/scs-tutorial/3.3.building_cpp_cmake/build/bin
+2: Test command: /home/luke/Documents/Projects/grc-tutorial/cpp/03-cpp-build-with-cmake/build/bin/movies_db
+2: Working Directory: /home/luke/Documents/Projects/grc-tutorial/cpp/03-cpp-build-with-cmake/build/test
+2: Environment variables: 
+2:  LD_LIBRARY_PATH=/home/luke/Documents/Projects/grc-tutorial/cpp/03-cpp-build-with-cmake/build/bin
 2: Test timeout computed to be: 1500
 2: movies: in create
 2: movies: in read
@@ -492,10 +495,10 @@ test 2
 2: movies: in delete
 2/2 Test #2: test_movies_db ...................   Passed    0.00 sec
 
-<font color="#4E9A06">100% tests passed</font>, 0 tests failed out of 2
+100% tests passed, 0 tests failed out of 2
 
 Total Test time (real) =   0.01 sec
-</pre>
+```
 
 #### Installing
 
