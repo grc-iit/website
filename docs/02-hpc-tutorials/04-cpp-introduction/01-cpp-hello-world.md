@@ -22,7 +22,10 @@ where a program crashes, without having to use an expensive debugger all the tim
 ## Setup
 
 ```bash
-cd ${SCS_TUTORIAL}/cpp_hello_world
+git clone https://github.com/grc-iit/grc-tutorial.git
+cd grc-tutorial
+export GRC_TUTORIAL=${PWD}
+cd ${GRC_TUTORIAL}/cpp/01-cpp-hello-world
 ```
 
 ## C++ Source File
@@ -99,8 +102,9 @@ the program succeeded. Any other value indicates a failure and the reason for fa
 
 ## Building
 
-We will build this code manually using gcc. It is generally a bad idea to compile things manually, but the knowledge of how
-the compiler is called will be helpful.
+We will build this code manually using gcc. In general, building things manually
+is a bad idea. Build tools (CMake nowadays for C/C++) automate much of the
+process. However, the knowledge of how the compiler is is helpful.
 
 Here we will use gcc to compile the program "`hello_world.cc`".
 
