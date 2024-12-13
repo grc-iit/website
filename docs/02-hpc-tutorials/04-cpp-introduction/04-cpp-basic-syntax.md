@@ -261,15 +261,15 @@ in 3.06.
 
 |Name|Description|
 |-------|----------|
-|'A < B'|'Less than operator. A is less than B.'|
-|'A <= B'|'Less than or equal operator. A is at most B.'|
-|'A > B'|'Greater than operator. A is larger than B.'|
-|'A >= B'|'Greater than or equal operator. A is at least B.'|
-|'A == B'|'Equality operator. A and B are the same'|
-|A !\= B|'Inequality operator. A and B are not the same.'|
-|A && B|'AND operator. Both A and B are true.'|
-|A \\ B|'OR operator. One of A or B is true.'|
-|'!A'|'NOT operator. Check if A is not true.'|
+|``A < B``|Less than operator. A is less than B.|
+|``A <= B``|Less than or equal operator. A is at most B.|
+|``A > B``|Greater than operator. A is larger than B.|
+|``A >= B``|Greater than or equal operator. A is at least B.|
+|``A == B``|Equality operator. A and B are the same|
+|``A !\= B``|Inequality operator. A and B are not the same.|
+|``A && B``|AND operator. Both A and B are true.|
+|``A \\ B``|OR operator. One of A or B is true.|
+|``!A``|NOT operator. Check if A is not true.|
 
 ### If-Else
 
