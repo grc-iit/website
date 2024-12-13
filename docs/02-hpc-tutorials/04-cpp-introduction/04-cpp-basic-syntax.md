@@ -514,7 +514,8 @@ which demonstrates the following:
 
 This is technically the way C++ recommends to do File I/O in general.
 In HPC, it doesn't get used very often, though. Most HPC programs use
-STDIO or POSIX. However, we introduce here anyway.
+STDIO or POSIX. However, we introduce here anyway. It is located in
+[libstdc.cc](https://github.com/grc-iit/grc-tutorial/blob/main/cpp/04-cpp-basic-syntax/src/libstd.cc).
 
 ```cpp
 #include <iostream>
@@ -576,7 +577,7 @@ Hello, World!
 ### STDIO
 
 The following example demonstrates the basics of the STDIO API.
-The code is located in [libstd.cc]().
+The code is located in [stdio.cc](https://github.com/grc-iit/grc-tutorial/blob/main/cpp/04-cpp-basic-syntax/src/stdio.cc).
 
 ```cpp
 #include <stdio.h>
@@ -656,6 +657,7 @@ Hello, World!
 ### POSIX
 
 The following example demonstrates the basics of the POSIX API.
+It is located in [posix.cc](https://github.com/grc-iit/grc-tutorial/blob/main/cpp/04-cpp-basic-syntax/src/posix.cc).
 
 ```cpp
 #include <stdio.h>

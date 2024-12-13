@@ -190,16 +190,13 @@ sudo docker-compose exec -u sshuser node2 hostname
 ```
 
 These commands should print "node1" and "node2".
-![docker-compose exec hostname results](images/5/5.2.7.docker-exec-hostname.png)
 
 Next, we will try performing ssh from one node into the other.
 ```bash
 sudo docker-compose exec -u sshuser node1 ssh node2 hostname
 ```
 
-The above command will execute "ssh node2 hostname" in node1. Its
-result should be:
-![docker-compose exec ssh results](images/5/5.2.7.ssh-test.png)
+The above command will execute "ssh node2 hostname" in node1.
 
 ## Interactive shell with cluster nodes
 

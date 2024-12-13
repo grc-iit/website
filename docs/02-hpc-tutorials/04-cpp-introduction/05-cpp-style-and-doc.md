@@ -153,7 +153,6 @@ It can be installed as follows:
 python3 -m pip install cpplint
 ```
 
-We have the following code located [here]().
 ```cpp
 // Copyright [year] <Copyright Owner>
 
