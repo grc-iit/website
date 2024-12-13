@@ -25,10 +25,10 @@ is a subdirectory of the current working directory.
 ```bash
 ssh-keygen -t rsa -f ${PWD}/id_rsa -N "" -q
 ```
-**-t rsa** uses RSA for the algorithm.
-**-f ${PWD}/id_rsa** defines the output for the private key to be in this directory.
-**-N ""** indicates no password should be generated.
-**-q** disables interactive prompts.
+* ``-t rsa`` uses RSA for the algorithm.
+* ``-f ${PWD}/id_rsa`` defines the output for the private key to be in this directory.
+* ``-N ""`` indicates no password should be generated.
+* ``-q`` disables interactive prompts.
 
 ## OpenSSH-Server Dockerfile
 
@@ -190,16 +190,13 @@ sudo docker-compose exec -u sshuser node2 hostname
 ```
 
 These commands should print "node1" and "node2".
-![docker-compose exec hostname results](images/5/5.2.7.docker-exec-hostname.png)
 
 Next, we will try performing ssh from one node into the other.
 ```bash
 sudo docker-compose exec -u sshuser node1 ssh node2 hostname
 ```
 
-The above command will execute "ssh node2 hostname" in node1. Its
-result should be:
-![docker-compose exec ssh results](images/5/5.2.7.ssh-test.png)
+The above command will execute "ssh node2 hostname" in node1.
 
 ## Interactive shell with cluster nodes
 

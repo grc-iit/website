@@ -184,7 +184,7 @@ this file there are two options.
 g++ src/database_lib.cc -I${PWD}/include -fpic -c -o build/database_lib.o
 ```
 
--I${PWD}/include will ensure the compiler searches the include directory
+``-I${PWD}/include`` will ensure the compiler searches the include directory
 for headers
 
 ### Fix 2: Environment Variables
@@ -234,7 +234,7 @@ g++ src/grocery_db.cc -I${PWD}/include -L${PWD}/build -ldatabase_lib -o build/gr
 g++ src/movies_db.cc -I${PWD}/include -L${PWD}/build -ldatabase_lib -o build/movies_db
 ```
 
--L${PWD}/build tells the compiler to search this directory for shared objects.
+``-L${PWD}/build`` tells the compiler to search this directory for shared objects.
 
 ### Fix 2: Environment Variables
 

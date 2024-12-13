@@ -133,7 +133,7 @@ public:
 In this example, we overload the addition operator to perform complex number addition.
 
 ### 3.6.04.3. Relational Operators
-Relational operators (==, !=, <, >, <=, >=) can be overloaded to define custom comparison logic for objects of your class.
+Relational operators (``==``, ``!=``, ``<``, ``>``, ``<=``, ``>=``) can be overloaded to define custom comparison logic for objects of your class.
 
 Example:
 
@@ -190,7 +190,7 @@ public:
 In this example, we overload the function call operator to create an object that behaves like a function, adding two integers.
 
 ### Bitwise Operators
-Bitwise operators (&, |, ^, ~, <<, >>) can be overloaded to define custom bitwise operations for objects of your class.
+Bitwise operators (`&`, `|`, `^`, `~`, `<<`, `>>`) can be overloaded to define custom bitwise operations for objects of your class.
 
 Example:
 

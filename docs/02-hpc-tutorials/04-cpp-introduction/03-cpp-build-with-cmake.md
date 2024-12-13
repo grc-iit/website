@@ -187,7 +187,7 @@ set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY
 
 CMAKE_BINARY_DIR is automatically provided by CMake. This is the absolute
 path to the directory which contains the root CMake. In our case, this would
-be "cd ${GRC_TUTORIAL}/cpp/03-cpp-build-with-cmake".
+be ``cd ${GRC_TUTORIAL}/cpp/03-cpp-build-with-cmake``.
 
 In this example, we output all executables and shared objects to the bin
 directory.
@@ -259,14 +259,14 @@ include_directories(${CMAKE_SOURCE_DIR}/include)
 ```
 
 *include_directories* will ensure that header files can be discovered
-by the C++ compiler. This is analagous to the "-I" flag in the gcc
+by the C++ compiler. This is analagous to the ``-I`` flag in the gcc
 compiler. Here we ensure that the compiler will search the directory
-${CMAKE_SOURCE_DIR}/include for header files.
+``${CMAKE_SOURCE_DIR}/include`` for header files.
 
 CMAKE_SOURCE_DIR is provided automatically by CMake. It represents
 the absolute path to the directory containing the root CMakeLists.txt.
 In our case, this constant would expand to
-"cd ${GRC_TUTORIAL}/cpp/03-cpp-build-with-cmake/".
+``cd ${GRC_TUTORIAL}/cpp/03-cpp-build-with-cmake/``.
 
 ### Creating a Shared Library
 ```cmake
@@ -283,12 +283,12 @@ target_link_libraries(database_lib
 input the path to all source files related to the build. The SHARED indicates
 this library is shared (as opposed to static). Here, there is only one source
 file, datbase_lib.cc. The output of this command will be "libdatabase_lib.so" in
-the "build/lib" directory.
+the ``build/lib`` directory.
 
 CMAKE_CURRENT_SOURCE_DIR is provided automatically by CMake. It represents
 the absolute path to the directory containing the CMakeLists.txt currently
 being processed. In our case, this constant would expand to
-"cd ${GRC_TUTORIAL}/cpp/03-cpp-build-with-cmake/src".
+``cd ${GRC_TUTORIAL}/cpp/03-cpp-build-with-cmake/src``.
 
 *target_link_libraries* will link all necessary libraries necessary to compile the target database_lib.
 This is analagous to the "-l" flag in gcc. In our case, we link against the
@@ -339,14 +339,14 @@ install(
 
 *install* defines what happens when a user calls "make install". In this
 case we specify that our targets database_lib, grocery_db, and movies_db
-should be installed into one of LIBRARY, ARCHIVE, or RUNTIME depending
+should be installed into one of ``LIBRARY``, ``ARCHIVE``, or ``RUNTIME`` depending
 on its type. For example, database_lib will be installed to LIBRARY
 (since we used add_library), whereas grocery_db and movies_db will be installed
-to RUNTIME (since we used add_executable).
+to ``RUNTIME`` (since we used add_executable).
 
-CMAKE_INSTALL_PREFIX is a constant provided by CMake which represents
+``CMAKE_INSTALL_PREFIX`` is a constant provided by CMake which represents
 where files should be installed. This can be configured by users by passing
--DCMAKE_INSTALL_PREFIX to their CMake build. By default, the value of this
+``-DCMAKE_INSTALL_PREFIX`` to their CMake build. By default, the value of this
 constant is /usr.
 
 ### Installing Header Files
@@ -364,8 +364,8 @@ install(
 ```
 
 In this case, we use *install* to specify
-that the specific file ${CMAKE_SOURCE_DIR}/include/database_lib.h should be
-installed to ${CMAKE_INSTALL_PREFIX}/include. Here, we use the keyword
+that the specific file ``${CMAKE_SOURCE_DIR}/include/database_lib.h`` should be
+installed to ``${CMAKE_INSTALL_PREFIX}/include``. Here, we use the keyword
 FILES instead of the keyword TARGET. Targets are defined using a CMake
 function such as add_executable or add_library. Files are just the way
 they are with no modification.
@@ -386,7 +386,7 @@ set_property(TEST test_movies_db PROPERTY ENVIRONMENT
 ```
 
 *add_test* creates a CTest case. Here we create two tests: test_grocery_db
-and test_movies_db. The test will execute the command ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/grocery_db.
+and test_movies_db. The test will execute the command ``${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/grocery_db``.
 
 CMAKE_RUNTIME_OUTPUT_DIRECTORY is a constant provided by CMake. It
 is the location where an executable is installed after performing the
@@ -394,10 +394,10 @@ is the location where an executable is installed after performing the
 
 *set_property* sets some sort of property about a target. In this
 case the target is the test case test_movies_db. We are setting
-an environment variable LD_LIBRARY_PATH. From section 3.2, we
+an environment variable ``LD_LIBRARY_PATH``. From section 3.2, we
 saw that we needed to be very careful about ensuring the OS
 knows where shared libraries are located. In this case, we
-ensure the OS will check the path ${CMAKE_LIBRARY_OUTPUT_DIRECTORY}.
+ensure the OS will check the path ``${CMAKE_LIBRARY_OUTPUT_DIRECTORY}``.
 
 CMAKE_LIBRARY_OUTPUT_DIRECTORY is a constant provided by CMake. It
 is the location where a shared library is installed after performing
@@ -456,11 +456,12 @@ This will run unit tests verbosely, meaning that terminal outputs
 will not be hidden. -VV indicates making the tests verbose
 
 You should see something like:
-<pre>UpdateCTestConfiguration  from :/home/lukemartinlogan/Documents/Projects/PhD/scs-tutorial/3.3.building_cpp_cmake/build/DartConfiguration.tcl
-Parse Config file:/home/lukemartinlogan/Documents/Projects/PhD/scs-tutorial/3.3.building_cpp_cmake/build/DartConfiguration.tcl
-UpdateCTestConfiguration  from :/home/lukemartinlogan/Documents/Projects/PhD/scs-tutorial/3.3.building_cpp_cmake/build/DartConfiguration.tcl
-Parse Config file:/home/lukemartinlogan/Documents/Projects/PhD/scs-tutorial/3.3.building_cpp_cmake/build/DartConfiguration.tcl
-Test project /home/lukemartinlogan/Documents/Projects/PhD/scs-tutorial/3.3.building_cpp_cmake/build
+```bash
+UpdateCTestConfiguration  from :/home/luke/Documents/Projects/grc-tutorial/cpp/03-cpp-build-with-cmake/build/DartConfiguration.tcl
+Parse Config file:/home/luke/Documents/Projects/grc-tutorial/cpp/03-cpp-build-with-cmake/build/DartConfiguration.tcl
+UpdateCTestConfiguration  from :/home/luke/Documents/Projects/grc-tutorial/cpp/03-cpp-build-with-cmake/build/DartConfiguration.tcl
+Parse Config file:/home/luke/Documents/Projects/grc-tutorial/cpp/03-cpp-build-with-cmake/build/DartConfiguration.tcl
+Test project /home/luke/Documents/Projects/grc-tutorial/cpp/03-cpp-build-with-cmake/build
 Constructing a list of tests
 Done constructing a list of tests
 Updating test list for fixtures
@@ -470,9 +471,10 @@ Checking test dependency graph end
 test 1
     Start 1: test_grocery_db
 
-1: Test command: /home/lukemartinlogan/Documents/Projects/PhD/scs-tutorial/3.3.building_cpp_cmake/build/bin/grocery_db
-1: Environment variables:
-1:  LD_LIBRARY_PATH=/home/lukemartinlogan/Documents/Projects/PhD/scs-tutorial/3.3.building_cpp_cmake/build/bin
+1: Test command: /home/luke/Documents/Projects/grc-tutorial/cpp/03-cpp-build-with-cmake/build/bin/grocery_db
+1: Working Directory: /home/luke/Documents/Projects/grc-tutorial/cpp/03-cpp-build-with-cmake/build/test
+1: Environment variables: 
+1:  LD_LIBRARY_PATH=/home/luke/Documents/Projects/grc-tutorial/cpp/03-cpp-build-with-cmake/build/bin
 1: Test timeout computed to be: 1500
 1: grocery: in create
 1: grocery: in read
@@ -482,9 +484,10 @@ test 1
 test 2
     Start 2: test_movies_db
 
-2: Test command: /home/lukemartinlogan/Documents/Projects/PhD/scs-tutorial/3.3.building_cpp_cmake/build/bin/movies_db
-2: Environment variables:
-2:  LD_LIBRARY_PATH=/home/lukemartinlogan/Documents/Projects/PhD/scs-tutorial/3.3.building_cpp_cmake/build/bin
+2: Test command: /home/luke/Documents/Projects/grc-tutorial/cpp/03-cpp-build-with-cmake/build/bin/movies_db
+2: Working Directory: /home/luke/Documents/Projects/grc-tutorial/cpp/03-cpp-build-with-cmake/build/test
+2: Environment variables: 
+2:  LD_LIBRARY_PATH=/home/luke/Documents/Projects/grc-tutorial/cpp/03-cpp-build-with-cmake/build/bin
 2: Test timeout computed to be: 1500
 2: movies: in create
 2: movies: in read
@@ -492,10 +495,10 @@ test 2
 2: movies: in delete
 2/2 Test #2: test_movies_db ...................   Passed    0.00 sec
 
-<font color="#4E9A06">100% tests passed</font>, 0 tests failed out of 2
+100% tests passed, 0 tests failed out of 2
 
 Total Test time (real) =   0.01 sec
-</pre>
+```
 
 #### Installing
 

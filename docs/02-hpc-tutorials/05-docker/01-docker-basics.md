@@ -73,7 +73,7 @@ sudo docker build -t [IMAGE_NAME] [DOCKERFILE_DIR, can be a github link] -f [DOC
 2. DOCKERFILE_DIR: the directory containing the Dockerfile.
 3. DOCKERFILE_NAME: the name of the dockerfile in that directory. This is optional. Default: Dockerfile.
 
-Let's say that our Dockerfile is located at ${HOME}/MyDockerfiles/Dockerfile.
+Let's say that our Dockerfile is located at ``${HOME}/MyDockerfiles/Dockerfile``.
 We could build the image two ways:
 ```
 # Option 1: a single command
