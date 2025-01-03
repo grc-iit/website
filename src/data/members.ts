@@ -113,18 +113,6 @@ export default [
     type: "researcher",
   },
   {
-    name: "Dr. Aparna Sasidharan",
-    title: "Research Software Engineer",
-    advisor: "Dr. Xian-He Sun",
-    image: require("@site/static/img/members/sasidharan.jpg").default,
-    links: {
-      email: "asasidharan@iit.edu",
-      linkedin: "https://www.linkedin.com/in/aparna-sasidharan-a36541158/",
-      website: "https://sites.google.com/view/aparna-sasidharan/home",
-    },
-    type: "engineer",
-  },
-  {
     name: "Meng Tang",
     title: "PhD Candidate",
     advisor: "Dr. Xian-He Sun",
