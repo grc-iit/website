@@ -83,7 +83,7 @@ export default [
   },
   {
     name: "Dr. Xiaoyang Lu",
-    title: "Research Assistant Professor",
+    title: "Assistant Research Professor",
     advisor: "Dr. Xian-He Sun",
     image: require("@site/static/img/members/lu.png").default,
     links: {
@@ -113,18 +113,6 @@ export default [
     type: "researcher",
   },
   {
-    name: "Dr. Aparna Sasidharan",
-    title: "Research Software Engineer",
-    advisor: "Dr. Xian-He Sun",
-    image: require("@site/static/img/members/sasidharan.jpg").default,
-    links: {
-      email: "asasidharan@iit.edu",
-      linkedin: "https://www.linkedin.com/in/aparna-sasidharan-a36541158/",
-      website: "https://sites.google.com/view/aparna-sasidharan/home",
-    },
-    type: "engineer",
-  },
-  {
     name: "Meng Tang",
     title: "PhD Candidate",
     advisor: "Dr. Xian-He Sun",
@@ -134,7 +122,11 @@ export default [
       github: "https://github.com/candiceT233",
       linkedin: "https://www.linkedin.com/in/meng-tang-86417a128/",
     },
-    researchInterests: ["Distributed Storage", "Containerization"],
+    researchInterests: [
+      "Distributed Storage",
+      "Workflow I/O",
+      "Containerization",
+    ],
     type: "researcher",
   },
   {
@@ -174,8 +166,8 @@ export default [
       email: "iyildirim@hawk.iit.edu",
       github: "https://github.com/izzet",
       linkedin: "https://www.linkedin.com/in/izzetcyildirim/",
+      orcid: "https://orcid.org/0000-0003-3513-0764",
       scholar: "https://scholar.google.com/citations?user=-Zi-DtsAAAAJ&hl=en",
-      twitter: "https://twitter.com/izzetcyildirim",
       website: "https://izzet.dev/",
     },
     researchInterests: [

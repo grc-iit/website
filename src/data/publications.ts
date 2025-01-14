@@ -3,22 +3,23 @@ import { ProjectId, Publication, PublicationTag } from "../types";
 const publications: Publication[] = [
   {
     authors: [
-      "J. Cernuda",
-      "L. Logan",
-      "N. Lewis",
-      "S. Byna",
+      "S. Yang",
+      "S. He",
+      "W. Wang",
+      "Y. Yin",
+      "T. Wu",
+      "W. Chen",
+      "X. Zhang",
       "X.-H. Sun",
-      "A. Kougkas",
+      "D. Feng",
     ],
-    title:
-        "Jarvis: Towards a Shared, User-Friendly, and Reproducible, I/O Infrastructure.",
-    venue: "PDSW'24",
-    type: "Workshop",
-    date: "November, 2024",
-    tags: ["deployment", "HPC", "hardware abstraction", "resource management", "I/O", "Python"],
-    links: {
-      pdf: "http://cs.iit.edu/~scs/assets/files/cernuda2024jarvis.pdf",
-    },
+    title: "GOPIM: GCN-Oriented Pipeline Optimization for PIM Accelerators",
+    venue:
+      "The IEEE International Symposium on High-Performance Computer Architecture (HPCA 2025)",
+    type: "Conference",
+    date: "March, 2025",
+    tags: [],
+    links: {},
   },
   {
     authors: [
@@ -33,12 +34,90 @@ const publications: Publication[] = [
     ],
     title:
       "AMBEA: Aggressive Maximal Biclique Enumeration in Large Bipartite Graph Computing",
-    venue: "IEEE Transactions on Computers",
+    venue: "IEEE Transactions on Computers, Vol. 73, No. 12",
     type: "Journal",
-    date: "TBA",
-    tags: [],
-    links: {},
+    date: "December, 2024",
+    tags: [
+      "Graph Computing",
+      "Bipartite Graph",
+      "Maximal Biclique Enumeration",
+    ],
+    links: {
+      pdf: "http://cs.iit.edu/~scs/assets/files/pan2024ambea.pdf",
+      bibtex: "http://cs.iit.edu/~scs/assets/files/pan2024ambea.bib",
+      citation: "http://cs.iit.edu/~scs/assets/files/pan2024ambea.txt",
+    },
   },
+  {
+    authors: [
+      "A. Gainaru",
+      "G. Eisenhauer",
+      "N. Podhorszki",
+      "L. Dulac",
+      "Q. Gong",
+      "A. Kougkas",
+      "J. Lofstead",
+      "X.-H. Sun",
+      "S. Klasky",
+    ],
+    title:
+      "To Derive or Not to Derive: I/O Libraries Take Charge of Derived Quantities Computation",
+    venue:
+      "IEEE/SBC 36th International Symposium on Computer Architecture and High Performance Computing (SBAC-PAD 2024), Hawaii, USA",
+    type: "Conference",
+    date: "November, 2024",
+    tags: [
+      "HPC Analysis",
+      "Large-Scale I/O",
+      "Derived Variables",
+      "Quantities of Interest",
+    ],
+    links: {
+      pdf: "http://cs.iit.edu/~scs/assets/files/gainaru2024derive.pdf",
+    },
+  },
+  {
+    authors: ["J. Ye", "B. Nicolae", "A. Kougkas", "X.-H. Sun"],
+    title:
+      "Uncover the Overhead and Resource Usage for Handling KV Cache Overflow in LLM Inference",
+    venue:
+      "The International Conference for High Performance Computing, Networking, Storage, and Analysis (SC'24)",
+    type: "Poster",
+    date: "November, 2024",
+    tags: ["KV Cache", "LLM Inference"],
+    links: {
+      poster: "http://cs.iit.edu/~scs/assets/files/ye2024kvcache_poster.pdf",
+      "extended abstract":
+        "http://cs.iit.edu/~scs/assets/files/ye2024kvcache_abstract.pdf",
+    },
+  },
+  {
+    authors: [
+      "J. Cernuda",
+      "L. Logan",
+      "N. Lewis",
+      "S. Byna",
+      "X.-H. Sun",
+      "A. Kougkas",
+    ],
+    title:
+      "Jarvis: Towards a Shared, User-Friendly, and Reproducible, I/O Infrastructure.",
+    venue: "The International Parallel Data Systems Workshop (PDSW'24)",
+    type: "Workshop",
+    date: "November, 2024",
+    tags: [
+      "Deployment",
+      "HPC",
+      "Hardware Abstraction",
+      "I/O",
+      "Python",
+      "Resource Management",
+    ],
+    links: {
+      pdf: "http://cs.iit.edu/~scs/assets/files/cernuda2024jarvis.pdf",
+    },
+  },
+
   {
     authors: [
       "H. Devarajan",
@@ -56,11 +135,15 @@ const publications: Publication[] = [
     title:
       "DFTracer: An Analysis-Friendly Data Flow Tracer for AI-Driven Workflows",
     venue:
-      "The International Conference for High Performance Computing, Networking, Storage, and Analysis (SC'24)	",
+      "The International Conference for High Performance Computing, Networking, Storage, and Analysis (SC'24)",
     type: "Conference",
     date: "November, 2024",
     tags: ["Deep Learning", "Workflows", "I/O Tracing"],
-    links: {},
+    links: {
+      pdf: "http://cs.iit.edu/~scs/assets/files/devarajan2024dftracer.pdf",
+      bibtex: "http://cs.iit.edu/~scs/assets/files/devarajan2024dftracer.bib",
+      citation: "http://cs.iit.edu/~scs/assets/files/devarajan2024dftracer.txt",
+    },
   },
   {
     authors: ["L. Logan", "X.-H. Sun", "A. Kougkas"],
@@ -77,7 +160,11 @@ const publications: Publication[] = [
       "HPC",
       "Operating Systems",
     ],
-    links: {},
+    links: {
+      pdf: "http://cs.iit.edu/~scs/assets/files/logan2024megammap.pdf",
+      bibtex: "http://cs.iit.edu/~scs/assets/files/logan2024megammap.bib",
+      citation: "http://cs.iit.edu/~scs/assets/files/logan2024megammap.txt",
+    },
   },
   {
     authors: [
@@ -98,8 +185,12 @@ const publications: Publication[] = [
       "The International Conference for High Performance Computing, Networking, Storage, and Analysis (SC'24)",
     type: "Conference",
     date: "November, 2024",
-    tags: [],
-    links: {},
+    tags: ["Bipartite Graph", "Maximal Biclique Enumeration"],
+    links: {
+      pdf: "http://cs.iit.edu/~scs/assets/files/pan2024bipartite.pdf",
+      bibtex: "http://cs.iit.edu/~scs/assets/files/pan2024bipartite.bib",
+      citation: "http://cs.iit.edu/~scs/assets/files/pan2024bipartite.txt",
+    },
   },
   {
     authors: [
@@ -118,7 +209,39 @@ const publications: Publication[] = [
     type: "Conference",
     date: "November, 2024",
     tags: ["Graph Pattern Matching", "Processing-in-Memory", "Cache System"],
-    links: {},
+    links: {
+      pdf: "http://cs.iit.edu/~scs/assets/files/yan2024aceminer.pdf",
+      slides: "http://cs.iit.edu/~scs/assets/files/yan2024aceminer_slides.pdf",
+    },
+  },
+  {
+    authors: [
+      "M. Tang",
+      "J. Cernuda",
+      "J. Ye",
+      "L. Guo",
+      "N. Tallent",
+      "A. Kougkas",
+      "X.-H. Sun",
+    ],
+    title:
+      "DaYu: Optimizing Distributed Scientific Workflows by Decoding Dataflow Semantics and Dynamics",
+    venue:
+      "2024 IEEE International Conference on Cluster Computing (CLUSTER'24)",
+    type: "Conference",
+    date: "September, 2024",
+    tags: [
+      "Data Analytics",
+      "Modeling",
+      "Performance Measurement",
+      "Tools",
+      "Workflow Optimization",
+    ],
+    links: {
+      pdf: "http://cs.iit.edu/~scs/assets/files/tang2024dayu.pdf",
+      bibtex: "http://cs.iit.edu/~scs/assets/files/tang2024dayu.bib",
+      citation: "http://cs.iit.edu/~scs/assets/files/tang2024dayu.txt",
+    },
   },
   {
     authors: [
@@ -162,8 +285,12 @@ const publications: Publication[] = [
     venue: "The 53th International Conference on Parallel Processing (ICPP'24)",
     type: "Conference",
     date: "August, 2024",
-    tags: [],
-    links: {},
+    tags: ["Heterogeneous Systems", "Emerging Architectures"],
+    links: {
+      pdf: "http://cs.iit.edu/~scs/assets/files/wu2024autohet.pdf",
+      bibtex: "http://cs.iit.edu/~scs/assets/files/wu2024autohet.bib",
+      citation: "http://cs.iit.edu/~scs/assets/files/wu2024autohet.txt",
+    },
   },
   {
     authors: ["J. Cernuda", "J. Ye", "A. Kougkas", "X.-H. Sun"],
@@ -189,6 +316,8 @@ const publications: Publication[] = [
     authors: [
       "J. Ye",
       "J. Cernuda",
+      "N. Rajesh",
+      "K. Bateman",
       "O. Yildiz",
       "T. Peterka",
       "A. Nigmetov",
@@ -202,8 +331,18 @@ const publications: Publication[] = [
     venue: "The 53th International Conference on Parallel Processing (ICPP'24)",
     type: "Conference",
     date: "August, 2024",
-    tags: ["DNN Model Transferring", "Inference Serving"],
-    links: {},
+    tags: [
+      "AI Workflows",
+      "Adaptive AI Model Checkpointing",
+      "Coupled Training and Inferences",
+      "Inferences During Partial Training",
+    ],
+    links: {
+      pdf: "http://cs.iit.edu/~scs/assets/files/ye2024viper.pdf",
+      slides: "http://cs.iit.edu/~scs/assets/files/ye2024viper.pptx",
+      bibtex: "http://cs.iit.edu/~scs/assets/files/ye2024viper.bib",
+      citation: "http://cs.iit.edu/~scs/assets/files/ye2024viper.txt",
+    },
   },
   {
     authors: [
@@ -315,6 +454,7 @@ const publications: Publication[] = [
       "Concurrency",
       "Synchronization",
       "Scalability",
+      "UniMCC",
     ],
     links: {
       pdf: "http://cs.iit.edu/~scs/assets/files/lu2024aces.pdf",
@@ -332,7 +472,12 @@ const publications: Publication[] = [
       "The 30th IEEE International Symposium on High-Performance Computer Architecture (HPCA 2024), Edinburgh, Scotland",
     type: "Conference",
     date: "March, 2024",
-    tags: ["Memory Architecture", "Cache Management"],
+    tags: [
+      "Memory Architecture",
+      "Cache Management",
+      "Optimization of Memory Architectures",
+      "UniMCC",
+    ],
     links: {
       pdf: "http://cs.iit.edu/~scs/assets/files/lu2024chrome.pdf",
       slides: "http://cs.iit.edu/~scs/assets/files/lu2024chrome_slides.pdf",
@@ -350,8 +495,7 @@ const publications: Publication[] = [
     ],
     title:
       "IOMax: Maximizing Out-of-Core I/O Analysis Performance on HPC Systems",
-    venue:
-      "The 8th International Parallel Data Systems Workshop (PDSW'23), November 12, 2023",
+    venue: "The International Parallel Data Systems Workshop (PDSW'23)",
     type: "Workshop",
     date: "November, 2023",
     tags: ["I/O Analysis", "Out-of-Core Analysis", "Data Drilling", "WisIO"],
@@ -442,6 +586,7 @@ const publications: Publication[] = [
       "Scalable Computing",
       "Memory-Wall",
       "Data-Centric Design",
+      "Optimization of Memory Architectures",
     ],
     links: {
       pdf: "http://cs.iit.edu/~scs/assets/files/sun2023memory.pdf",
@@ -482,7 +627,7 @@ const publications: Publication[] = [
       "The 29th IEEE International Symposium on High-Performance Computer Architecture (HPCA-29), Montreal, QC, Canada, February 25 - March 01, 2023",
     type: "Conference",
     date: "February, 2023",
-    tags: [],
+    tags: ["Optimization of Memory Architectures"],
     links: {
       pdf: "http://cs.iit.edu/~scs/assets/files/lu2023care.pdf",
       slides: "http://cs.iit.edu/~scs/assets/files/lu2023care-slides.pdf",
@@ -547,7 +692,11 @@ const publications: Publication[] = [
       "The 2022 Winter Simulation Conference (WSC), Singapore, December 11-14, 2022",
     type: "Conference",
     date: "December, 2022",
-    tags: ["Hierarchical Memory System", "C-AMAT"],
+    tags: [
+      "Hierarchical Memory System",
+      "C-AMAT",
+      "Optimization of Memory Architectures",
+    ],
     links: {
       pdf: "http://cs.iit.edu/~scs/assets/files/najafi2022generalized.pdf",
       bibtex: "http://cs.iit.edu/~scs/assets/files/najafi2022generalized.bib",
@@ -771,7 +920,7 @@ const publications: Publication[] = [
       "The 2021 IEEE 39th International Conference on Computer Design (ICCD'21), October 24 - 27, 2021",
     type: "Conference",
     date: "October, 2021",
-    tags: [],
+    tags: ["Optimization of Memory Architectures"],
     links: {
       pdf: "http://cs.iit.edu/~scs/assets/files/lu2021premier.pdf",
       bibtex: "http://cs.iit.edu/~scs/assets/files/lu2021premier.bib",
@@ -981,6 +1130,7 @@ const publications: Publication[] = [
       "Memory Architecture",
       "Memory Hierarchy",
       "Concurrent Average Memory Access Time",
+      "Optimization of Memory Architectures",
     ],
     links: {
       pdf: "http://cs.iit.edu/~scs/assets/files/liu2021study.pdf",
@@ -1144,7 +1294,12 @@ const publications: Publication[] = [
       "The 38th IEEE International Conference on Computer Design (ICCD'20), October 18 - 21, 2020",
     type: "Conference",
     date: "October, 2020",
-    tags: ["Prefetch", "Memory Performance Model", "Concurrent Memory Access"],
+    tags: [
+      "Prefetch",
+      "Memory Performance Model",
+      "Concurrent Memory Access",
+      "Optimization of Memory Architectures",
+    ],
     links: {
       pdf: "http://cs.iit.edu/~scs/assets/files/lu2020apac.pdf",
       bibtex: "http://cs.iit.edu/~scs/assets/files/lu2020apac.bib",
