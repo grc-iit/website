@@ -3,6 +3,24 @@ import { ProjectId, Publication, PublicationTag } from "../types";
 const publications: Publication[] = [
   {
     authors: [
+      "J. Ye",
+      "J. Cernuda",
+      "A. Maurya",
+      "X.-H. Sun",
+      "A. Kougkas",
+      "B. Nicolae",
+    ],
+    title:
+      "Characterizing the Behavior and Impact of KV Caching on Transformer Inferences under Concurrency",
+    venue:
+      "The 39th IEEE International Parallel & Distributed Processing Symposium (IPDPS 2025)",
+    type: "Conference",
+    date: "June, 2025",
+    tags: [],
+    links: {},
+  },
+  {
+    authors: [
       "S. Yang",
       "S. He",
       "W. Wang",
@@ -429,7 +447,7 @@ const publications: Publication[] = [
     ],
     title: "TunIO: An AI-powered Framework for Optimizing HPC I/O",
     venue:
-      "38th IEEE International Parallel & Distributed Processing Symposium (IPDPS 2024)",
+      "The 38th IEEE International Parallel & Distributed Processing Symposium (IPDPS 2024)",
     type: "Conference",
     date: "May, 2024",
     tags: ["AI for I/O", "I/O Stack Tuning"],

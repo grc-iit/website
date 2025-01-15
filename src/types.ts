@@ -79,6 +79,7 @@ export type PublicationAuthor =
   | "A. Haider"
   | "A. Kougkas"
   | "A. Kravtsov"
+  | "A. Maurya"
   | "A. Nigmetov"
   | "A. R. Blatecky"
   | "A. Torres"
