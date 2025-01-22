@@ -68,7 +68,7 @@ directory. Generally, the root CMake is responsible for the following:
 3. Setting variables global to the build
 4. Setting compiler flags (e.g., optimization)
 
-In this section, we will describe our root [CMakeLists.txt](https://github.com/scs-lab/scs-tutorial/blob/main/3.3.building_cpp_cmake/CMakeLists.txt).
+In this section, we will describe our root [CMakeLists.txt](https://github.com/grc-iit/grc-tutorial/blob/main/cpp/03-cpp-build-with-cmake/CMakeLists.txt).
 
 ### CMake Preamble
 ```cmake
@@ -245,7 +245,7 @@ directory and execute the CMakeLists.txt in that subdirectory.
 
 ## src/CMakeLists.txt
 
-In this section, we will discuss [src/CMakeLists.txt](https://github.com/scs-lab/scs-tutorial/blob/main/3.3.building_cpp_cmake/src/CMakeLists.txt).
+In this section, we will discuss [src/CMakeLists.txt](https://github.com/grc-iit/grc-tutorial/blob/main/cpp/03-cpp-build-with-cmake/src/CMakeLists.txt).
 This CMake file is responsible for defining how to build + install the
 source code in this repo.
 
@@ -372,7 +372,7 @@ they are with no modification.
 
 ## test/CMakeLists.txt
 
-In this section, we will discuss [test/CMakeLists.txt](https://github.com/scs-lab/scs-tutorial/blob/main/3.3.building_cpp_cmake/test/CMakeLists.txt). This CMake is responsible for creating unit tests.
+In this section, we will discuss [test/CMakeLists.txt](https://github.com/grc-iit/grc-tutorial/blob/main/cpp/03-cpp-build-with-cmake/test/CMakeLists.txt). This CMake is responsible for creating unit tests.
 
 ### Creating a CTest
 ```cmake

@@ -23,7 +23,7 @@ Jarvis-CD integrates with the SLURM scheduler through the pipeline sbatch menu. 
 To run a job using SLURM:
 
 ```bash
-jarvis pipeline sbatch job_name=test nnodes=4
+jarvis ppl sbatch job_name=test nnodes=4
 ```
 
 ## PBS Scheduler
@@ -42,5 +42,5 @@ Jarvis-CD also supports the PBS scheduler through the pipeline pbs menu. The fol
 To run a job using PBS:
 
 ```bash
-jarvis pipeline pbs nnodes=2 system=other_system
+jarvis ppl pbs nnodes=2 system=other_system
 ```
