@@ -13,15 +13,27 @@
 
 [Spack](https://spack.io/) is the easiest way to get Hermes and all its dependencies installed.
 
-First, add the Hermes spack repo:
+### Install Spack
 ```bash
-git clone https://github.com/HDFGroup/hermes
-cd hermes
-git submodule update --init --recursive
-spack repo add ci/hermes
+cd ${HOME}
+git clone https://github.com/spack/spack.git
+cd spack
+git checkout tags/v0.22.2
+echo ". ${PWD}/share/spack/setup-env.sh" >> ~/.bashrc
+source ~/.bashrc
 ```
 
-Second, introspect your machine to ensure that spack considers software already present on your machine. If there are modulefiles, make sure all relevant modulefiles have been loaded before executing this command.
+### Clone the GRC Spack Repo
+
+First, clone the GRC repo:
+```bash
+cd ${HOME}
+git clone https://github.com/grc-iit/grc-repo
+spack repo add grc-repo
+```
+
+### Add External Dependencies  
+Introspect your machine to ensure that spack considers software already present on your machine. If there are modulefiles, make sure all relevant modulefiles have been loaded before executing this command.
 You should ensure that any modules relating to networking (e.g., libfabric or UCX) and MPI are loaded, since they are likely specialized to your machine:
 ```bash
 spack external find
