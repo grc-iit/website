@@ -28,10 +28,10 @@ jarvis repo create gray_scott app
 We can then create an example pipeline as follows:
 
 ```bash
-jarvis pipeline create test
-jarvis pipeline append hermes
-jarvis pipeline append hermes_mpiio
-jarvis pipeline append gray_scott
+jarvis ppl create test
+jarvis ppl append hermes
+jarvis ppl append hermes_mpiio
+jarvis ppl append gray_scott
 ```
 
 This is an example of a pipeline which will deploy Hermes, the Hermes MPI-IO
@@ -313,7 +313,7 @@ will make the kwargs dict be:
 
 ### `start`
 
-The start function is called during `jarvis pipeline run` and `jarvis pipeline start`.
+The start function is called during `jarvis ppl run` and `jarvis ppl start`.
 This function should execute the program itself.
 
 Below is an example for Hermes:
@@ -336,7 +336,7 @@ def start(self):
 
 ### `stop`
 
-The stop function is called during `jarvis pipeline run` and `jarvis pipeline stop`.
+The stop function is called during `jarvis ppl run` and `jarvis ppl stop`.
 This function should terminate the program.
 
 Below is an example for Hermes:
@@ -363,7 +363,7 @@ This is not typically implemented for Applications, but it is for Services.
 
 ### `clean`
 
-The `clean` function is called during `jarvis pipeline clean`.
+The `clean` function is called during `jarvis ppl clean`.
 It clears all intermediate data produced by a pipeline.
 
 Below is the prototype
@@ -381,7 +381,7 @@ def clean(self):
 
 ### `status`
 
-The `status` function is called during `jarvis pipeline status`
+The `status` function is called during `jarvis ppl status`
 It determines whether or not a service is running. This is not typically
 implemented for Applications, but it is for Services.
 

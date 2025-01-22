@@ -57,10 +57,10 @@ files are stored in the `${PRIVATE_DIR}` and `${SHARED_DIR}` directories stored
 in the jarvis configuration.
 
 ```bash
-jarvis pipeline create ofs-global
-jarvis pipeline append orangefs
-jarvis pipeline start &
-jarvis pipeline stop
+jarvis ppl create ofs-global
+jarvis ppl append orangefs
+jarvis ppl start &
+jarvis ppl stop
 ```
 
 ## Application Pkgs
@@ -71,11 +71,11 @@ Applications can include:
 - simulation codes
 
 ```bash
-jarvis pipeline create my-benchmark
+jarvis ppl create my-benchmark
 jarvis cd my-benchmark
-jarvis pipeline append orangefs
-jarvis pipeline append hermes
-jarvis pipeline append ior
+jarvis ppl append orangefs
+jarvis ppl append hermes
+jarvis ppl append ior
 ```
 
 ## Interceptor Pkgs
@@ -84,14 +84,14 @@ A library can be used to intercept or monitor some functionality of an
 application. For example, a library may include
 
 ```bash
-jarvis pipeline create my-app
+jarvis ppl create my-app
 jarvis cd my-app
-jarvis pipeline append orangefs \
+jarvis ppl append orangefs \
   client_path=${HOME}/llogan/pfs
-jarvis pipeline append hermes
-jarvis pipeline append monitor
-jarvis pipeline append qmcpack
-jarvis pipeline run
+jarvis ppl append hermes
+jarvis ppl append monitor
+jarvis ppl append qmcpack
+jarvis ppl run
 ```
 
 ## Pipeline Metadata

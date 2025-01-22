@@ -44,7 +44,7 @@ This information will be stored under `${JARVIS_ROOT}/config/resource_graph.yaml
 The following command will create an empty pipeline "my_pipeline":
 
 ```bash
-jarvis pipeline create ior_test
+jarvis ppl create ior_test
 ```
 
 After creating a pipeline, jarvis will focus on that pipeline.
