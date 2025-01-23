@@ -83,7 +83,7 @@ hermes_env will store all important environment variables, including PATH,
 LD_LIBRARY_PATH, etc. in a YAML file. This will make it so that you do not
 need to repeatedly run spack load and module load if the machine is broken.
 
-### Set the active Hostfile
+## Set the active Hostfile
 
 The hostfile contains the set of nodes that the pipeline will run over.
 This is structured the same way as a traditional MPI hostfile.
@@ -108,7 +108,7 @@ pipeline. Jarvis does not automatically detect changes to this file.
 jarvis pipeline update
 ```
 
-#### Create an empty pipeline
+### Create an empty pipeline
 
 ```bash
 jarvis pipeline create hermes
