@@ -60,7 +60,7 @@ this parameter can be set later.
 
 For a personal machine, these directories can be the same directory.
 
-### Building the Resource Graph
+## Building the Resource Graph
 
 The resource graph is a snapshot of your systems network and storage.
 Many packages depend on it for their configurations. The Hermes I/O system, for example,
@@ -69,7 +69,7 @@ uses this to identify valid networks and buffering locations.
 jarvis rg build
 ```
 
-### Building an Environment
+## Building an Environment
 
 We will now load all necessary environment variables and build a
 Jarvis environment named hermes_env:
