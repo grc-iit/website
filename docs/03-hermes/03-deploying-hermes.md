@@ -108,7 +108,7 @@ pipeline. Jarvis does not automatically detect changes to this file.
 jarvis pipeline update
 ```
 
-### Create an empty pipeline
+## Create a pipeline
 
 ```bash
 jarvis pipeline create hermes
@@ -117,7 +117,7 @@ jarvis pipeline create hermes
 hermes is the name of the pipeline. It doesn't need to be hermes,
 it can be any name.
 
-#### Copy the environment cache
+### Copy the environment cache
 
 ```bash
 jarvis pipeline env copy hermes_env
@@ -125,7 +125,7 @@ jarvis pipeline env copy hermes_env
 
 This will use the hermes_env environment that was previously created in
 
-#### Add Hermes runtime
+### Add Hermes runtime
 
 ```bash
 jarvis pipeline append hermes_run
