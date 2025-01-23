@@ -12,119 +12,62 @@ that Hermes expects in order for applications to be deployed. We have
 also integrated several applications into Jarvis that can be seamlessly
 deployed with Hermes.
 
-### Install Jarvis
+Jarvis is automatically installed as a dependency in GRC's spack repo.
 
-To install jarvis, do the following:
+## Building the Jarvis Configuration
 
+### Bootstrapping for a single-node machine
+
+You may be trying to test things on just a single node. 
+
+In this case, run:
 ```bash
-export JARVIS_PATH=${PWD}/jarvis-cd
-git clone https://github.com/grc-iit/jarvis-cd.git ${JARVIS_PATH}
-cd ${JARVIS_PATH}
-pip install -e .
+jarvis bootstrap from local
 ```
 
-### Initialize Jarvis
+### Bootstrapping from a specific machine
 
-After installing, Jarvis MUST be configured for your specific system. The first
-step is to define places for storing Jarvis configuration data. Note that large data
-objects are **never** intended to be stored in these directories.
-
-There are three places where configuration data is stored:
-
-- **CONFIG_DIR:** A directory where jarvis metadata for pkgs and pipelines are stored. This
-  directory can be anywhere that the current user can access. ``${HOME}/jarvis_config`` would be an example.
-- **PRIVATE_DIR:** A directory which is common across all machines, but stores data locally to the
-  machine. Some jarvis pkgs require certain data to be stored per-machine. ``/tmp/jarvis_priv`` would be an example.
-- **SHARED_DIR:** A directory which is common across all machines, where each machine has the same
-  view of data in the directory. In a supercomputing site, this would typically be
-  in your home directory. For example ``${HOME}/jarvis_shared``
-
-Make sure that all these paths are absolute paths. Environment variables can be used to make absolute paths less cumbersome. This command will automatically create the directories if they don't exist.
-```bash
-jarvis init [CONFIG_DIR] [PRIVATE_DIR] [SHARED_DIR]
-```
-
-This above command produces the jarvis configuration and store it here:
-```bash
-${JARVIS_PATH}/config/jarvis_config.yaml
-```
-
-### Build a Resource Graph
-
-A resource graph contains the storage and networking configuration
-of the machines you intend to deploy Hermes on.
-
-#### Bootstrapping from an existing machine
-
-We have several resource graphs for different machines, located under
-`${JARVIS_PATH}/builtin/resource_graph`. There are resource graphs
-for different machines spanning IIT, PNNL, and Argonne. To view the
-set of preconfigured machines, run:
-
-```bash
-ls ${JARVIS_PATH}/builtin/resource_graph
-```
-
-If one of your machines is there, then do:
-
-```bash
-jarvis bootstrap from [MY_MACHINE]
-```
-
-For example, ares is one of the machines:
+Jarvis has been pre-configured on some machines. To bootstrap from
+one of them, run the following:
 
 ```bash
 jarvis bootstrap from ares
 ```
 
-#### Building a new resource graph
+NOTE: Jarvis must be installed from the compute nodes in Ares, NOT the master node. This is because we store configuration data in /mnt/ssd by default, which is only on compute nodes. We do not store data in /tmp since it will be eventually destroyed.
 
-If a resource graph for your machine is not available, you will have to
-define one manually.
-
-The resource graph **must** be created at exactly the following path:
-
+To check the set of available machines to bootstrap from, run:
 ```bash
-${JARVIS_PATH}/config/resource_graph.yaml
+jarvis bootstrap list
 ```
 
-For storage devices, the required parameters are as follows:
+### Creating a new configuration
 
-```yaml
-fs:
-  - avail: 500G # Available capacity of the device (Suffix: K,G,T,P)
-    dev_type: ssd # Type of storage hardware (hdd, ssd, nvme, pmem)
-    mount: /mnt/ssd/${USER} # Where to place data on the device
-    shared: false # Is this shared across nodes (e.g., a PFS?)
+A configuration can be generated as follows:
+```bash
+jarvis init [CONFIG_DIR] [PRIVATE_DIR] [SHARED_DIR (optional)]
 ```
 
-For networks, the parameters are as follows:
+* **CONFIG_DIR:** A directory where jarvis metadata for pkgs and pipelines
+are stored. This directory can be anywhere that the current user can access.
+* **PRIVATE_DIR:** A directory which is common across all machines, but
+stores data locally to the machine. Some jarvis pkgs require certain data to
+be stored per-machine. OrangeFS is an example.
+* **SHARED_DIR:** A directory which is common across all machines, where
+each machine has the same view of data in the directory. Most jarvis pkgs
+require this, but on machines without a global filesystem (e.g., Chameleon Cloud),
+this parameter can be set later.
 
-```yaml
-net:
-  - domain: lo # Domain of network. Can be null.
-    fabric: 127.0.0.1/32
-    provider: tcp;ofi_rxm
-    shared: false # Is this network shared across nodes. E.g., localhost is not
-    speed: 40G
-```
+For a personal machine, these directories can be the same directory.
 
-This information can be discovered using tools such as ``fi_info`` provided by libfabric. The fi_info tool is extremely verbose and requires some expertise to understand. fi_info outputs several networks -- most of which are irrelevant. Many networks printed may only function in single-node cases -- or not at all.
-* The most important information to determine a relevant network is domain, fabric, and provider.
-* Networks with the **lo** domain or with fabrics equivalent to 127.0.0.1 will only function in single-node cases.
-* Fabrics ending with the format \*.0.0.0 will **NOT** work. These are *network* addresses, not *host* addreses. For example, 127.0.0.0 comes up sometimes in the fi_info output.
-* Networks where the fabric is not a number are generally irrelevant and will not function when used. For example:
-```yaml
-# This provider is not relevant
-provider: UDP
-fabric: UDP-IP
-domain: udp
-version: 1.1
-type: FI_EP_DGRAM
-protocol: FI_PROTO_UDP
+## Building the Resource Graph
+
+The resource graph is a snapshot of your systems network and storage.
+Many packages depend on it for their configurations. The Hermes I/O system, for example,
+uses this to identify valid networks and buffering locations.
+```bash
+jarvis rg build
 ```
-* One way to filter out dysfunctional fi_info outputs is to use ``ip addr show`` (or ``fi_info | grep fabric``) to list available IP addresses. Do this on two separate machines, compare their output, and then look at only the IP addresses that are similar between the machines. If you can ssh between the machines using these IP addresses, then you should focus on only those fabrics matching their pattern in the fi_info output
-* Be careful about the providers. It has come up plenty of times where a provider is listed, but doesn't actually work. Verbs, for example, may fail if your Hermes installation was not correctly configured to support RDMA. This is a guess-and-check game. TCP and Sockets are generally a safe bet. It may be of benefit to try just these providers and get a distributed deployment of Hermes functioning before moving on to verbs.
 
 ### Building an Environment
 
