@@ -24,8 +24,6 @@ source ~/.bashrc
 ```
 
 ### Clone the GRC Spack Repo
-
-First, clone the GRC repo:
 ```bash
 cd ${HOME}
 git clone https://github.com/grc-iit/grc-repo
@@ -37,6 +35,7 @@ Introspect your machine to ensure that spack considers software already present 
 You should ensure that any modules relating to networking (e.g., libfabric or UCX) and MPI are loaded, since they are likely specialized to your machine:
 ```bash
 spack external find
+spack external find python
 ```
 
 Third, ensure that a recent compiler is added in spack. Hermes and some of its dependencies use the full C++17 feature set and require a compiler suitable of handling this:
@@ -51,7 +50,7 @@ spack compiler list
 Before installing, you may want to verify that spack is going to
 install Hermes with the correct dependencies.
 ```bash
-spack spec -I hermes@master
+spack spec -I hermes
 ```
 
 Some questions you may want to ask yourself:
@@ -60,19 +59,19 @@ Some questions you may want to ask yourself:
 
 To install the default Hermes:
 ```bash
-spack install hermes@master
+spack install hermes
 ```
 
 Hermes additionally has variants for intercepting MPI-IO and HDF5. They
 can be installed as follows:
 ```bash
-spack install hermes+vfd+mpiio@master
+spack install hermes+vfd+mpiio
 ```
 
 If you intend to use high-performance networks such as verbs,
 you will need to have knowledge of your specific system. This step is highly dependent on the machine, and you may need to consult your machine's documentation or sysadmin to determine what kind of network you use. If your machine uses infiniband, libfabric+verbs is probably for you. Libfabric does not come preinstalled with verbs support in spack.
 ```
-spack install hermes@master ^ libfabric fabrics=rxm,sockets,tcp,udp,verbs
+spack install hermes ^ libfabric fabrics=rxm,sockets,tcp,udp,verbs
 ```
 
 ### Why is my spack installation failing?
@@ -81,7 +80,7 @@ While spack automates the installation of most dependencies, it is under active 
 
 If Hermes fails to install use debug mode to get more information:
 ```bash
-spack -d install hermes@master
+spack -d install hermes
 ```
 
 #### Environment errors
@@ -112,7 +111,7 @@ to add the packages. The format of the yaml file is straightforward.
 There may be multiple versions of the same software installed at the
 same time. To determine what dependencies Hermes will be using, run:
 ```bash
-spack spec -I hermes@master
+spack spec -I hermes
 ```
 
 You may find that some dependencies are not the ones you had intended.
@@ -121,7 +120,7 @@ You can choose a specific version of a dependency using ``^``. Below
 is an example of installing with mpich@3.3.2
 
 ```bash
-spack install hermes@master ^ mpich@3.3.2
+spack install hermes ^ mpich@3.3.2
 ```
 
 #### Compilation errors
@@ -137,7 +136,7 @@ spack compiler add
 In order to ensure that spack uses the correct compiler, you can
 use the ``%`` symbol:
 ```bash
-spack install hermes@master%gcc@9.4
+spack install hermes%gcc@9.4
 ```
 
 #### Fetcher errors
@@ -238,7 +237,7 @@ cmake ../ \
 -DCMAKE_INSTALL_PREFIX=$(scspkg pkg root hermes_run)
 ```
 
-There are several options provided in the root Hermes [CMake](https://github.com/HDFGroup/hermes/blob/master/CMakeLists.txt). To view these
+There are several options provided in the root Hermes [CMake](https://github.com/HDFGroup/hermes/blob/1.2/CMakeLists.txt). To view these
 options, one can run run:
 ```bash
 ccmake ../
