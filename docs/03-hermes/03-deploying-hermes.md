@@ -256,8 +256,7 @@ all paths in `${HOME}/ior_data`.
 ### Add Hermes MPI-IO interceptor
 
 ```bash
-jarvis ppl append hermes_api
-jarvis pkg configure hermes_api +mpi
+jarvis ppl append hermes_api +mpi
 ```
 
 This will automatically locate the interceptor library by
