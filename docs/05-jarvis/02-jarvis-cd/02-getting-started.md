@@ -34,7 +34,7 @@ provided by your machine, they are loaded.
 To begin polling the system, run:
 
 ```bash
-jarvis rg build +walkthrough
+jarvis rg build
 ```
 
 This information will be stored under `${JARVIS_ROOT}/config/resource_graph.yaml`. The command uses SSH to connect to all pkgs. It will use the hostfile from the previous command and scan those pkgs.
