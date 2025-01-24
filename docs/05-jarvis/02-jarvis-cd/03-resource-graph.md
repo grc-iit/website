@@ -19,14 +19,11 @@ The resource graph contains information about the cluster hardware:
 NOTE: The resource-graph utility command depends on:
 
 - fi_info
+- chi-nettest
 - lsblk
 - df
 
-If libfabric is installed through spack, please load it before continuing.
-
-```bash
-spack load libfabric
-```
+These are installed automatically with the spack package.
 
 ## Building a Resource Graph Automatically
 
@@ -46,10 +43,10 @@ jarvis hostfile set /path/to/hostfile
 Build the resource graph
 
 ```bash
-jarvis resource-graph build +walkthrough
+jarvis rg build
 ```
 
-The resource graph will be stored under `${JARVIS_ROOT}/config/resource_graph.yaml`
+The resource graph will be stored under `~/.jarvis/resource_graph.yaml`
 
 ## Storage Graph
 
@@ -85,6 +82,9 @@ fi_info
 
 This will store the network information available per host.
 
+We use a utility named chi-nettest to identify properties of networks. Mainly,
+we use this program to detect whether we can send data over it.
+
 ## CPU Graph
 
 CPU information can be helpful for determining information such as the number
@@ -106,7 +106,7 @@ The resource graph can be queried for network and storage info.
 from jarvis_util import *
 
 rg = ResourceGraph()
-rg.find_storage(shared=True, condense=True)
+rg.find_storage(shared=True, needs_root=False)
 ```
 
 ## Future Ideas

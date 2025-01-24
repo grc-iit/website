@@ -58,9 +58,36 @@ each machine has the same view of data in the directory. Most jarvis pkgs
 require this, but on machines without a global filesystem (e.g., Chameleon Cloud),
 this parameter can be set later.
 
-For a personal machine, these directories can be the same directory.
+For a personal machine, these directories can be the same directory. 
 
-## Building the Resource Graph
+In addition to initializing the jarvis conf file, you must also build a resource graph.
+
+#### Set the active Hostfile
+
+The hostfile contains the set of nodes that the pipeline will run over.
+This is structured the same way as a traditional MPI hostfile.
+
+An example hostfile:
+
+```txt
+ares-comp-20
+ares-comp-[21-25]
+```
+
+To set the active hostfile, run:
+
+```bash
+jarvis hostfile set /path/to/hostfile
+```
+
+Note that every time you change the hostfile, you will need to update the
+pipeline. Jarvis does not automatically detect changes to this file.
+
+```bash
+jarvis ppl update
+```
+
+#### Building the Resource Graph
 
 The resource graph is a snapshot of your systems network and storage.
 Many packages depend on it for their configurations. The Hermes I/O system, for example,
@@ -83,35 +110,10 @@ hermes_env will store all important environment variables, including PATH,
 LD_LIBRARY_PATH, etc. in a YAML file. This will make it so that you do not
 need to repeatedly run spack load and module load if the machine is broken.
 
-## Set the active Hostfile
-
-The hostfile contains the set of nodes that the pipeline will run over.
-This is structured the same way as a traditional MPI hostfile.
-
-An example hostfile:
-
-```txt
-ares-comp-20
-ares-comp-[21-25]
-```
-
-To set the active hostfile, run:
-
-```bash
-jarvis hostfile set /path/to/hostfile
-```
-
-Note that every time you change the hostfile, you will need to update the
-pipeline. Jarvis does not automatically detect changes to this file.
-
-```bash
-jarvis pipeline update
-```
-
 ## Create a pipeline
 
 ```bash
-jarvis pipeline create hermes
+jarvis ppl create hermes
 ```
 
 hermes is the name of the pipeline. It doesn't need to be hermes,
@@ -120,7 +122,7 @@ it can be any name.
 ### Copy the environment cache
 
 ```bash
-jarvis pipeline env copy hermes_env
+jarvis ppl env copy hermes_env
 ```
 
 This will use the hermes_env environment that was previously created in
@@ -128,7 +130,7 @@ This will use the hermes_env environment that was previously created in
 ### Add Hermes runtime
 
 ```bash
-jarvis pipeline append hermes_run
+jarvis ppl append hermes_run
 jarvis pkg configure hermes_run \
 sleep=5 \
 include=${HOME}/ior_data
@@ -153,7 +155,7 @@ jarvis pkg help hermes_run
 To start Hermes:
 
 ```bash
-jarvis pipeline start
+jarvis ppl start
 ```
 
 ### Stopping and Killing Hermes
@@ -161,13 +163,13 @@ jarvis pipeline start
 To gracefully stop Hermes and flush data back to the PFS:
 
 ```bash
-jarvis pipeline stop
+jarvis ppl stop
 ```
 
 To kill a Hermes deployment that isn't stopping gracefully:
 
 ```bash
-jarvis pipeline kill
+jarvis ppl kill
 ```
 
 ### Cleanup
@@ -175,13 +177,25 @@ jarvis pipeline kill
 To erase data produced by the pipeline:
 
 ```bash
-jarvis pipeline clean
+jarvis ppl clean
 ```
 
 To destroy the pipeline:
 
 ```bash
-jarvis pipeline destroy
+jarvis ppl destroy
+```
+
+## Changing the active Hostfile
+
+You may want to change the hostfile at some point. This can 
+be done using the same command as before. 
+
+However, note that every time you change the hostfile, you will need to update the
+pipeline. Jarvis does not automatically detect changes to this file.
+
+```bash
+jarvis ppl update
 ```
 
 ## Configuring + Deploying Hermes with an Application
@@ -208,13 +222,13 @@ LD_LIBRARY_PATH, etc. in a YAML file.
 ### Create an empty pipeline
 
 ```bash
-jarvis pipeline create hermes_ior
+jarvis ppl create hermes_ior
 ```
 
 ### Copy the environment cache
 
 ```bash
-jarvis pipeline env copy hermes_ior_env
+jarvis ppl env copy hermes_ior_env
 ```
 
 ### Set the active hostfile
@@ -226,7 +240,7 @@ jarvis hostfile set /path/to/hostfile
 ### Add Hermes runtime
 
 ```bash
-jarvis pipeline append hermes_run
+jarvis ppl append hermes_run
 jarvis pkg configure hermes_run \
 sleep=5 \
 include=${HOME}/ior_data
@@ -238,7 +252,7 @@ all paths in `${HOME}/ior_data`.
 ### Add Hermes MPI-IO interceptor
 
 ```bash
-jarvis pipeline append hermes_api
+jarvis ppl append hermes_api
 jarvis pkg configure hermes_api +mpi
 ```
 
@@ -254,7 +268,7 @@ jarvis pkg help hermes_run
 ### Add IOR
 
 ```bash
-jarvis pipeline append ior
+jarvis ppl append ior
 jarvis pkg configure ior \
 xfer=1m \
 block=1g \
@@ -274,15 +288,15 @@ produce a single output file `${HOME}/ior_data/ior.bin`(out) using MPI-IO
 To run the pipeline:
 
 ```bash
-jarvis pipeline run
+jarvis ppl run
 ```
 
 This will launch Hermes, execute IOR, and then stop Hermes. It is equivalent
 to:
 
 ```bash
-jarvis pipeline start
-jarvis pipeline stop
+jarvis ppl start
+jarvis ppl stop
 ```
 
 ### Cleanup
@@ -290,7 +304,7 @@ jarvis pipeline stop
 The following will delete intermediate data generated by Hermes + IOR:
 
 ```bash
-jarvis pipeline clean
+jarvis ppl clean
 ```
 
 ## Why is my application hanging?
