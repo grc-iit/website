@@ -76,8 +76,9 @@ for window_size, df_size in mm_kmeans_df_window_size, mm_kmeans_df_df_size:
 
 # repeat:
 
-The number of times each experiment should be conducted. This is for
-reproducability.
+The number of times each experiment should be conducted. For example,
+this can be used to calculate the average across experiment runs to
+get a better understanding of variability and noise in your study.
 
 # output
 
@@ -94,7 +95,7 @@ By default, the output of this is going to be a dataset with each variable as a 
 To get more columns, pkgs can define a custom ``_get_stat()`` function. This is more
 for developers than users: Below is an example of a custom stat for the YCSB benchmark,
 which analyzes the output of YCSB for its throughput and total runtime.
-```
+```python
 class Ycsb:
   def _get_stat(self, stat_dict):
         """
