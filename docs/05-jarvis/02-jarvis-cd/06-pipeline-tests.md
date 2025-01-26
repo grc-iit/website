@@ -84,11 +84,19 @@ In this example, a total of 6 cases are executed:
 4g 4g 4
 ```
 
+By having a separate loop section, you can define certain variables as together or independent
+to reduce the number of total test cases. In this example, ``mm_kmeans_df.window_size`` and ``mm_kmeans_df.df_size``
+vary together, but independently from ``spark_cluster.num_nodes``.
+
+``mm_kmeans_df.window_size`` and ``mm_kmeans_df.df_size`` must have the same size (in this case 6).
+
 # repeat:
 
 The number of times each experiment should be conducted. For example,
 this can be used to calculate the average across experiment runs to
 get a better understanding of variability and noise in your study.
+
+In this example, experiments are only conducted once.
 
 # output
 
