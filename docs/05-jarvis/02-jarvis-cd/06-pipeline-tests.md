@@ -74,6 +74,16 @@ for window_size, df_size in mm_kmeans_df_window_size, mm_kmeans_df_df_size:
     mm_kmeans_spark.configure(window_size, df_size, num_nodes)
 ```
 
+In this example, a total of 6 cases are executed: 
+```
+16m 16m 4
+64m 64m 4
+128m 128m 4
+1g 1g 4
+2g 2g 4
+4g 4g 4
+```
+
 # repeat:
 
 The number of times each experiment should be conducted. For example,
