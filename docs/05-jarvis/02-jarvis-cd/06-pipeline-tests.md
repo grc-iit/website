@@ -74,11 +74,29 @@ for window_size, df_size in mm_kmeans_df_window_size, mm_kmeans_df_df_size:
     mm_kmeans_spark.configure(window_size, df_size, num_nodes)
 ```
 
+In this example, a total of 6 cases are executed: 
+```
+16m 16m 4
+64m 64m 4
+128m 128m 4
+1g 1g 4
+2g 2g 4
+4g 4g 4
+```
+
+By having a separate loop section, you can define certain variables as together or independent
+to reduce the number of total test cases. In this example, ``mm_kmeans_df.window_size`` and ``mm_kmeans_df.df_size``
+vary together, but independently from ``spark_cluster.num_nodes``.
+
+``mm_kmeans_df.window_size`` and ``mm_kmeans_df.df_size`` must have the same size (in this case 6).
+
 # repeat:
 
 The number of times each experiment should be conducted. For example,
 this can be used to calculate the average across experiment runs to
 get a better understanding of variability and noise in your study.
+
+In this example, experiments are only conducted once.
 
 # output
 
