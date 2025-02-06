@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkgrc=self.webpackChunkgrc||[]).push([[4195],{2282:e=>{e.exports=JSON.parse('{"label":"Keynote","permalink":"/blog/tags/keynote","allTagsPath":"/blog/tags","count":1,"unlisted":false}')}}]);

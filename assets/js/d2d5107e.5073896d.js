@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkgrc=self.webpackChunkgrc||[]).push([[1984],{7821:l=>{l.exports=JSON.parse('{"label":"ChronoLog","permalink":"/blog/tags/chrono-log","allTagsPath":"/blog/tags","count":1,"unlisted":false}')}}]);

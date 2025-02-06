@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkgrc=self.webpackChunkgrc||[]).push([[8169],{4970:e=>{e.exports=JSON.parse('{"title":"Recent posts","items":[{"title":"Introducing the Gnosis Research Center","permalink":"/newsletter/2023/10/25/introducing-grc","unlisted":false}]}')}}]);
