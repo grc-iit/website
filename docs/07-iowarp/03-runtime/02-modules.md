@@ -162,7 +162,7 @@ rather than a specific module.
 The ``chi_refresh_methods`` command will autogenerate some new files that you can
 copy-paste from. The extensions of these files are ``temp_h`` and ``temp_cc``.
 ```bash
-tasks
+my_mod_repo
 └── compressor
     ├── CMakeLists.txt
     ├── include
