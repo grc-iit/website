@@ -132,8 +132,8 @@ Inherited methods are common across all modules. Of these,
 only kCreate is strictly required. The others are optional,
 which is indicated by setting -1 to avoid code generation for them.
 
-Custom methods can range from 10 to 2^32. Let's uncomment the kCustom
-task so that we have the following:
+Custom methods can range from 10 to 2^32. Let's add the methods
+kCompress and kDecompress.
 
 ```yaml
 # Inherited Methods

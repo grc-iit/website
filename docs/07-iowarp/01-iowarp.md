@@ -4,7 +4,7 @@ IoWarp is a powerful cutting-edge data management platform designed to streamlin
 
 ## Installation
 
-[Spack](https://spack.io/) is the easiest way to get Hermes and all its dependencies installed.
+[Spack](https://spack.io/) is the easiest way to install iowarp as of right now.
 
 ### Install Spack
 ```bash
