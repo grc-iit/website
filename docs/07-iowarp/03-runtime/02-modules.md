@@ -200,10 +200,10 @@ Below is what ``include/compressor/compressor_tasks.h`` should look like after y
 have done this:
 ```cpp
 /**
- * A task to create example
+ * A task to create compressor
  * */
 struct CreateTaskParams {
-  CLS_CONST char *lib_name_ = "example";
+  CLS_CONST char *lib_name_ = "compressor";
 
   HSHM_INLINE_CROSS_FUN
   CreateTaskParams() = default;
@@ -216,7 +216,7 @@ struct CreateTaskParams {
 };
 typedef chi::Admin::CreateContainerBaseTask<CreateTaskParams> CreateTask;
 
-/** A task to destroy example */
+/** A task to destroy compressor */
 typedef chi::Admin::DestroyContainerTask DestroyTask;
 
 /** The CompressTask task */
@@ -310,7 +310,7 @@ compression library. We modify the non-default constructor and the serialization
 The serialization function in particular is important.
 ```cpp
 struct CreateTaskParams {
-  CLS_CONST char *lib_name_ = "example";
+  CLS_CONST char *lib_name_ = "compressor";
   int compress_id_;
 
   HSHM_INLINE_CROSS_FUN
