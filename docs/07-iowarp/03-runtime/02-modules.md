@@ -132,8 +132,8 @@ Inherited methods are common across all modules. Of these,
 only kCreate is strictly required. The others are optional,
 which is indicated by setting -1 to avoid code generation for them.
 
-Custom methods can range from 10 to 2^32. Let's uncomment the kCustom
-task so that we have the following:
+Custom methods can range from 10 to 2^32. Let's add the methods
+kCompress and kDecompress.
 
 ```yaml
 # Inherited Methods
@@ -162,7 +162,7 @@ rather than a specific module.
 The ``chi_refresh_methods`` command will autogenerate some new files that you can
 copy-paste from. The extensions of these files are ``temp_h`` and ``temp_cc``.
 ```bash
-tasks
+my_mod_repo
 └── compressor
     ├── CMakeLists.txt
     ├── include
@@ -200,10 +200,10 @@ Below is what ``include/compressor/compressor_tasks.h`` should look like after y
 have done this:
 ```cpp
 /**
- * A task to create example
+ * A task to create compressor
  * */
 struct CreateTaskParams {
-  CLS_CONST char *lib_name_ = "example";
+  CLS_CONST char *lib_name_ = "compressor";
 
   HSHM_INLINE_CROSS_FUN
   CreateTaskParams() = default;
@@ -216,7 +216,7 @@ struct CreateTaskParams {
 };
 typedef chi::Admin::CreateContainerBaseTask<CreateTaskParams> CreateTask;
 
-/** A task to destroy example */
+/** A task to destroy compressor */
 typedef chi::Admin::DestroyContainerTask DestroyTask;
 
 /** The CompressTask task */
@@ -310,7 +310,7 @@ compression library. We modify the non-default constructor and the serialization
 The serialization function in particular is important.
 ```cpp
 struct CreateTaskParams {
-  CLS_CONST char *lib_name_ = "example";
+  CLS_CONST char *lib_name_ = "compressor";
   int compress_id_;
 
   HSHM_INLINE_CROSS_FUN
@@ -674,7 +674,7 @@ they will use.
 
 Without modification, the file looks like this:
 ```cpp
-/** Create example requests */
+/** Create compressor requests */
 class Client : public ModuleClient {
  public:
   /** Default constructor */
