@@ -674,7 +674,7 @@ they will use.
 
 Without modification, the file looks like this:
 ```cpp
-/** Create example requests */
+/** Create compressor requests */
 class Client : public ModuleClient {
  public:
   /** Default constructor */
