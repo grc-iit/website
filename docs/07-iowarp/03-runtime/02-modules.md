@@ -151,15 +151,15 @@ kDecompress: 11
 
 ## Autogenerate task helper files
 
-To autogenerate the kCustom function, we can run the following command:
+To autogenerate the Compress and Decompress functions, we can run the following command:
 ```bash
-chi_refresh_methods tasks
+chi_refresh_mods tasks
 ```
 
 NOTE: Unlike ``chi_make_mod``, this command takes as input the entire module repo, 
 rather than a specific module.
 
-The ``chi_refresh_methods`` command will autogenerate some new files that you can
+The ``chi_refresh_mods`` command will autogenerate some new files that you can
 copy-paste from. The extensions of these files are ``temp_h`` and ``temp_cc``.
 ```bash
 my_mod_repo
