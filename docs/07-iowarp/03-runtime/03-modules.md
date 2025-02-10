@@ -170,7 +170,7 @@ kDecompress: 11
 
 To autogenerate the Compress and Decompress functions, we can run the following command:
 ```bash
-chi_refresh_repo tasks
+chi_refresh_repo ~/my_mod_repo
 ```
 
 NOTE: Unlike ``chi_make_mod``, this command takes as input the entire module repo, 
@@ -1089,4 +1089,40 @@ cmake ../ -DCMAKE_INSTALL_PREFIX=$(scspkg pkg root my_mod_repo)
 make -j32 install
 ```
 
-## 
+## Link to your mods
+
+In order to use the Compressor Client API, you must 
+link to it and Chimaera in your CMake. 
+
+Below is an example CMake:
+```cmake
+cmake_minimum_required(VERSION 3.25)
+project(external)
+
+find_package(Chimaera CONFIG REQUIRED)
+find_package(Example CONFIG REQUIRED)
+
+add_executable(external external.cc)
+target_link_libraries(external example::compressor_client)
+```
+
+### Locate your module
+```cpp
+find_package(Example CONFIG REQUIRED)
+``` 
+
+The find_package for your mod repo will be in "uppercase snakecase" format.
+Since our namespace was example, this translates to "Example". If
+the namespace were hello_example, the find_package would 
+be HelloExample instead.
+
+### Target link libraries
+```cpp
+target_link_libraries(external example::compressor_client)
+```
+
+There are two targets that you can access here:
+1. ``example::compressor_client``: Contains the APIs for the client 
+2. ``example::compressor_client_gpu``: Contains APIs for the client,
+which can be called from GPU. Assumes Chimaera was compiled with
+either CUDA or ROCm.
