@@ -1059,3 +1059,15 @@ aggregating the results of that into a single task.
 
 For now, we leave this as-is. The current implementation of the function
 essentially does nothing.
+
+## Compile + Install
+
+To compile the module repo
+```bash
+scspkg create my_mod_repo
+cd ~/my_mod_repo
+mkdir build
+cd build
+cmake ../ -DCMAKE_INSTALL_PREFIX=$(scspkg pkg root my_mod_repo)
+make -j32 install
+```
