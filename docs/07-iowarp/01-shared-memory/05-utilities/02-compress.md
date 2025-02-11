@@ -41,6 +41,8 @@ We support many compression algorithms:
 ## An example
 
 ```cpp
+#include "hermes_shm/util/compress/compress_factory.h"
+
 int main() {
     hshm::Zlib zlib;
     size_t cmpr_size = 1024, raw_size = 1024;
