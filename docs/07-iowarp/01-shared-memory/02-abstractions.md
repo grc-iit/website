@@ -1,4 +1,4 @@
-# Hermes-Shm Abstractions
+# Memory Abstractions
 
 The main purpose of hermes-shm is to provide data structures and allocators for managing memory.
 This can be both private memory and shared memory. This section details the primary
@@ -110,6 +110,15 @@ class BaseAllocator : public CoreAllocT {
 };
 ```
 
+### Memory Context
+
+The memory context object is used to store hints on memory allocation.
+The main hint that this object supports currently is Thread ID.
+
+In most cases, the memory context will be ``HSHM_DEFAULT_MEM_CTX``,
+which stores a null thread id. This indicates to a memory allocator
+that it should scan thread-local storage for the current thread id.
+
 ## Memory Manager
 
 The memory manager is where allocators and backends are stored. This
@@ -192,3 +201,4 @@ int main() {
   HERMES_THREAD_MODEL->GetTid();
 }
 ```
+
