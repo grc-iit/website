@@ -1,4 +1,4 @@
-# IOWARP
+# IoWarp
 
 IoWarp is a powerful cutting-edge data management platform designed to streamline and accelerate scientific workflows, especially those intensified by the rise of artificial intelligence (AI). It optimizes data flow throughout the research process, ensuring efficient handling of diverse data types, formats, and the exponential growth of data. IOWarp aims to significantly reduce data access times, accelerate the pace of scientific discovery, and foster a collaborative research environment.
 
@@ -51,11 +51,14 @@ cd ${HOME}
 scspkg create hermes_shm
 git clone https://github.com/iowarp/cte-hermes-shm.git
 cd cte-hermes-shm
+mkdir build
+cd build
 cmake ../ \
 -DCMAKE_INSTALL_PREFIX=$(scspkg pkg root hermes_shm) \
 -DHSHM_ENABLE_COMPRESS=ON \
 -DHSHM_ENABLE_ENCRYPT=ON \
 -DHSHM_RPC_THALLIUM=ON
+make -j32 install
 ```
 
 NOTE: If you will be working on hermes-shm, create your own personal 
