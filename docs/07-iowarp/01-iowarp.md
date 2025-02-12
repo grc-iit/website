@@ -57,7 +57,8 @@ cmake ../ \
 -DCMAKE_INSTALL_PREFIX=$(scspkg pkg root hermes_shm) \
 -DHSHM_ENABLE_COMPRESS=ON \
 -DHSHM_ENABLE_ENCRYPT=ON \
--DHSHM_RPC_THALLIUM=ON
+-DHSHM_RPC_THALLIUM=ON \
+-DHSHM_USE_ELF=ON
 make -j32 install
 ```
 
