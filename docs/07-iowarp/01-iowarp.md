@@ -88,7 +88,10 @@ cd ${HOME}
 scspkg create cte
 git clone https://github.com/iowarp/content-transfer-engine.git
 
+cd content-transfer-engine
 module load hermes_shm iowarp_runtime
+mkdir build
+cd build
 cmake ../ \
 -DCMAKE_INSTALL_PREFIX=$(scspkg pkg root cte)
 make -j32 install
