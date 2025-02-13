@@ -52,17 +52,54 @@ that streamline the installation of our tools.
 
 We provide an Ubuntu contianer where iowarp's dependencies are
 already installed. No need to rerun ``spack install iowarp +nocompile``.
-```bash
-docker pull lukemartinlogan/chimaera-deps:latest
-docker run -it \
---name iowarp \
---network host \
---memory=8G \
---shm-size=8G \
--p 4000:4000 \
--p 4001:4001 \
-lukemartinlogan/chimaera-deps:latest
+
+Here is the docker compose:
+```dockerfile
+services:
+  iowarp:
+    image: lukemartinlogan/chimaera-deps:latest
+    container_name: iowarp  
+    shm_size: 8g
+    mem_limit: 8g
+    volumes:
+      - ~/.ssh:/root/.ssh
+      - ~/cte-hermes-shm:/cte-hermes-shm
+      - ~/iowarp-runtime:/iowarp-runtime
+      - ~/content-transfer-engine:/content-transfer-engine
+    stdin_open: true
+    tty: true
+    network_mode: host
 ```
+
+To launch container:
+```bash
+mkdir ~/iowarp-dev
+cd ~/iowarp-dev
+touch ~/iowarp-dev/docker-compose.yml
+# Copy-paste the above into the file
+docker compose up -d  # For recent dockers
+docker-compose up -d  # For older dockers
+```
+
+To interact with the container:
+```bash
+docker exec -it chimaera bash
+```
+
+To stop container:
+```bash
+cd ~/iowarp-dev
+docker compose down  # For recent dockers
+docker-compose down  # For older dockers
+```
+
+NOTE: Do all ``git clone`` commands outside of the container and mount as volumes.
+The above docker-compose assumes you have placed hermes-shm, iowarp-runtime, and
+content-transfer-engine in your home directory. If you didn't, then please update
+the volumes in the above file to be their actual locations.
+
+NOTE: ``shm_size`` and ``memory`` are set to 8GB. Feel free to increase or decrease
+that value.
 
 ### For Pull Requests
 You may find the github [command line](https://cli.github.com/) useful for making PRs.
