@@ -54,6 +54,22 @@ We provide an Ubuntu contianer where iowarp's dependencies are
 already installed. No need to rerun ``spack install iowarp +nocompile``.
 ```bash
 docker pull lukemartinlogan/chimaera-deps:latest
+docker run -it \
+--name iowarp \
+--network host \
+--memory=8G \
+--shm-size=8G \
+-p 4000:4000 \
+-p 4001:4001 \
+lukemartinlogan/chimaera-deps:latest
+```
+
+### For Pull Requests
+You may find the github [command line](https://cli.github.com/) useful for making PRs.
+```bash
+gh auth login
+gh repo set-default
+gh pr create --title "Your pull request title" --body "Your pull request description"
 ```
 
 ### Hermes-SHM
