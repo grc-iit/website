@@ -90,9 +90,9 @@ services:
     mem_limit: 8g
     volumes:
       - ~/.ssh:/root/.ssh
-      - ~/cte-hermes-shm:/cte-hermes-shm
-      - ~/iowarp-runtime:/iowarp-runtime
-      - ~/content-transfer-engine:/content-transfer-engine
+      - ${IOWARP_PKGS}/cte-hermes-shm:/cte-hermes-shm
+      - ${IOWARP_PKGS}/iowarp-runtime:/iowarp-runtime
+      - ${IOWARP_PKGS}/content-transfer-engine:/content-transfer-engine
     stdin_open: true
     tty: true
     network_mode: host
@@ -100,24 +100,24 @@ services:
 
 To launch container:
 ```bash
-mkdir ~/iowarp-dev
-cd ~/iowarp-dev
-touch ~/iowarp-dev/docker-compose.yml
+mkdir -p ${IOWARP_PKGS}/docker/develop
+cd ${IOWARP_PKGS}/docker/develop
+touch ${IOWARP_PKGS}/docker/develop/docker-compose.yml
 # Copy-paste the above into the file
-docker compose up -d  # For recent dockers
-docker-compose up -d  # For older dockers
+docker compose up -d  # Only for recent dockers
+docker-compose up -d  # Only for older dockers
 ```
 
 To interact with the container:
 ```bash
-docker exec -it chimaera bash
+docker exec -it iowarp bash
 ```
 
 To stop container:
 ```bash
-cd ~/iowarp-dev
-docker compose down  # For recent dockers
-docker-compose down  # For older dockers
+cd ${IOWARP_PKGS}/docker/develop
+docker compose down  # Only for recent dockers
+docker-compose down  # Only for older dockers
 ```
 
 NOTE: Do all ``git clone`` commands outside of the container and mount as volumes.
