@@ -100,9 +100,9 @@ services:
 
 To launch container:
 ```bash
-mkdir ~/iowarp-dev
-cd ~/iowarp-dev
-touch ~/iowarp-dev/docker-compose.yml
+mkdir -p ${IOWARP_PKGS}/docker/develop
+cd ${IOWARP_PKGS}/docker/develop
+touch ${IOWARP_PKGS}/docker/develop/docker-compose.yml
 # Copy-paste the above into the file
 docker compose up -d  # For recent dockers
 docker-compose up -d  # For older dockers
@@ -110,12 +110,12 @@ docker-compose up -d  # For older dockers
 
 To interact with the container:
 ```bash
-docker exec -it chimaera bash
+docker exec -it iowarp bash
 ```
 
 To stop container:
 ```bash
-cd ~/iowarp-dev
+cd ${IOWARP_PKGS}/docker/develop
 docker compose down  # For recent dockers
 docker-compose down  # For older dockers
 ```
