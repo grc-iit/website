@@ -90,9 +90,9 @@ services:
     mem_limit: 8g
     volumes:
       - ~/.ssh:/root/.ssh
-      - ~/cte-hermes-shm:/cte-hermes-shm
-      - ~/iowarp-runtime:/iowarp-runtime
-      - ~/content-transfer-engine:/content-transfer-engine
+      - ${IOWARP_PKGS}/cte-hermes-shm:/cte-hermes-shm
+      - ${IOWARP_PKGS}/iowarp-runtime:/iowarp-runtime
+      - ${IOWARP_PKGS}/content-transfer-engine:/content-transfer-engine
     stdin_open: true
     tty: true
     network_mode: host
