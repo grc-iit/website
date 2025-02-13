@@ -33,9 +33,18 @@ spack install iowarp
 
 ## Install IOWARP: DEVS
 
+### Project Environment
+Decide on where you want to place your iowarp repos.
+This guide will assume you have set a variable named IOWARP_PKGS.
+```bash
+export IOWARP_PKGS="${HOME}"
+```
+
+Set IOWARP_PKGs to where you want your packages.
+
 ### Clone the repos
 ```bash
-cd ${HOME}
+cd ${IOWARP_PKGS}
 git clone https://github.com/iowarp/cte-hermes-shm.git
 git clone https://github.com/iowarp/iowarp-runtime
 git clone https://github.com/iowarp/content-transfer-engine.git
@@ -129,7 +138,7 @@ gh pr create --title "Your pull request title" --body "Your pull request descrip
 
 ### Hermes-SHM
 ```bash
-cd ${HOME}/cte-hermes-shm
+cd ${IOWARP_PKGS}/cte-hermes-shm
 scspkg create hermes_shm
 mkdir build
 cd build
@@ -146,14 +155,14 @@ If you will be working on hermes-shm, create your own personal
 fork instead of cloning directly. The following will allow
 you to keep your fork updated with changes to the global repo.
 ```bash
-cd ${HOME}/cte-hermes-shm
+cd ${IOWARP_PKGS}/cte-hermes-shm
 git remote add iowarp https://github.com/iowarp/cte-hermes-shm.git
 git pull iowarp
 ```
 
 ### IoWarp Runtime: Chimaera
 ```bash
-cd ${HOME}/iowarp-runtime
+cd ${IOWARP_PKGS}/iowarp-runtime
 scspkg create iowarp_runtime
 module load hermes_shm
 mkdir build
@@ -167,14 +176,14 @@ NOTE: If you will be working on iowarp-runtime, create your own personal
 fork instead of cloning directly. The following will allow
 you to keep your fork updated with changes to the global repo.
 ```bash
-cd ${HOME}/iowarp-runtime
+cd ${IOWARP_PKGS}/iowarp-runtime
 git remote add iowarp https://github.com/iowarp/iowarp-runtime
 git pull iowarp
 ```
 
 ### Content-Transfer-Engine: Hermes
 ```bash
-cd ${HOME}/content-transfer-engine
+cd ${IOWARP_PKGS}/content-transfer-engine
 scspkg create cte
 module load hermes_shm iowarp_runtime
 mkdir build
@@ -188,7 +197,7 @@ NOTE: If you will be working on the cte, create your own personal
 fork instead of cloning directly. The following will allow
 you to keep your fork updated with changes to the global repo.
 ```bash
-cd ${HOME}/hermes
+cd ${IOWARP_PKGS}/content-transfer-engine
 git remote add iowarp https://github.com/iowarp/content-transfer-engine.git
 git pull iowarp
 ```
