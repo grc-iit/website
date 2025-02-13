@@ -42,6 +42,10 @@ export IOWARP_PKGS="${HOME}"
 
 Set IOWARP_PKGs to where you want your packages.
 
+NOTE: This variable needs to be reset for every new terminal.
+On Linux, you could add the above command to your ``~/.bashrc``
+to automate. 
+
 ### Clone the repos
 ```bash
 cd ${IOWARP_PKGS}
