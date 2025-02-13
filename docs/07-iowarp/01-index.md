@@ -2,7 +2,9 @@
 
 IoWarp is a powerful cutting-edge data management platform designed to streamline and accelerate scientific workflows, especially those intensified by the rise of artificial intelligence (AI). It optimizes data flow throughout the research process, ensuring efficient handling of diverse data types, formats, and the exponential growth of data. IOWarp aims to significantly reduce data access times, accelerate the pace of scientific discovery, and foster a collaborative research environment.
 
-## Installation
+## Dependencies
+
+Currently, IoWarp is Linux-only. We are working on extending portability.
 
 [Spack](https://spack.io/) is the easiest way to install iowarp as of right now.
 
@@ -23,14 +25,15 @@ git clone https://github.com/grc-iit/grc-repo
 spack repo add grc-repo
 ```
 
-### Install IOWARP: USERS
+## Install IOWARP: USERS
 For general users of IOWARP, use the following command:
 ```bash
 spack install iowarp
 ```
 
-### Install IOWARP: DEVS
+## Install IOWARP: DEVS
 
+### For Linux users
 For those contributing to iowarp:
 ```bash
 spack install iowarp +nocompile
@@ -45,7 +48,15 @@ scspkg is installed automatically by iowarp. It is a tool for
 managing modulefiles, which set various environment variables
 that streamline the installation of our tools.
 
-#### Hermes-SHM
+### For non-Linux users
+
+We provide an Ubuntu contianer where iowarp's dependencies are
+already installed. No need to rerun ``spack install iowarp +nocompile``.
+```bash
+docker pull lukemartinlogan/chimaera-deps:latest
+```
+
+### Hermes-SHM
 ```bash
 cd ${HOME}
 scspkg create hermes_shm
@@ -62,10 +73,16 @@ cmake ../ \
 make -j32 install
 ```
 
-NOTE: If you will be working on hermes-shm, create your own personal 
-fork instead of cloning directly.
+If you will be working on hermes-shm, create your own personal 
+fork instead of cloning directly. The following will allow
+you to keep your fork updated with changes to the global repo.
+```bash
+cd ${HOME}/hermes_shm
+git remote add iowarp https://github.com/iowarp/cte-hermes-shm.git
+git pull iowarp
+```
 
-#### IoWarp Runtime: Chimaera
+### IoWarp Runtime: Chimaera
 ```bash
 cd ${HOME}
 scspkg create iowarp_runtime
@@ -81,9 +98,15 @@ make -j32 install
 ```
 
 NOTE: If you will be working on iowarp-runtime, create your own personal 
-fork instead of cloning directly.
+fork instead of cloning directly. The following will allow
+you to keep your fork updated with changes to the global repo.
+```bash
+cd ${HOME}/hermes_shm
+git remote add iowarp https://github.com/iowarp/iowarp-runtime
+git pull iowarp
+```
 
-#### Content-Transfer-Engine: Hermes
+### Content-Transfer-Engine: Hermes
 ```bash
 cd ${HOME}
 scspkg create cte
@@ -99,4 +122,10 @@ make -j32 install
 ```
 
 NOTE: If you will be working on the cte, create your own personal
-fork instead of cloning directly.
+fork instead of cloning directly. The following will allow
+you to keep your fork updated with changes to the global repo.
+```bash
+cd ${HOME}/hermes_shm
+git remote add iowarp https://github.com/iowarp/content-transfer-engine.git
+git pull iowarp
+```
