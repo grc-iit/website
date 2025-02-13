@@ -104,8 +104,8 @@ mkdir -p ${IOWARP_PKGS}/docker/develop
 cd ${IOWARP_PKGS}/docker/develop
 touch ${IOWARP_PKGS}/docker/develop/docker-compose.yml
 # Copy-paste the above into the file
-docker compose up -d  # For recent dockers
-docker-compose up -d  # For older dockers
+docker compose up -d  # Only for recent dockers
+docker-compose up -d  # Only for older dockers
 ```
 
 To interact with the container:
@@ -116,8 +116,8 @@ docker exec -it iowarp bash
 To stop container:
 ```bash
 cd ${IOWARP_PKGS}/docker/develop
-docker compose down  # For recent dockers
-docker-compose down  # For older dockers
+docker compose down  # Only for recent dockers
+docker-compose down  # Only for older dockers
 ```
 
 NOTE: Do all ``git clone`` commands outside of the container and mount as volumes.
